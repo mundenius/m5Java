@@ -8,7 +8,8 @@
 </head>
 <body>
 	<h1>Contacto</h1>
-	<form method="post" action="EnviarMensaje">
+	
+	<form method="post" action="/formularioContacto">
 		<label for="nombre">Nombre:</label> <input type="text" id="nombre"
 			name="nombre" required><br>
 		<br> <label for="email">Email:</label> <input type="email"
