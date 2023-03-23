@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Inicio</title>
 </head>
 <body>
 
+	<h1>Inicio</h1>
+	<div>
+	<a href = "/Ejercicio1/contacto.jsp">Go to welcome page</a>
+	</div>
 </body>
 </html>
