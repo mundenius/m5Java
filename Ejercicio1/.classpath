@@ -21,7 +21,5 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/vsald/eclipse/apache-tomcat-9.0.71/lib/servlet-api.jar"/>
-	<classpathentry exported="true" kind="lib" path="src/main/webapp/Confirmacion.jsp"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -1,4 +1,4 @@
-<%-- comentarios, agregar autores etc --%>
+<%-- autores  --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -23,7 +23,8 @@ h1 {
 form {
 	width: 50%;
 	margin: 50px auto;
-	background-color: #FFFFFF; border-radius : 5px;
+	background-color: #FFFFFF;
+	border-radius: 5px;
 	padding: 20px;
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
@@ -67,14 +68,13 @@ input[type="submit"]:hover {
 <body>
 	<h1>Contacto</h1>
 
-	<form method="POST" action="formularioContacto">
-		<label for="nombre">Nombre:</label> <input type="text" id="nombre"
-			name="nombre" required> <label for="email">Email:</label> <input
-			type="email" id="email" name="email" required> <label
-			for="mensaje">Mensaje:</label>
+	<form action="/FormularioContacto" method="POST">
+		<label>Nombre:</label> <input type="text" name="nombre" required>
+		 <label>Email:</label> <input type="email" id="email" name="email" required> 
+		 <label for="mensaje">Mensaje:</label>
 		<textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
 
-		<input type="submit" value="Enviar">
+		<button type="submit">Enviar</button>
 	</form>
 
 </body>
