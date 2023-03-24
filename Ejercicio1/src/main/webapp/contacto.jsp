@@ -67,7 +67,7 @@ input[type="submit"]:hover {
 <body>
 	<h1>Contacto</h1>
 
-	<form method="post" action="formularioContacto">
+	<form method="POST" action="formularioContacto">
 		<label for="nombre">Nombre:</label> <input type="text" id="nombre"
 			name="nombre" required> <label for="email">Email:</label> <input
 			type="email" id="email" name="email" required> <label
