@@ -35,7 +35,7 @@ css
 	<br><br>
 	<h2>Detalles del mensaje:</h2>
 	<ul>
-		<li>Nombre: ${nombre}</li>
+		<li>No	 ${nombre}</li>
 		<li>Email: ${email}</li>
 		<li>Mensaje: ${mensaje}</li>
 	</ul>

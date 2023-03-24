@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "FormularioContact", urlPatterns = "/FormularioContacto")
+@WebServlet(name = "FormularioContacto", urlPatterns = "/FormularioContacto")
 public class FormularioContacto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -39,7 +39,8 @@ public class FormularioContacto extends HttpServlet {
 		request.setAttribute("mensaje", mensaje);
 
 		// Redirige a una pagina de confirmacion
-		// response.sendRedirect("/Confirmacion.jsp");
+		 response.sendRedirect("Confirmacion.jsp");
+		 return;
 
 	}
 

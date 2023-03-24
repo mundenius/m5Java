@@ -54,7 +54,7 @@ input[type="submit"] {
 	color: #FFFFFF;
 	padding: 10px;
 	border: none;
-	border-radius: 5px;
+	bor	der-radius: 5px;
 	cursor: pointer;
 	font-size: 16px;
 	margin-top: 10px;
@@ -68,13 +68,13 @@ input[type="submit"]:hover {
 <body>
 	<h1>Contacto</h1>
 
-	<form action="/FormularioContacto" method="POST">
+	<form action="FormularioContacto" method="POST">
 		<label>Nombre:</label> <input type="text" name="nombre" required>
 		 <label>Email:</label> <input type="email" id="email" name="email" required> 
 		 <label for="mensaje">Mensaje:</label>
 		<textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
 
-		<button type="submit">Enviar</button>
+		<input type="submit" value=enviar />
 	</form>
 
 </body>
