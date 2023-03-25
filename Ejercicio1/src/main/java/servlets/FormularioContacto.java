@@ -7,15 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet("/formularioContacto")
+@WebServlet(name = "FormularioContacto", urlPatterns = "/FormularioContacto")
 public class FormularioContacto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	
-	public FormularioContacto() {
-		super();
-		// TODO Auto-generated constructor stub
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 	}
 
 	@Override
@@ -26,13 +30,17 @@ public class FormularioContacto extends HttpServlet {
 		String email = request.getParameter("email");
 		String mensaje = request.getParameter("mensaje");
 
+		System.out.println(nombre);
+		System.out.println(email);
+		System.out.println(mensaje);
 
 		request.setAttribute("nombre", nombre);
 		request.setAttribute("email", email);
 		request.setAttribute("mensaje", mensaje);
 
 		// Redirige a una pagina de confirmacion
-		response.sendRedirect("/Confirmacion.jsp");
+		 response.sendRedirect("Confirmacion.jsp");
+		 return;
 
 	}
 
