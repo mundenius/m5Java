@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>request Capacitacion (cambiar nombre ando con sueño)</title>
+<title>Ingrese capacitacion</title>
 <style>
 body {
 	font-family: Arial, sans-serif;

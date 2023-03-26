@@ -69,16 +69,6 @@ section p {
 	color: #777777;
 }
 
-footer {
-	background-color: #333333;
-	color: #FFFFFF;
-	padding: 20px;
-	text-align: center;
-}
-
-footer p {
-	margin: 0;
-}
 
 </style>
 </head>

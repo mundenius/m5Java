@@ -25,11 +25,12 @@ public class FormularioContacto extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// Obtener los valores de los campos del formulario
+		// Obtener los valores
 		String nombre = request.getParameter("nombre");
 		String email = request.getParameter("email");
 		String mensaje = request.getParameter("mensaje");
 
+		//datos para ver si llegan en consola
 		System.out.println(nombre);
 		System.out.println(email);
 		System.out.println(mensaje);
@@ -39,7 +40,6 @@ public class FormularioContacto extends HttpServlet {
 		request.setAttribute("mensaje", mensaje);
 		
 
-		// Redirige a una pagina de confirmacion
 		 response.sendRedirect("Confirmacion.jsp");
 		 return;
 
