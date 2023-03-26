@@ -70,8 +70,11 @@ input[type="submit"]:hover {
 
 	<form action="FormularioContacto" method="POST">
 		<label>Nombre:</label> <input type="text" name="nombre" required>
-		 <label>Email:</label> <input type="email" id="email" name="email" required> 
-		 <label for="mensaje">Mensaje:</label>
+		
+		<label>Email:</label> <input type="email" id="email" name="email" required> 
+		 
+		<label for="mensaje">Mensaje:</label>
+		 
 		<textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
 
 		<input type="submit" value=enviar />
