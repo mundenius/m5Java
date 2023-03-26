@@ -72,18 +72,38 @@ input[type="submit"]:hover {
 
 
 	<main>
-		<form action="/FormularioCrearCapacitacion" method="post">
-			<label for="nombre">Nombre de la capacitación:</label> <input
-				type="text" id="nombre" name="nombre" required><br>
-			<br> <label for="descripcion">Descripción:</label>
-			<textarea id="descripcion" name="descripcion" required></textarea>
-			<br>
-			<br> <label for="fecha">Fecha de inicio:</label> <input
-				type="date" id="fecha" name="fecha" required><br>
-			<br> <label for="duracion">Duración (minutos):</label> <input
-				type="number" id="duracion" name="duracion" required>
-			minutos<br>
-			<br> <input type="submit" value="Crear">
+		<form action="FormularioCrearCapacitacion" method="POST"  onsubmit="return validarDuracion()">
+			<label for="nombre">Nombre de la capacitación:</label> 
+			<input type="text" id="nombre" name="nombreCap" required><br><br>
+			
+			<label for="descripcion">Descripción:</label>
+			<textarea id="descripcion" name="descripcion" required></textarea><br><br>
+			
+			<label for="fecha">Fecha de inicio:</label> 
+			<input type="date" id="fecha" name="fecha" required><br><br> 
+			 
+			<label for="duracion">Duración (minutos):</label>  
+			<input type="number" id="duracion" name="duracion" required>minutos<br><br>
+			<script>
+				const duracionInput = document.getElementById('duracion');
+
+				duracionInput
+						.addEventListener(
+								'change',
+								function() {
+
+									const duracionValue = parseInt(duracionInput.value);
+
+									// Si el valor es menor o igual a 15, alertta
+									if (duracionValue <= 15) {
+										alert('La capacitacion no puede durar menos de 15 minutos');
+										duracionInput.value = 15;
+									}
+								});
+			</script>
+
+
+			<input type="submit" value="enviar">
 		</form>
 	</main>
 

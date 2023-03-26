@@ -37,6 +37,7 @@ public class FormularioContacto extends HttpServlet {
 		request.setAttribute("nombre", nombre);
 		request.setAttribute("email", email);
 		request.setAttribute("mensaje", mensaje);
+		
 
 		// Redirige a una pagina de confirmacion
 		 response.sendRedirect("Confirmacion.jsp");
