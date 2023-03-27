@@ -54,6 +54,5 @@ function datosInvalidos() {
 	<div id="popup" style="display: none">
 		<p>El usuario o la contraseña son incorrectos. Inténtelo de nuevo.</p>
 	</div>
-
 </body>
 </html>

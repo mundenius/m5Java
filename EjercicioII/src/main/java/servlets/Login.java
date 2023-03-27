@@ -6,6 +6,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import java.util.*;
 
 /**
  * Servlet implementation class Login
@@ -18,16 +21,35 @@ public class Login extends HttpServlet {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+  
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String usuario = request.getParameter("usuario");
+		String password = request.getParameter("pass");
 		
+		
+		
+		if(usuario == null || password == null || !validacionDatos(usuario,password)) {
+			request.setAttribute("datosInvalidos", "Los datos ingresados no coinciden");
+			request.getRequestDispatcher("/index.jsp").forward(request, response);
+		}
+		else {
+			HttpSession sesion = request.getSession();
+			sesion.setAttribute("nombre", usuario);
+			response.sendRedirect("/inicio.jsp");
+		}
 	}
 
+	public boolean validacionDatos(String nombre, String password) {
+        HashMap<String, String> usuarios = new HashMap<String, String>();
+        usuarios.put("admin", "1234");
+        usuarios.put("vale", "007");
+        usuarios.put("carlos", "234");
+        usuarios.put("javi", "987");
+        usuarios.put("adrian", "456");
+        return usuarios.containsKey(nombre) && usuarios.get(nombre).equals(password);
+    }
 }
