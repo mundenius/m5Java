@@ -44,9 +44,10 @@ function datosInvalidos() {
 		</div>
 	</div>
 	<br>
+	<form action="/Login" method = "POST">
 	<div class="login">
-		<input type="text" placeholder="username" name="usuario"><br>
-		<input type="password" placeholder="password" name="pass"><br>
+		<input type="text" placeholder="nombre de usuario" name="usuario"><br>
+		<input type="password" placeholder="contraseña" name="pass"><br>
 		<input type="button" value="Login" onclick="daotsInvalidos()">
 	</div>
 
@@ -54,5 +55,6 @@ function datosInvalidos() {
 	<div id="popup" style="display: none">
 		<p>El usuario o la contraseña son incorrectos. Inténtelo de nuevo.</p>
 	</div>
+	</form>
 </body>
 </html>
