@@ -30,8 +30,11 @@ public class Login extends HttpServlet {
 		String usuario = request.getParameter("usuario");
 		String password = request.getParameter("pass");
 		
+
+		//debug muestra los datos en consolas si se reciben en servlet
 		System.out.println(usuario);
 		System.out.println(password);
+
 		
 		if(usuario == null || password == null || !validacionDatos(usuario,password)) {
 			request.setAttribute("datosInvalidos", "Los datos ingresados no coinciden");
@@ -51,6 +54,8 @@ public class Login extends HttpServlet {
         usuarios.put("carlos", "234");
         usuarios.put("javi", "987");
         usuarios.put("adrian", "456");
+        
+        
         return usuarios.containsKey(nombre) && usuarios.get(nombre).equals(password);
     }
 }

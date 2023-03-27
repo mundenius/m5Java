@@ -1,4 +1,3 @@
-<%-- pagina index donde se despliega el login --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,19 +20,6 @@
 }
 </style>
 
-<script>
-function datosInvalidos() {
-  var username = document.getElementsByName("usuario")[0].value;
-  var password = document.getElementsByName("pass")[0].value;
-
-  // Hacer una solicitud a su archivo de backend para validar las credenciales
-  // Si las credenciales son inválidas, mostrar la ventana emergente
-  if (credentialsAreInvalid) {
-    document.getElementById("popup").style.display = "block";
-  }
-}
-</script>
-
 </head>
 <body>
 	<div class="body"></div>
@@ -44,17 +30,19 @@ function datosInvalidos() {
 		</div>
 	</div>
 	<br>
-	<form action="/Login" method = "POST">
-	<div class="login">
-		<input type="text" placeholder="nombre de usuario" name="usuario"><br>
-		<input type="password" placeholder="contraseña" name="pass"><br>
-		<input type="button" value="Login" onclick="daotsInvalidos()">
-	</div>
+	<form action="Login" method="POST">
+		<div class="login">
+			<input type="text" placeholder="username" name="usuario"><br>
+			<input type="password" placeholder="password" name="pass"><br>
+			<input type="submit" value="Login">
+		</div>
+	</form>
 
 	<%-- ventana emergente en caso de error --%>
-	<div id="popup" style="display: none">
-		<p>El usuario o la contraseña son incorrectos. Inténtelo de nuevo.</p>
-	</div>
-	</form>
+	<% if(request.getAttribute("datosInvalidos") != null) { %>
+		<div id="popup">
+			<p><%= request.getAttribute("datosInvalidos") %></p> 
+		</div>
+	<% } %>
 </body>
 </html>
