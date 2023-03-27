@@ -14,7 +14,7 @@
 			<div>Site<span>Random</span></div>
 		</div>
 		<br>
-		<form action="${pageContext.request.contextPath}/Login" method = "POST">
+		<form action="/Login.java" method = "POST">
 		<div class="login">
 				<input type="text" placeholder="username" name="usuario"><br>
 				<input type="password" placeholder="password" name="pass"><br>
