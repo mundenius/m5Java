@@ -30,7 +30,8 @@ public class Login extends HttpServlet {
 		String usuario = request.getParameter("usuario");
 		String password = request.getParameter("pass");
 		
-		
+		System.out.println(usuario);
+		System.out.println(password);
 		
 		if(usuario == null || password == null || !validacionDatos(usuario,password)) {
 			request.setAttribute("datosInvalidos", "Los datos ingresados no coinciden");
