@@ -14,10 +14,12 @@
 			<div>Site<span>Random</span></div>
 		</div>
 		<br>
+		<form action="${pageContext.request.contextPath}/Login" method = "POST">
 		<div class="login">
-				<input type="text" placeholder="username" name="user"><br>
-				<input type="password" placeholder="password" name="password"><br>
+				<input type="text" placeholder="username" name="usuario"><br>
+				<input type="password" placeholder="password" name="pass"><br>
 				<input type="button" value="Login">
 		</div>
+		</form>
 </body>
 </html>
