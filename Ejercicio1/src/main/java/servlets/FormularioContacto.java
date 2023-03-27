@@ -7,35 +7,42 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class formularioContacto
- */
-@WebServlet("/formularioContacto")
+@WebServlet(name = "FormularioContacto", urlPatterns = "/FormularioContacto")
 public class FormularioContacto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public FormularioContacto() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// Obtener los valores
+		String nombre = request.getParameter("nombre");
+		String email = request.getParameter("email");
+		String mensaje = request.getParameter("mensaje");
+
+		//datos para ver si llegan en consola
+		System.out.println(nombre);
+		System.out.println(email);
+		System.out.println(mensaje);
+
+		request.setAttribute("nombre", nombre);
+		request.setAttribute("email", email);
+		request.setAttribute("mensaje", mensaje);
+		
+
+		 response.sendRedirect("confirmacionContacto.jsp");
+		 return;
+
 	}
 
 }

@@ -34,7 +34,7 @@ public class NavBar extends HttpServlet {
 		// TODO Auto-generated method stub
 		String inicio = "Inicio";
 		String cliente = "Cliente";
-//		String admin = "Administrativo";
+		String admin = "Administrativo";
 //		String prof = "Profesional";
 		
 		request.setAttribute("ini",inicio);
