@@ -81,10 +81,11 @@ section p {
 		</h1>
 	</header>
 	<nav>
-		<ul>
+	<%@ include file="FIJOS/Navbar.jsp" %>
+<!-- 		<ul>
 			<li><a href="contacto.jsp">Contacto</a></li>
 			<li><a href="capacitacion.jsp">Crear Capacitación</a></li>
-		</ul>r
+		</ul> -->
 	</nav>
 	<section>
 		<h2>Capacitaciones recientes</h2>
