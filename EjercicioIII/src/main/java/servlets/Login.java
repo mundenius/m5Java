@@ -22,6 +22,23 @@ public class Login extends HttpServlet {
 		// TODO Auto-generated constructor stub
 	}
   
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        HttpSession session = request.getSession();
+        
+        if(session.getAttribute("nombre") != null){
+            //SI EXISTE, ELIMINAR EL ATRIBUTO
+            session.removeAttribute("nombre");
+            response.sendRedirect("index.jsp");
+        }
+        else{
+            response.sendRedirect("inicio.jsp");
+        }
+
+
+    }
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -43,7 +60,7 @@ public class Login extends HttpServlet {
 		else {
 			HttpSession sesion = request.getSession();
 			sesion.setAttribute("nombre", usuario);
-			response.sendRedirect("/inicio.jsp");
+			response.sendRedirect("inicio.jsp");
 		}
 	}
 
