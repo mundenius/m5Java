@@ -31,11 +31,11 @@
 				<li class="dropdown">
 					<button class="btn btn-secondary dropdown-toggle" type="button"
 						id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false">Menú Usuario</button>
+						aria-expanded="false">Menú <% %></button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-						<button class="dropdown-item" type="button">Editar
-							Usuario</button>
-						<button class="dropdown-item" type="button">Cerrar Sesión</button>
+						<a class="dropdown-item" type="button">Editar
+							Usuario</a>
+						<a class="dropdown-item" type="button" href="${pageContext.request.contextPath}/Login">Cerrar Sesión</a>
 					</div>
 				</li>
 				<%-- 				<li class="nav-item dropdown"><a
