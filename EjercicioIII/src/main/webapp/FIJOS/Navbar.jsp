@@ -1,5 +1,6 @@
 <%@page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <script src= assets/main.js></script>
+
 <nav class="navbar navbar-expand-lg bg-light">
 	<div class="container-fluid">
 		<a class="navbar-brand"
@@ -51,8 +52,8 @@
 				} else {
 				%>
 
-				<li class="nav-item"><a class="nav-link"
-					href="${pageContext.request.contextPath}/index.jsp">Login</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="${pageContext.request.contextPath}/index.jsp">Login</a></li>
 
 				<%
 				}
@@ -60,4 +61,5 @@
 			</ul>
 		</div>
 	</div>
+
 </nav>
