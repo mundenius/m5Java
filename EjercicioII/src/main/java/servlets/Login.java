@@ -38,7 +38,7 @@ public class Login extends HttpServlet {
 		
 		if(usuario == null || password == null || !validacionDatos(usuario,password)) {
 			request.setAttribute("datosInvalidos", "Los datos ingresados no coinciden");
-//			request.getRequestDispatcher("/index.jsp").forward(request, response);
+			request.getRequestDispatcher("/index.jsp").forward(request, response);
 		}
 		else {
 			HttpSession sesion = request.getSession();
