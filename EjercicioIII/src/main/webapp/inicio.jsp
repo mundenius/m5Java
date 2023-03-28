@@ -9,6 +9,7 @@
 	rel="stylesheet"
 	integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
 	crossorigin="anonymous">
+
 <title>Inicio</title>
 <style>
 body {
@@ -27,7 +28,6 @@ h1 {
 	color: #FFFFFF;
 	padding: 20px;
 } */
-
 nav ul {
 	list-style: none;
 	margin: 0;
@@ -76,13 +76,11 @@ section p {
 </head>
 <body>
 	<header>
-		<h1 class="display-1 text center">
-			Bienvenido
-		</h1>
+		<h1 class="display-1 text center">Bienvenido</h1>
 	</header>
 	<nav>
-	<%@ include file="FIJOS/Navbar.jsp" %>
-<!-- 		<ul>
+		<%@ include file="FIJOS/Navbar.jsp"%>
+		<!-- 		<ul>
 			<li><a href="contacto.jsp">Contacto</a></li>
 			<li><a href="capacitacion.jsp">Crear Capacitación</a></li>
 		</ul> -->
