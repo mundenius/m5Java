@@ -75,6 +75,9 @@ input[type="submit"] {
 	font-size: 16px;
 	margin-top: 10px;
 }
+p{
+    color: grey;
+}
 
 input[type="submit"]:hover {
 	background-color: #555555;
