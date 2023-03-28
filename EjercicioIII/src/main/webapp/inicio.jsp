@@ -4,11 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	crossorigin="anonymous"></script>
 <title>Inicio</title>
 <style>
 body {
@@ -27,7 +33,6 @@ h1 {
 	color: #FFFFFF;
 	padding: 20px;
 } */
-
 nav ul {
 	list-style: none;
 	margin: 0;
@@ -76,13 +81,11 @@ section p {
 </head>
 <body>
 	<header>
-		<h1 class="display-1 text center">
-			Bienvenido
-		</h1>
+		<h1 class="display-1 text center">Bienvenido</h1>
 	</header>
 	<nav>
-	<%@ include file="FIJOS/Navbar.jsp" %>
-<!-- 		<ul>
+		<%@ include file="FIJOS/Navbar.jsp"%>
+		<!-- 		<ul>
 			<li><a href="contacto.jsp">Contacto</a></li>
 			<li><a href="capacitacion.jsp">Crear Capacitación</a></li>
 		</ul> -->
@@ -91,5 +94,7 @@ section p {
 		<h2>Capacitaciones recientes</h2>
 		<p>No hay capacitaciones recientes</p>
 	</section>
+		<script type="text/javascript" src="/assets/main.js"></script>
 </body>
+
 </html>
