@@ -12,8 +12,9 @@
 <title>Inicio</title>
 <style>
 body {
+    
 	font-family: Montserrat;
-	background-color: #FFFFFF;
+	background-color: #e3f4f0;
 	color: black;
 }
 
@@ -21,8 +22,8 @@ h1 {
 	text-align: center;
 	margin-top: 0;
 }
-
-/* nav {
+/*
+nav {
 	background-color: #333333;
 	color: #FFFFFF;
 	padding: 20px;
