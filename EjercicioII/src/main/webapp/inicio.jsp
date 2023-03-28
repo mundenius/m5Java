@@ -84,7 +84,7 @@ section p {
 		<ul>
 			<li><a href="contacto.jsp">Contacto</a></li>
 			<li><a href="capacitacion.jsp">Crear Capacitación</a></li>
-		</ul>
+		</ul>r
 	</nav>
 	<section>
 		<h2>Capacitaciones recientes</h2>

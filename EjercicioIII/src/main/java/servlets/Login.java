@@ -43,7 +43,7 @@ public class Login extends HttpServlet {
 		else {
 			HttpSession sesion = request.getSession();
 			sesion.setAttribute("nombre", usuario);
-			response.sendRedirect("/inicio.jsp");
+			response.sendRedirect("inicio.jsp");
 		}
 	}
 
@@ -59,3 +59,4 @@ public class Login extends HttpServlet {
         return usuarios.containsKey(nombre) && usuarios.get(nombre).equals(password);
     }
 }
+
