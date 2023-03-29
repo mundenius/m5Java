@@ -22,7 +22,7 @@
 					href="${pageContext.request.contextPath}/capacitacion.jsp">Capacitación</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="${pageContext.request.contextPath}/ListaCapacitaciones">Lista
+					href="${pageContext.request.contextPath}/listaCapacitaciones.jsp">Lista
 						de Capacitaciones</a></li>
 
 				<%
