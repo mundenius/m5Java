@@ -7,6 +7,6 @@
 <title>Lista Capacitaciones</title>
 </head>
 <body>
-
+<h1> En construccion </h1>
 </body>
 </html>
