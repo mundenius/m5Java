@@ -31,7 +31,7 @@ public class Login extends HttpServlet {
         if(session.getAttribute("nombre") != null){
             //SI EXISTE, ELIMINAR EL ATRIBUTO
             session.removeAttribute("nombre");
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("/index.jsp");
         }
         else{
             response.sendRedirect("inicio.jsp");
