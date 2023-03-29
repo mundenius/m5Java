@@ -28,7 +28,9 @@
 				<%
 				if (request.getSession().getAttribute("nombre") != null) {
 				%>
-				<li class="dropdown">
+				<li class="nav-item"><a class="nav-link"
+					href="${pageContext.request.contextPath}/CerrarSesion">Cerrar Sesión</a></li>
+				<%-- <li class="dropdown">
 					<button class="btn btn-secondary dropdown-toggle" type="button"
 						id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false">Menú <% %></button>
@@ -37,7 +39,7 @@
 							Usuario</a>
 						<a class="dropdown-item" type="button" href="${pageContext.request.contextPath}/Login">Cerrar Sesión</a>
 					</div>
-				</li>
+				</li> --%>
 				<%-- 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" role="button"
 					data-bs-toggle="dropdown" aria-expanded="false"> Menú Usuario </a>
