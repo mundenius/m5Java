@@ -71,6 +71,8 @@ input[type="submit"]:hover {
 	border: 1px solid #cccccc;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px #cccccc;
+	font-size: 20px;
+    color: black;
 }
 </style>
 
@@ -85,12 +87,15 @@ input[type="submit"]:hover {
 	</div>
 	<br>
 	<form action="Login" method="POST">
-		<div class="login">
-			<input type="text" placeholder="username" name="usuario"><br>
-			<input type="password" placeholder="password" name="pass"><br>
-			<input type="submit" value="Login">
-		</div>
-	</form>
+	<div class="login">
+		<label for="usuario"><Strong>Usuario</Strong></label>
+		<input type="text" placeholder="Escriba usuario aqui" name="usuario" id="usuario"><br>
+		<label for="pass"><Strong>Contraseña</Strong></label>
+		<input type="password" placeholder="Escriba contraseña aqui" name="pass" id="pass"><br>
+		<input type="submit" value="Login">
+	</div>
+</form>
+
 
 	<%-- ventana emergente en caso de error --%>
 	<% if(request.getAttribute("datosInvalidos") != null) { %>
