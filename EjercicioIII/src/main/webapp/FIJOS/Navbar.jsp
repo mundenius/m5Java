@@ -16,13 +16,13 @@
 				<li class="nav-item"><a class="nav-link" aria-current="page"
 					href="${pageContext.request.contextPath}/inicio.jsp">Inicio</a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="${pageContext.request.contextPath}/FormularioContacto">Contacto</a>
+					href="${pageContext.request.contextPath}/contacto.jsp">Contacto</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="${pageContext.request.contextPath}/FormularioCrearCapacitacion">Capacitación</a>
+					href="${pageContext.request.contextPath}/capacitacion.jsp">Capacitación</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="${pageContext.request.contextPath}/ListaCapacitaciones">Lista
+					href="${pageContext.request.contextPath}/listaCapacitaciones.jsp">Lista
 						de Capacitaciones</a></li>
 
 				<%

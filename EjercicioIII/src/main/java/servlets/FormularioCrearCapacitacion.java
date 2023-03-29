@@ -68,7 +68,7 @@ public class FormularioCrearCapacitacion extends HttpServlet {
         lista1.agregarCapacitacion(capacitacion);
 
     	// Redirige a una pagina de confirmacion
-		 response.sendRedirect("confirmacionContacto.jsp");
+		 response.sendRedirect("confirmacionCapacitacion.jsp");
 		 
 		 lista1.listarCapacitaciones(capacitacion);
 		 return;
