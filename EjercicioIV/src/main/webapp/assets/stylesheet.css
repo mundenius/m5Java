@@ -112,18 +112,6 @@ input[type="text"], input[type="email"], textarea {
 input[type="submit"]:hover {
 	background-color: #555555;
 }
-
-body {
-    
-	font-family: serif;
-	background-color: #e3f4f0;
-	color: black;
-}
-
-h1 {
-	text-align: center;
-	margin-top: 0;
-}
 /*
 nav {
 	background-color: #333333;
