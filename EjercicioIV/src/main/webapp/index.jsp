@@ -4,77 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+	crossorigin="anonymous">
     <title>Login</title>
-<style>
-    body {
-	font-family: Arial, sans-serif;
-	background-color: #D1F2EB;
-	color: #FFFFFF;
-}
+    <link rel="stylesheet" href="assets/stylesheet.css">
 
-h1 {
-	text-align: center;
-	margin-top: 50px;
-	color: #333333;
-}
-
-form {
-	width: 50%;
-	margin: 50px auto;
-	background-color: #FFFFFF;
-	border-radius: 5px;
-	padding: 20px;
-	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-}
-
-label {
-	display: block;
-	margin-top: 10px;
-	color: #333333;
-}
-
-input[type="text"], input[type="email"], textarea {
-	width: 100%;
-	padding: 10px;
-	margin-top: 5px;
-	margin-bottom: 10px;
-	border-radius: 5px;
-	border: 1px solid #CCCCCC;
-	font-size: 16px;
-	color: #333333;
-	box-sizing: border-box;
-}
-
-input[type="submit"] {
-	width: 100%;
-	background-color: #333333;
-	color: #FFFFFF;
-	padding: 10px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	font-size: 16px;
-	margin-top: 10px;
-}
-
-input[type="submit"]:hover {
-	background-color: #555555;
-}
-#popup {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 300px;
-	padding: 20px;
-	background-color: #ffffff;
-	border: 1px solid #cccccc;
-	border-radius: 5px;
-	box-shadow: 0px 0px 10px #cccccc;
-	font-size: 20px;
-    color: black;
-}
-</style>
 
 </head>
 <body>
@@ -82,7 +21,7 @@ input[type="submit"]:hover {
 	<div class="grad"></div>
 	<div class="header">
 		<div>
-			Site<span>Random</span>
+			<h1>Inicie sesion</h1>
 		</div>
 	</div>
 	<br>
@@ -104,4 +43,7 @@ input[type="submit"]:hover {
 		</div>
 	<% } %>
 </body>
+<footer>
+<%@include file= "FIJOS/Footer.jsp" %>
+</footer>
 </html>
