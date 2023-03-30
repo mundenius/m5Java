@@ -2,7 +2,7 @@
 
 
 body {
-	font-family: Arial, sans-serif;
+	font-family: serif;
 	background-color: #D1F2EB;
 	color: #FFFFFF;
 }
@@ -115,7 +115,7 @@ input[type="submit"]:hover {
 
 body {
     
-	font-family: Montserrat;
+	font-family: serif;
 	background-color: #e3f4f0;
 	color: black;
 }
@@ -174,4 +174,10 @@ section h2 {
 section p {
 	margin-bottom: 0;
 	color: #777777;
+}
+span{
+	font-family: serif;
+	text-align: center;
+	margin-top: 50px;
+	
 }

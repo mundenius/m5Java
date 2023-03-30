@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="assets/stylesheet.css">
 <title>Lista Capacitaciones</title>
 </head>
 <body>
 <h1> En construccion </h1>
 </body>
+<footer>
+<%@include file= "FIJOS/Footer.jsp" %>
+</footer>
 </html>

@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Ingrese capacitacion</title>
-<link rel="stylesheet" href="/EjercicioIV/src/main/webapp/assets/stylesheet.css">
+<link rel="stylesheet" href="assets/stylesheet.css">
 
 </head>
 <body>
@@ -54,4 +54,7 @@
 	</main>
 
 </body>
+<footer>
+<%@include file= "FIJOS/Footer.jsp" %>
+</footer>
 </html>

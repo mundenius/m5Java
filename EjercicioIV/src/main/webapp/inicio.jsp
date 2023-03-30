@@ -9,7 +9,7 @@
 	rel="stylesheet"
 	integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
 	crossorigin="anonymous">
-	<link rel="stylesheet" href="/EjercicioIV/src/main/webapp/assets/stylesheet.css">
+	<link rel="stylesheet" href="assets/stylesheet.css">
 <title>Inicio</title>
 
 </head>
@@ -32,4 +32,9 @@
 		<p>No hay capacitaciones recientes</p>
 	</section>
 </body>
+<br>
+<br>
+<footer>
+<%@include file= "FIJOS/Footer.jsp" %>
+</footer>
 </html>
