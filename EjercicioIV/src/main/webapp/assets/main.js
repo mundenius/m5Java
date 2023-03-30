@@ -1,5 +1,0 @@
-/**
- * 
- */
-
- $('.dropdown-toggle').dropdown()
