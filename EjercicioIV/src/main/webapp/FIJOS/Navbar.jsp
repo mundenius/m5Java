@@ -19,7 +19,7 @@
 					href="${pageContext.request.contextPath}/contacto.jsp">Contacto</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="${pageContext.request.contextPath}/capacitacion.jsp">Capacitación</a>
+					href="${pageContext.request.contextPath}/capacitacion.jsp">Creacion de capacitaciones</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
 					href="${pageContext.request.contextPath}/listaCapacitaciones.jsp">Lista
