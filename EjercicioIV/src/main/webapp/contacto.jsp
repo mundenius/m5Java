@@ -10,7 +10,7 @@ Carlos Carrasco --%>
 <head>
 <meta charset="UTF-8">
 <title>Contacto</title>
-<link rel="stylesheet" href="/EjercicioIV/src/main/webapp/assets/stylesheet.css">
+<link rel="stylesheet" href="assets/stylesheet.css">
 
 </head>
 <body>
@@ -29,4 +29,7 @@ Carlos Carrasco --%>
 	</form>
 
 </body>
+<footer>
+<%@include file= "FIJOS/Footer.jsp" %>
+</footer>
 </html>

@@ -2,7 +2,7 @@
 
 
 body {
-	font-family: Arial, sans-serif;
+	font-family: serif;
 	background-color: #D1F2EB;
 	color: #FFFFFF;
 }
@@ -113,17 +113,7 @@ input[type="submit"]:hover {
 	background-color: #555555;
 }
 
-body {
-    
-	font-family: Montserrat;
-	background-color: #e3f4f0;
-	color: black;
-}
 
-h1 {
-	text-align: center;
-	margin-top: 0;
-}
 /*
 nav {
 	background-color: #333333;
@@ -174,4 +164,10 @@ section h2 {
 section p {
 	margin-bottom: 0;
 	color: #777777;
+}
+span{
+	font-family: serif;
+	text-align: center;
+	margin-top: 50px;
+	
 }
