@@ -14,8 +14,9 @@ Carlos Carrasco --%>
 
 </head>
 <body>
-	<h1>Contacto</h1>
 
+	<h1>Contacto</h1>
+<%@include file = "FIJOS/Navbar.jsp"%>
 	<form action="FormularioContacto" method="POST">
 		<label>Nombre:</label> <input type="text" name="nombre" required>
 		

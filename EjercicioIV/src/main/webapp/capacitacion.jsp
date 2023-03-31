@@ -19,6 +19,7 @@ Carlos Carrasco --%>
 	<header>
 		<h1>Crear Capacitación</h1>
 	</header>
+	<%@include file = "FIJOS/Navbar.jsp"%>
 
 
 	<main>

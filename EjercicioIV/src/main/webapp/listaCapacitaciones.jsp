@@ -13,7 +13,10 @@ Carlos Carrasco --%>
 <title>Lista Capacitaciones</title>
 </head>
 <body>
-<h1> En construccion </h1>
+<h1>Lista de Capacitaciones</h1>
+<%@include file = "FIJOS/Navbar.jsp"%>
+<h2> En construccion </h2>
+
 </body>
 <footer>
 <%@include file= "FIJOS/Footer.jsp" %>
