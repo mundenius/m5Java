@@ -85,6 +85,7 @@ public class FormularioCrearCapacitacion extends HttpServlet {
 
 		lista1.listarCapacitaciones(capacitacion);
 		return;
+		//request.setAttribute("capacitaciones", ListaCapacitaciones);
 
 	}
 
