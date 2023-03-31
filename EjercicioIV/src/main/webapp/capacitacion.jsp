@@ -1,4 +1,8 @@
-<%-- comentarios, agregar autores etc --%>
+<%-- autores:
+Javiera Saavedra
+Valentina Saldias
+Adrian Fredes 
+Carlos Carrasco --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -19,17 +23,24 @@
 
 	<main>
 		<form action="FormularioCrearCapacitacion" method="POST"  onsubmit="return validarDuracion()">
-			<label for="nombre">Nombre de la capacitación:</label> 
-			<input type="text" id="nombre" name="nombreCap" required><br><br>
-			
-			<label for="descripcion">Descripción:</label>
-			<textarea id="descripcion" name="descripcion" required></textarea><br><br>
-			
-			<label for="fecha">Fecha de inicio:</label> 
+			<label for="idCapacitacion">ID Capacitación:</label>
+			<input type="text" id="idcapacitacion" name="idCapacitacion" required><br><br>
+
+			<label for="fecha">Fecha:</label>
 			<input type="date" id="fecha" name="fecha" required><br><br> 
-			 
+			
+			<label for="hora">Hora:</label>
+			<input type="time" id="hora" name="hora" required>
+
+			<label for="lugar">Lugar:</label>
+			<input type="text" id="lugar" name="lugar">
+			
 			<label for="duracion">Duración (minutos):</label>  
 			<input type="number" id="duracion" name="duracion" required>minutos<br><br>
+			
+			<label for="cliente_rutcliente">RUT Cliente:</label>
+			<input type="text" id="cliente_rutcliente" name="cliente_rutcliente">
+
 			<script>
 				const duracionInput = document.getElementById('duracion');
 

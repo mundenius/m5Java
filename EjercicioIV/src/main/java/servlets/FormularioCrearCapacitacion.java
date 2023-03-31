@@ -29,105 +29,143 @@ public class FormularioCrearCapacitacion extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		 // Obtener los valores de los campos del formulario
+		// Obtener los valores de los campos del formulario
 		ListaCapacitaciones lista1 = new ListaCapacitaciones();
 		Capacitacion capacitacion = new Capacitacion();
+
+		String idCapacitacion = request.getParameter("idCapacitacion");
+		String fechaCap = request.getParameter("fecha");
+		String hora = request.getParameter("hora");
+		String lugar = request.getParameter("lugar");
+		String duracionCap = request.getParameter("duracion");
+		String cliente_rutcliente = request.getParameter("cliente_rutcliente");
+
+		Date fecha = null;
+		if (fechaCap != null && !fechaCap.isEmpty()) {
+		    try {
+		        fecha = new SimpleDateFormat("dd-MM-yyyy").parse(fechaCap);
+		    } catch (ParseException e) {
+		        e.printStackTrace();
+		    }
+		}
+
+
+		int duracion = 0;
+		if (duracionCap != null && !duracionCap.isEmpty()) {
+		    duracion = Integer.parseInt(duracionCap);
+		}
 		
-		String nombreCap = request.getParameter("nombreCap");
-        String descripcion = request.getParameter("descripcion");
-        String fechaCap = request.getParameter("fecha");
-        String duracionCap = request.getParameter("duracion");
 
-        Date fecha = null;
-        try {
-            fecha = new SimpleDateFormat("dd-MM-yyyy").parse(fechaCap);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+		// Imprimir los valores obtenidos en la consola
+		System.out.println(idCapacitacion);
+		System.out.println(fecha);
+		System.out.println(hora);
+		System.out.println(lugar);
+		System.out.println(duracion);
+		System.out.println(cliente_rutcliente);
+		// Guardar los valores en los atributos de la solicitud
 
-        int duracion = Integer.parseInt(duracionCap);
+		request.setAttribute("idcapacitacion", idCapacitacion);
+		capacitacion.setIdCapacitacion(idCapacitacion);
+		request.setAttribute("fecha", fecha);
+		capacitacion.setFechaCap(fechaCap);
+		request.setAttribute("hora", hora);
+		capacitacion.setHora(hora);
+		request.setAttribute("lugar", lugar);
+		capacitacion.setLugar(lugar);
+		request.setAttribute("duracion", duracion);
+		capacitacion.setDuracionCap(duracionCap);
+		request.setAttribute("cliente_rutcliente", cliente_rutcliente);
+		capacitacion.setCliente_rutcliente(cliente_rutcliente);
 
-        // Imprimir los valores obtenidos en la consola
-        System.out.println(nombreCap);
-        System.out.println(descripcion);
-        System.out.println(fecha);
-        System.out.println(duracion);
+		lista1.agregarCapacitacion(capacitacion);
 
-        // Guardar los valores en los atributos de la solicitud
-        
-        
-        request.setAttribute("nombre", nombreCap);
-        capacitacion.setNombreCap(nombreCap);
-        request.setAttribute("descripcion", descripcion);
-        capacitacion.setDescripcion(descripcion);
-        request.setAttribute("fecha", fecha);
-        capacitacion.setFechaCap(fechaCap);
-        request.setAttribute("duracion", duracion);
-        capacitacion.setDuracionCap(duracionCap);
-        
-        lista1.agregarCapacitacion(capacitacion);
+		// Redirige a una pagina de confirmacion
+		response.sendRedirect("confirmacionCapacitacion.jsp");
 
-    	// Redirige a una pagina de confirmacion
-		 response.sendRedirect("confirmacionCapacitacion.jsp");
-		 
-		 lista1.listarCapacitaciones(capacitacion);
-		 return;
-
+		lista1.listarCapacitaciones(capacitacion);
+		return;
 
 	}
-/** @publicClass se crea clase interna para manejar arraylist de capacitaciones */
+
+	/**
+	 * @publicClass se crea clase interna para manejar arraylist de capacitaciones
+	 */
 	public class Capacitacion {
-		String nombreCap;
-        String descripcion;
-        String fechaCap;
-        String duracionCap;
-        
-        public void Capacitacion() {
-        	
-        }
-        public void Capacitacion(String nombreCap, String descripcion, String fechaCap, String duracionCap) {
-        	this.nombreCap = nombreCap;
-        	this.descripcion = descripcion;
-        	this.fechaCap = fechaCap;
-        	this.duracionCap = duracionCap;
-        }
-        
-        /**@param nombre capacitacion */ 
-        public void setNombreCap(String nombreCap) {
-        	this.nombreCap = nombreCap;
-        }
-        public String getNombreCap() {
-        	return nombreCap;
-        }
-        
-        /**@param descripcion capacitacion */
-        public void setDescripcion(String descripcion) {
-        	this.descripcion = descripcion;
-        }
-        public String getDescripcion() {
-        	return descripcion;
-        }
-        
-        /**@param fecha capacitacion */
-        public void setFechaCap(String fechaCap) {
-        	this.fechaCap = fechaCap; 
-        }
-        public String getFechaCap() {
-        	return fechaCap;
-        }
-        
-        /**@param duracion capacitacion */
-        public void setDuracionCap(String duracionCap) {
-        	this.duracionCap = duracionCap;
-        }
-        public String getDuracionCap() {
-        	return duracionCap;
-        }
-        
-        @Override 
-        public String toString() {
-        	return "Nombre Capacitacion: " + getNombreCap() + "\nDescripcion Capacitacion: " + getDescripcion() 
-        	+ "\nFecha Capacitacion: " + getFechaCap() + "\nDuracion Capacitacion: " + getDuracionCap();
-        }
+		String idCapacitacion;
+		String fechaCap;
+		String hora;
+		String lugar;
+		String duracionCap;
+		String cliente_rutcliente;
+		
+		public Capacitacion() {
+		}
+
+
+		public Capacitacion(String idCapacitacion, String fechaCap, String hora, String lugar, String duracionCap,
+				String cliente_rutcliente) {
+			this.idCapacitacion = idCapacitacion;
+			this.fechaCap = fechaCap;
+			this.hora = hora;
+			this.lugar = lugar;
+			this.duracionCap = duracionCap;
+			this.cliente_rutcliente = cliente_rutcliente;
+		}
+
+		public void setIdCapacitacion(String idCapacitacion) {
+			this.idCapacitacion = idCapacitacion;
+		}
+
+		public String getIdCapacitacion() {
+			return idCapacitacion;
+		}
+
+		public void setFechaCap(String fechaCap) {
+			this.fechaCap = fechaCap;
+		}
+
+		public String getFechaCap() {
+			return fechaCap;
+		}
+
+		public void setHora(String hora) {
+			this.hora = hora;
+		}
+
+		public String getHora() {
+			return hora;
+		}
+
+		public void setLugar(String lugar) {
+			this.lugar = lugar;
+		}
+
+		public String getLugar() {
+			return lugar;
+		}
+
+		public void setDuracionCap(String duracionCap) {
+			this.duracionCap = duracionCap;
+		}
+
+		public String getDuracionCap() {
+			return duracionCap;
+		}
+
+		public void setCliente_rutcliente(String cliente_rutcliente) {
+			this.cliente_rutcliente = cliente_rutcliente;
+		}
+
+		public String getCliente_rutcliente() {
+			return cliente_rutcliente;
+		}
+
+		@Override
+		public String toString() {
+			return "\nToString\nId capacitacion: " + getIdCapacitacion() + "\nFecha: " + getFechaCap() + "\nHora: " + getHora()
+					+ "\nLugar: " + getLugar() + "\nduracion: " + getDuracionCap() + "\nRut del cliente: "
+					+ getCliente_rutcliente();
+		}
 	}
 }
