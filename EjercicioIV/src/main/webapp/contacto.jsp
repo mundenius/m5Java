@@ -1,5 +1,8 @@
-<%-- autores  --%>
-
+<%-- autores:
+Javiera Saavedra
+Valentina Saldias
+Adrian Fredes 
+Carlos Carrasco --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
