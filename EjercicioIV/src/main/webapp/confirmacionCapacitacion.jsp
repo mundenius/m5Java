@@ -10,6 +10,7 @@ Carlos Carrasco --%>
 <head>
 <meta charset="UTF-8">
 <title>Capacitacion</title>
+<link rel="stylesheet" href="assets/stylesheet.css">
 
     </head>
     <body>
@@ -20,4 +21,7 @@ Carlos Carrasco --%>
             <a href="inicio.jsp" class="btn">Regresar al inicio</a>
         </div>
     </body>
+    <footer>
+<%@include file= "FIJOS/Footer.jsp" %>
+</footer>
     </html>

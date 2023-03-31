@@ -10,7 +10,7 @@ Carlos Carrasco --%>
 <head>
 <meta charset="UTF-8">
 <title>Confirmación de contacto</title>
-<link rel="stylesheet" href="/EjercicioIV/src/main/webapp/assets/stylesheet.css">
+<link rel="stylesheet" href="assets/stylesheet.css">
    
     
     </head>
@@ -22,4 +22,7 @@ Carlos Carrasco --%>
             <a href="inicio.jsp" class="btn">Regresar al inicio</a>
         </div>
     </body>
+    <footer>
+<%@include file= "FIJOS/Footer.jsp" %>
+</footer>
     </html>

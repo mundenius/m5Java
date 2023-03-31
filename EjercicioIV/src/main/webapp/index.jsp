@@ -10,7 +10,7 @@ Carlos Carrasco --%>
 <head>
 <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="/EjercicioIV/src/main/webapp/assets/stylesheet.css">
+    <link rel="stylesheet" href="assets/stylesheet.css">
 
 
 </head>
@@ -19,7 +19,7 @@ Carlos Carrasco --%>
 	<div class="grad"></div>
 	<div class="header">
 		<div>
-			Site<span>Random</span>
+			<h1>Inicie sesion</h1>
 		</div>
 	</div>
 	<br>
@@ -41,4 +41,7 @@ Carlos Carrasco --%>
 		</div>
 	<% } %>
 </body>
+<footer>
+<%@include file= "FIJOS/Footer.jsp" %>
+</footer>
 </html>
