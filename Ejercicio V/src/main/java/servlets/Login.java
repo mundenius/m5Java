@@ -1,6 +1,12 @@
 package servlets;
 
 import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import java.util.*;
 
@@ -48,7 +54,7 @@ public class Login extends HttpServlet {
 
 		
 		if(usuario == null || password == null || !validacionDatos(usuario,password)) {
-			request.setAttribute("datosInvalidos", "Los datos ingresados no coinciden");
+			request.setAttribute("datosInvalidos", "Usuario y/o contraseñas incorrectos");
 			request.getRequestDispatcher("/index.jsp").forward(request, response);
 		}
 		else {

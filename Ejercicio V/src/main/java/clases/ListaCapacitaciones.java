@@ -1,6 +1,8 @@
-package servlets;
+package clases;
 
 import java.util.ArrayList;
+
+import clases.Capacitacion;
 
 public class ListaCapacitaciones {
 
