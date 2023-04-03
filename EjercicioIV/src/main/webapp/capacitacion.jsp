@@ -24,27 +24,34 @@ Carlos Carrasco --%>
 
 	<main>
 		<form action="FormularioCrearCapacitacion" method="POST"  onsubmit="return validarDuracion()">
-			<label for="idCapacitacion">ID Capacitación:</label>
-			<input type="text" id="idcapacitacion" name="idCapacitacion" required><br><br>
+			<label for="idCapacitacion"><strong>ID Capacitación:</strong></label>
+			<input type="text" id="idcapacitacion" name="idCapacitacion" required 
+			oninvalid="this.setCustomValidity('Ingrese un numero de ID')"
+			onchange="this.setCustomValidity('')" type="text" /><br><br>
+			
+			<label for="cliente_rutcliente"><strong>RUT Cliente:</strong></label>
+			<input type="text" id="cliente_rutcliente" name="cliente_rutcliente"  required 
+			oninvalid="this.setCustomValidity('Ingrese Rut')"
+			onchange="this.setCustomValidity('')" type="text" /><br><br>
+			
+			<label for="lugar"><strong>Lugar:</strong></label>
+			<input type="text" id="lugar" name="lugar"  required 
+			oninvalid="this.setCustomValidity('Ingrese una dirección para la capacitación')"
+			onchange="this.setCustomValidity('')" type="text"/><br><br>
 
-			<label for="fecha">Fecha:</label>
+			<label for="fecha"><strong>Fecha:</strong></label> 
 			<input type="date" id="fecha" name="fecha" required><br><br> 
 			
-			<label for="hora">Hora:</label>
-			<input type="time" id="hora" name="hora" required>
+			<label for="hora"><strong>Hora:</strong></label>
+			<input type="time" id="hora" name="hora" required><br><br>
 
-			<label for="lugar">Lugar:</label>
-			<input type="text" id="lugar" name="lugar">
+			<label for="duracion"><strong>Duración (en minutos):</strong></label>  
+			<input type="number" id="duracion" name="duracion" required><br><br>
 			
-			<label for="duracion">Duración (minutos):</label>  
-			<input type="number" id="duracion" name="duracion" required>minutos<br><br>
 			
-			<label for="cliente_rutcliente">RUT Cliente:</label>
-			<input type="text" id="cliente_rutcliente" name="cliente_rutcliente">
 
 			<script>
 				const duracionInput = document.getElementById('duracion');
-
 				duracionInput
 						.addEventListener(
 								'change',

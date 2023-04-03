@@ -10,6 +10,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.Time;
+
+
 
 @WebServlet(name = "FormularioCrearCapacitacion", urlPatterns = "/FormularioCrearCapacitacion")
 public class FormularioCrearCapacitacion extends HttpServlet {
@@ -33,12 +36,12 @@ public class FormularioCrearCapacitacion extends HttpServlet {
 		ListaCapacitaciones lista1 = new ListaCapacitaciones();
 		Capacitacion capacitacion = new Capacitacion();
 
-		String idCapacitacion = request.getParameter("idCapacitacion");
+		String idCapacitacion = request.getParameter("idCapacitacion"); 
 		String fechaCap = request.getParameter("fecha");
 		String hora = request.getParameter("hora");
-		String lugar = request.getParameter("lugar");
-		String duracionCap = request.getParameter("duracion");
-		String cliente_rutcliente = request.getParameter("cliente_rutcliente");
+		String lugar = request.getParameter("lugar"); 
+		String duracionCap = request.getParameter("duracion"); 
+		int cliente_rutcliente = Integer.parseInt(request.getParameter("cliente_rutcliente")); 
 
 		Date fecha = null;
 		if (fechaCap != null && !fechaCap.isEmpty()) {
@@ -55,7 +58,8 @@ public class FormularioCrearCapacitacion extends HttpServlet {
 		    duracion = Integer.parseInt(duracionCap);
 		}
 		
-
+		
+		
 		// Imprimir los valores obtenidos en la consola
 		System.out.println(idCapacitacion);
 		System.out.println(fecha);
@@ -85,6 +89,7 @@ public class FormularioCrearCapacitacion extends HttpServlet {
 
 		lista1.listarCapacitaciones(capacitacion);
 		return;
+		//request.setAttribute("capacitaciones", ListaCapacitaciones);
 
 	}
 
@@ -97,14 +102,14 @@ public class FormularioCrearCapacitacion extends HttpServlet {
 		String hora;
 		String lugar;
 		String duracionCap;
-		String cliente_rutcliente;
+		int cliente_rutcliente;
 		
 		public Capacitacion() {
 		}
 
 
 		public Capacitacion(String idCapacitacion, String fechaCap, String hora, String lugar, String duracionCap,
-				String cliente_rutcliente) {
+				int cliente_rutcliente) {
 			this.idCapacitacion = idCapacitacion;
 			this.fechaCap = fechaCap;
 			this.hora = hora;
@@ -153,11 +158,11 @@ public class FormularioCrearCapacitacion extends HttpServlet {
 			return duracionCap;
 		}
 
-		public void setCliente_rutcliente(String cliente_rutcliente) {
+		public void setCliente_rutcliente(int cliente_rutcliente) {
 			this.cliente_rutcliente = cliente_rutcliente;
 		}
 
-		public String getCliente_rutcliente() {
+		public int getCliente_rutcliente() {
 			return cliente_rutcliente;
 		}
 
