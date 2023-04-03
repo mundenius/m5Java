@@ -23,7 +23,7 @@ Carlos Carrasco --%>
 
 
 	<main>
-		<form action="FormularioCrearCapacitacion" method="POST"  onsubmit="return validarDuracion()">
+		<form action="CrearCapacitacion" method="POST"  onsubmit="return validarDuracion()">
 			<label for="idCapacitacion"><strong>ID Capacitación:</strong></label>
 			<input type="text" id="idcapacitacion" name="idCapacitacion" required 
 			oninvalid="this.setCustomValidity('Ingrese un numero de ID')"
