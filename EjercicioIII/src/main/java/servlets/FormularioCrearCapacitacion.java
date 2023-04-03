@@ -126,7 +126,7 @@ public class FormularioCrearCapacitacion extends HttpServlet {
         
         @Override 
         public String toString() {
-        	return "Nombre Capacitacion: " + getNombreCap() + "\nDescripcion Capacitacion: " + getDescripcion() 
+        	return "\nNombre Capacitacion: " + getNombreCap() + "\nDescripcion Capacitacion: " + getDescripcion() 
         	+ "\nFecha Capacitacion: " + getFechaCap() + "\nDuracion Capacitacion: " + getDuracionCap();
         }
 	}

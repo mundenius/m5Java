@@ -1,8 +1,8 @@
-package servlets;
+package clases;
 
 import java.util.ArrayList;
 
-import servlets.FormularioCrearCapacitacion.Capacitacion;
+import clases.Capacitacion;
 
 public class ListaCapacitaciones {
 

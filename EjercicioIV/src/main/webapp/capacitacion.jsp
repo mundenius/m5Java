@@ -1,4 +1,8 @@
-<%-- comentarios, agregar autores etc --%>
+<%-- autores:
+Javiera Saavedra
+Valentina Saldias
+Adrian Fredes 
+Carlos Carrasco --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -7,86 +11,47 @@
 <head>
 <meta charset="UTF-8">
 <title>Ingrese capacitacion</title>
-<style>
-body {
-	font-family: Arial, sans-serif;
-	background-color: #D1F2EB;
-	color: #FFFFFF;
-}
+<link rel="stylesheet" href="assets/stylesheet.css">
 
-h1 {
-	text-align: center;
-	margin-top: 50px;
-	color: #333333;
-}
-
-form {
-	width: 50%;
-	margin: 50px auto;
-	background-color: #FFFFFF;
-	border-radius: 5px;
-	padding: 20px;
-	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-}
-
-label {
-	display: block;
-	margin-top: 10px;
-	color: #333333;
-}
-
-input[type="text"], input[type="email"], textarea {
-	width: 100%;
-	padding: 10px;
-	margin-top: 5px;
-	margin-bottom: 10px;
-	border-radius: 5px;
-	border: 1px solid #CCCCCC;
-	font-size: 16px;
-	color: #333333;
-	box-sizing: border-box;
-}
-
-input[type="submit"] {
-	width: 100%;
-	background-color: #333333;
-	color: #FFFFFF;
-	padding: 10px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	font-size: 16px;
-	margin-top: 10px;
-}
-
-input[type="submit"]:hover {
-	background-color: #555555;
-}
-</style>
 </head>
 <body>
 
 	<header>
 		<h1>Crear Capacitación</h1>
 	</header>
+	<%@include file = "FIJOS/Navbar.jsp"%>
 
 
 	<main>
-		<form action="FormularioCrearCapacitacion" method="POST"  onsubmit="return validarDuracion()">
-			<label for="nombre">Nombre de la capacitación:</label> 
-			<input type="text" id="nombre" name="nombreCap" required><br><br>
+		<form action="CrearCapacitacion" method="POST"  onsubmit="return validarDuracion()">
+			<label for="idCapacitacion"><strong>ID Capacitación:</strong></label>
+			<input type="text" id="idcapacitacion" name="idCapacitacion" required 
+			oninvalid="this.setCustomValidity('Ingrese un numero de ID')"
+			onchange="this.setCustomValidity('')" type="text" /><br><br>
 			
-			<label for="descripcion">Descripción:</label>
-			<textarea id="descripcion" name="descripcion" required></textarea><br><br>
+			<label for="cliente_rutcliente"><strong>RUT Cliente:</strong></label>
+			<input type="text" id="cliente_rutcliente" name="cliente_rutcliente"  required 
+			oninvalid="this.setCustomValidity('Ingrese Rut')"
+			onchange="this.setCustomValidity('')" type="text" /><br><br>
 			
-			<label for="fecha">Fecha de inicio:</label> 
+			<label for="lugar"><strong>Lugar:</strong></label>
+			<input type="text" id="lugar" name="lugar"  required 
+			oninvalid="this.setCustomValidity('Ingrese una dirección para la capacitación')"
+			onchange="this.setCustomValidity('')" type="text"/><br><br>
+
+			<label for="fecha"><strong>Fecha:</strong></label> 
 			<input type="date" id="fecha" name="fecha" required><br><br> 
-			 
-			<label for="duracion">Duración (minutos):</label>  
-			<input type="number" id="duracion" name="duracion" required>minutos<br><br>
+			
+			<label for="hora"><strong>Hora:</strong></label>
+			<input type="time" id="hora" name="hora" required><br><br>
+
+			<label for="duracion"><strong>Duración (en minutos):</strong></label>  
+			<input type="number" id="duracion" name="duracion" required><br><br>
+			
+			
+
 			<script>
 				const duracionInput = document.getElementById('duracion');
-
 				duracionInput
 						.addEventListener(
 								'change',
@@ -108,4 +73,7 @@ input[type="submit"]:hover {
 	</main>
 
 </body>
+<footer>
+<%@include file= "FIJOS/Footer.jsp" %>
+</footer>
 </html>

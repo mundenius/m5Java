@@ -1,6 +1,7 @@
 package conexion;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 public class Singleton {
 
@@ -29,9 +30,9 @@ public class Singleton {
 		public static Connection getConnection() {
 			if(conn == null) {
 				new Singleton();
-				System.out.println("se creo la conexion"); //DEBUG
+				System.out.println("Se creo la conexion"); //DEBUG
 			}
-			System.out.println("retorno conexion..."); //DEBUG
+			System.out.println("Retorno conexion..."); //DEBUG
 			return conn;
 		}
 }
