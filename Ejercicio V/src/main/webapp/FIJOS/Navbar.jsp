@@ -12,12 +12,13 @@
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" aria-current="page"
 					href="${pageContext.request.contextPath}/inicio.jsp">Inicio</a></li>
+					
 				<li class="nav-item"><a class="nav-link"
-					href="${pageContext.request.contextPath}/contacto.jsp">Contacto</a>
-				</li>
+					href="${pageContext.request.contextPath}/contacto.jsp">Contacto</a></li>
+				
 				<li class="nav-item"><a class="nav-link"
-					href="${pageContext.request.contextPath}/capacitacion.jsp">Capacitación</a>
-				</li>
+					href="${pageContext.request.contextPath}/capacitacion.jsp">Capacitación</a></li>
+				
 				<li class="nav-item"><a class="nav-link"
 					href="${pageContext.request.contextPath}/listaCapacitaciones.jsp">Lista
 						de Capacitaciones</a></li>
@@ -52,7 +53,7 @@
 				%>
 
 			<li class="nav-item"><a class="nav-link"
-				href="${pageContext.request.contextPath}/index.jsp">Login</a></li>
+				href="${pageContext.request.contextPath}/index.jsp">Cerrar Sesión</a></li>
 
 				<%
 				}
