@@ -21,6 +21,7 @@ Carlos Carrasco --%>
 <body>
 	<header>
 		<%@include file= "FIJOS/Header.jsp" %>
+		<h2>Bienvenidos</h2>
 	</header>
 	<nav>
 	
