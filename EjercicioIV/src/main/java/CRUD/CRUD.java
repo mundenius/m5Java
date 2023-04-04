@@ -1,4 +1,4 @@
-package servlets.CRUD;
+package CRUD;
 
 import java.util.List;
 
