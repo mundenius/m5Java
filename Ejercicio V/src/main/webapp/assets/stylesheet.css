@@ -12,7 +12,11 @@ h1 {
 	margin-top: 50px;
 	color: #333333;
 }
-
+h2{
+	text-align: center;
+	margin-top: 50px;
+	color: #333333;
+}
 p{
     color: grey;
 }
