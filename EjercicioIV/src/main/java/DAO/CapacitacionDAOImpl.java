@@ -5,6 +5,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.Time;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -39,12 +40,17 @@ public class CapacitacionDAOImpl implements ICapacitacionDAO{
 						lista.add(cap);
 						System.out.println("Capacitacion creada");
 					}
-					st.close();
-					rs.close();
-//					conn.close();
 					System.out.println("saliendo try/catch listarTodos()");
 				}catch(Exception e) {
 					System.out.println(e + " LISTAR, CAPACITACION DAO IMPL");
+				}finally {
+					try {
+						st.close();
+						rs.close();
+						conn.close();
+					}catch(Exception e) {
+						System.out.println(e);
+					}
 				}
 				
 				return lista;
@@ -68,7 +74,7 @@ public class CapacitacionDAOImpl implements ICapacitacionDAO{
 			PreparedStatement st = conn.prepareStatement(sql);
 			st.setInt(1, Integer.parseInt(capacitacion.getIdCapacitacion()));
 			st.setDate(2, StringToDate(capacitacion.getFechaCap()));
-			st.setTime(3, java.sql.Time.valueOf(capacitacion.getHora()) );
+			st.setTime(3, Time.valueOf(capacitacion.getHora()) );
 			st.setString(4, capacitacion.getLugar());
 			st.setInt(5, Integer.parseInt(capacitacion.getDuracionCap()));
 			st.setInt(6, capacitacion.getCliente_rutcliente());
