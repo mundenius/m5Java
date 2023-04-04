@@ -1,0 +1,49 @@
+.context-dark, .bg-gray-dark, .bg-primary {
+    color: #808080;
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+    color: #808080;
+}
+.nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 23px;
+    font-family: serif;
+    text-transform: uppercase;
+    color: #808080;
+}
+.social-container .col {
+    border: #808080;
+}
+.nav-list li a:before {
+    content: "\f14f";
+    font-family: serif;
+    color: #808080;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -28px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .22s ease;
+}

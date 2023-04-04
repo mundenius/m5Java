@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<web-app>
+<servlet>
+<servlet-name>ListarCapacitacion</servlet-name>
+<servlet-class>CRUD.Capacitacion_CRUD.ListarCapacitacion</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>ListarCapacitacion</servlet-name>
+<url-pattern>/ListarCapacitacion</url-pattern>
+</servlet-mapping>
+</web-app>
