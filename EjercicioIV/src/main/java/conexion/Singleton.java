@@ -11,7 +11,7 @@ public class Singleton {
 
 		//Constructor
 		private Singleton() {
-			String url="jdbc:mysql://127.0.0.1:3306/asesriaprevriesgos";
+			String url="jdbc:mysql://127.0.0.1:3306/asesoriaprevriesgos";
 			String driver = "com.mysql.cj.jdbc.Driver";
 			
 			String user = "root";

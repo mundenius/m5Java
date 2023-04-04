@@ -17,7 +17,7 @@ import DAO.ICapacitacionDAO;
 /**
  * Servlet implementation class ListarCapacitacion
  */
-@WebServlet("/ListarCapacitacion")
+//@WebServlet("/ListarCapacitacion")
 public class ListarCapacitacion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -34,9 +34,9 @@ public class ListarCapacitacion extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		Connection conn = Singleton.getConnection();
+//		Connection conn = Singleton.getConnection();
 		try {
-			System.out.println("entering try/catch svLP...");
+			System.out.println("entering try/catch sv listar capacitaciones...");
 			//se crea conexion con la base de datos
 //			List<Persona> listapersona = new ArrayList<Persona>();  otra forma 
 			
@@ -45,11 +45,11 @@ public class ListarCapacitacion extends HttpServlet {
 //			listapersona = perdao.listarTodos();	otra forma
 			request.setAttribute("listacapacitacion", capdao.listarTodos()); //listapersona	otra forma
 			System.out.println("request.setAttribute de ListarCapacitacion exitoso"); //DEBUG
-			RequestDispatcher dispatcher = request.getRequestDispatcher("listaCapacitaciones.jsp");
-
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/listaCapacitaciones.jsp");
 			dispatcher.forward(request, response);
+			
 			System.out.println("se despacho el forward de request,response");
-			conn.close();
+//			conn.close();
 		}catch(Exception e) {
 			System.out.println(e + " LISTAR CAPACITACION SERVLET");
 		}
