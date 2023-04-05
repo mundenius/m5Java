@@ -1,6 +1,7 @@
-package modelo.CRUD.Usuario_CRUD;
+package controlador;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,19 +10,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import modelo.DAO.UsuarioDAO.*;
-
 /**
- * Servlet implementation class ListarUsuario
+ * Servlet implementation class NavBar
  */
-//@WebServlet("/ListarUsuario")
-public class ListarUsuario extends HttpServlet {
+@WebServlet("/NavBar")
+public class Navbar extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ListarUsuario() {
+    public Navbar() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,20 +30,18 @@ public class ListarUsuario extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		try {
-			System.out.println("entering try/catch sv listar usuarios");
-			IUsuarioDAO udao = new ImplUsuarioDAO();
-			System.out.println("se creo la instancia udao"); //DEBUG
-//			listausuario = udao.listarTodos();	otra forma
-			request.setAttribute("listausuarios", udao.listarTodos()); //listausuario	otra forma
-			System.out.println("request.setAttribute de ListarUsuario exitoso"); //DEBUG
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/listaUsuarios.jsp");
-			dispatcher.forward(request, response);
-			
-			System.out.println("se despacho el forward de request,response");
-		}catch(Exception e) {
-			System.out.println(e + " LISTAR USUARIO SERVLET");
-		}
+		String inicio = "Inicio";
+		String cliente = "Cliente";
+		String admin = "Administrativo";
+//		String prof = "Profesional";
+		
+		request.setAttribute("ini",inicio);
+		
+		request.setAttribute("cli",cliente);
+		RequestDispatcher rd = request.getRequestDispatcher("contacto.jsp");
+		rd.forward(request, response);
+		
+		
 	}
 
 	/**

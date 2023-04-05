@@ -1,31 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>EjercicioV</display-name>
-  
-  <servlet>
-  <servlet-name>ListarCapacitacion</servlet-name>
-  <servlet-class>modelo.CRUD.Capacitacion_CRUD.ListarCapacitacion</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>ListarCapacitacion</servlet-name>
-  <url-pattern>/ListarCapacitacion</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  <servlet-name>CrearCapacitacion</servlet-name>
-  <servlet-class>modelo.CRUD.Capacitacion_CRUD.CrearCapacitacion</servlet-class>
-  </servlet>
- <servlet-mapping>
- <servlet-name>CrearCapacitacion</servlet-name>
- <url-pattern>/CrearCapacitacion</url-pattern>
- </servlet-mapping>
- 
-  <servlet>
-  <servlet-name>CerrarSesion</servlet-name>
-  <servlet-class>controlador.CerrarSesion</servlet-class>
-  </servlet>
- <servlet-mapping>
- <servlet-name>CerrarSesion</servlet-name>
- <url-pattern>/CerrarSesion</url-pattern>
- </servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>EjercicioV</display-name>
+
+	<servlet>
+		<servlet-name>ListarCapacitacion</servlet-name>
+		<servlet-class>modelo.CRUD.Capacitacion_CRUD.ListarCapacitacion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListarCapacitacion</servlet-name>
+		<url-pattern>/ListarCapacitacion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CrearCapacitacion</servlet-name>
+		<servlet-class>modelo.CRUD.Capacitacion_CRUD.CrearCapacitacion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CrearCapacitacion</servlet-name>
+		<url-pattern>/CrearCapacitacion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CerrarSesion</servlet-name>
+		<servlet-class>controlador.CerrarSesion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CerrarSesion</servlet-name>
+		<url-pattern>/CerrarSesion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>VistaContacto</servlet-name>
+		<servlet-class>controlador.VistaContacto</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VistaContacto</servlet-name>
+		<url-pattern>/VistaContacto</url-pattern>
+	</servlet-mapping>
 </web-app>
