@@ -27,7 +27,7 @@
 				if (request.getSession().getAttribute("nombre") != null) {
 				%>
 				<li class="nav-item"><a class="nav-link"
-					href="/CerrarSesion">Cerrar Sesión</a></li>
+					href="CerrarSesion">Cerrar Sesión</a></li>
 				<%-- <li class="dropdown">
 					<button class="btn btn-secondary dropdown-toggle" type="button"
 						id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"

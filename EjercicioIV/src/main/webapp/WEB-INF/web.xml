@@ -9,4 +9,13 @@
 <servlet-name>ListarCapacitacion</servlet-name>
 <url-pattern>/ListarCapacitacion</url-pattern>
 </servlet-mapping>
+
+<servlet>
+<servlet-name>CrearCapacitacion</servlet-name>
+<servlet-class>CRUD.Capacitacion_CRUD.CrearCapacitacion</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>CrearCapacitacion</servlet-name>
+<url-pattern>/CrearCapacitacion</url-pattern>
+</servlet-mapping>
 </web-app>

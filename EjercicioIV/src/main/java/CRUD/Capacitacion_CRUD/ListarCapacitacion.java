@@ -34,14 +34,12 @@ public class ListarCapacitacion extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		Connection conn = Singleton.getConnection();
 		try {
 			System.out.println("entering try/catch sv listar capacitaciones...");
-			//se crea conexion con la base de datos
 //			List<Persona> listapersona = new ArrayList<Persona>();  otra forma 
 			
 			ICapacitacionDAO capdao = new CapacitacionDAOImpl();
-			System.out.println("se creo la listapersona e instancia de perdao");
+			System.out.println("se creo instancia de capdao");
 //			listapersona = perdao.listarTodos();	otra forma
 			request.setAttribute("listacapacitacion", capdao.listarTodos()); //listapersona	otra forma
 			System.out.println("request.setAttribute de ListarCapacitacion exitoso"); //DEBUG
