@@ -10,11 +10,12 @@ Carlos Carrasco --%>
 <head>
 <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="/vista/assets/stylesheet.css">
+    <link rel="stylesheet" href="vista/assets/crearUsuarioStyle.css">
 
 
 </head>
 <body>
+
 	<div class="body"></div>
 	<div class="grad"></div>
 	<div class="header">

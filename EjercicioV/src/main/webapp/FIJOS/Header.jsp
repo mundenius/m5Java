@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/vista/assets/HeaderStyle.css">
+<link rel="stylesheet" href="vista/assets/HeaderStyle.css">
 <div id="wrap">
 	<header class="masthead">
 		<div class="container text-center">
