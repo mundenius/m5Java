@@ -7,18 +7,13 @@ import java.sql.Statement;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.sql.Connection;
 import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
-import modelo.clases.Capacitacion;
 import modelo.clases.Usuario;
 import modelo.conexion.Singleton;
 
-import modelo.conexion.Singleton;
 
-public class ImplUsuarioDAO implements IUsuarioDAO{
+public class ImplUsuarioDAO implements IUsuarioDAO {
 
 	ResultSet rs;
 	Statement st;
@@ -26,9 +21,9 @@ public class ImplUsuarioDAO implements IUsuarioDAO{
 	@Override
 	public List<Usuario> listarTodos() {
 		// TODO Auto-generated method stub
-		//se instancia una nueva conexion con el singleton
+		// se instancia una nueva conexion con el singleton
 		Connection conn = Singleton.getConnection();
-		System.out.println("llegó la conexion.. " + conn); //debug
+		System.out.println("llegó la conexion.. " + conn); // debug
 		// TODO Auto-generated method stub
 		List<Usuario> lista = new ArrayList<Usuario>();
 		try {
@@ -36,49 +31,48 @@ public class ImplUsuarioDAO implements IUsuarioDAO{
 			PreparedStatement st = conn.prepareStatement(sql);
 			rs = st.executeQuery(sql);
 			System.out.println("query ejecutada");
-			while(rs.next()) {
+			while (rs.next()) {
 				Usuario us = new Usuario();
-				us.setIdUsuario(String.valueOf(rs.getInt(1))); // el numero es por la columna en la base de datos
-				us.setFechaCap(String.valueOf(rs.getDate(2)));
-				us.setHora(String.valueOf(rs.getTime(3)));
-				us.setLugar(rs.getString(4));
-				us.setDuracionCap(String.valueOf(rs.getInt(5)));
-				us.setCliente_rutcliente(rs.getInt(6));
+				us.setIdUsuario(rs.getInt(1)); // el numero es por la columna en la base de datos
+				us.setNombre(rs.getString(2));
+				us.setApellido(rs.getString(3));
+				us.setFechaNacimiento(String.valueOf(rs.getDate(4)));
+				us.setRut(rs.getLong(5));
 				lista.add(us);
 				System.out.println("Capacitacion creada");
 			}
 			System.out.println("saliendo try/catch listarTodos()");
-		}catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println(e + " LISTAR, CAPACITACION DAO IMPL");
-		}finally {
+		} finally {
 			try {
 				st.close();
 				rs.close();
 				conn.close();
-			}catch(Exception e) {
-				System.out.println(e);
+			} catch (Exception e) {
+				System.out.println(e + " TRY/CATCH close connections");
 			}
 		}
-		
+
 		return lista;
 	}
 
 	@Override
 	public void registrar(Usuario d) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void actualizar(Usuario d) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void eliminar(int id) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
