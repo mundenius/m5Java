@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="/vista/assets/crearUsuarioStyle.css">
+<link rel="stylesheet" href="assets/crearUsuarioStyle.css">
 <title>Crear Usuario</title>
 </head>
 <body>

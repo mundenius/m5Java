@@ -3,7 +3,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 		<a class="navbar-brand"
-			href="/inicio.jsp">Prevencion
+			href="WEB-INF/inicio.jsp">Prevencion
 			de Riesgo</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 			data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
@@ -13,16 +13,20 @@
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" aria-current="page"
-					href="inicio.jsp">Inicio</a></li>
+					href="/inicio.jsp">Inicio</a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="vista/contacto.jsp">Contacto</a>
+					href="/contacto.jsp">Contacto</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="vista/capacitacion.jsp">Capacitacion</a>
+					href="/capacitacion.jsp">Capacitacion</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="ListarCapacitacion">Lista
+					href="/listaCapacitaciones.jsp">Lista
 						de Capacitaciones</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="/usuario.jsp">Crear Usuario</a></li>	
+				<li class="nav-item"><a class="nav-link"
+					href="listaUsuario.jsp">Lista de Usuarios</a></li>		
 
 
 				<%
