@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-light">
 	<div class="container-fluid">
 		<a class="navbar-brand"
-			href="/inicio.jsp">Prevención
+			href="/inicio.jsp">Prevenciï¿½n
 			de Riesgo</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 			data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
@@ -16,7 +16,7 @@
 					href="contacto.jsp">Contacto</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="capacitacion.jsp">Capacitación</a>
+					href="capacitacion.jsp">Capacitaciï¿½n</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
 					href="ListarCapacitacion">Lista
@@ -27,25 +27,25 @@
 				if (request.getSession().getAttribute("nombre") != null) {
 				%>
 				<li class="nav-item"><a class="nav-link"
-					href="CerrarSesion">Cerrar Sesión</a></li>
+					href="CerrarSesion">Cerrar Sesiï¿½n</a></li>
 				<%-- <li class="dropdown">
 					<button class="btn btn-secondary dropdown-toggle" type="button"
 						id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false">Menú <% %></button>
+						aria-expanded="false">Menï¿½ <% %></button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
 						<a class="dropdown-item" type="button">Editar
 							Usuario</a>
-						<a class="dropdown-item" type="button" href="${pageContext.request.contextPath}/Login">Cerrar Sesión</a>
+						<a class="dropdown-item" type="button" href="${pageContext.request.contextPath}/Login">Cerrar Sesiï¿½n</a>
 					</div>
 				</li> --%>
 				<%-- 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" role="button"
-					data-bs-toggle="dropdown" aria-expanded="false"> Menú Usuario </a>
+					data-bs-toggle="dropdown" aria-expanded="false"> Menï¿½ Usuario </a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="#">Configuración</a></li>
+						<li><a class="dropdown-item" href="#">Configuraciï¿½n</a></li>
 						<li><a class="dropdown-item"
 							href="${pageContext.request.contextPath}/index.jsp">Cerrar
-								Sesión</a></li>
+								Sesiï¿½n</a></li>
 					</ul></li> --%>
 
 				<%
