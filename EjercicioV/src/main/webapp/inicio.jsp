@@ -20,11 +20,11 @@ Carlos Carrasco --%>
 </head>
 <body>
 	<header>
-		<%@include file= "FIJOS/Header.jsp" %>
+		<%@include file= "/FIJOS/Header.jsp" %>
 	</header>
 	<nav>
 	
-	<%@include file= "FIJOS/Navbar.jsp" %>
+	<%@include file= "/FIJOS/Navbar.jsp" %>
 <!-- 		<ul>
 			<li><a href="contacto.jsp">Contacto</a></li>
 			<li><a href="capacitacion.jsp">Crear Capacitación</a></li>
@@ -38,6 +38,6 @@ Carlos Carrasco --%>
 <br>
 <br>
 <footer>
-<%@include file= "FIJOS/Footer.jsp" %>
+<%@include file= "/FIJOS/Footer.jsp" %>
 </footer>
 </html>

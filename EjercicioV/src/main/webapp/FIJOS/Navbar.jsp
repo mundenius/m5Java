@@ -3,7 +3,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 		<a class="navbar-brand"
-			href="/vista/inicio.jsp">Prevenci�n
+			href="/inicio.jsp">Prevencion
 			de Riesgo</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 			data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
@@ -13,12 +13,12 @@
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" aria-current="page"
-					href="/vista/inicio.jsp">Inicio</a></li>
+					href="inicio.jsp">Inicio</a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="/vista/contacto.jsp">Contacto</a>
+					href="vista/contacto.jsp">Contacto</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="/vista/capacitacion.jsp">Capacitaci�n</a>
+					href="vista/capacitacion.jsp">Capacitacion</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
 					href="ListarCapacitacion">Lista
@@ -29,7 +29,7 @@
 				if (request.getSession().getAttribute("nombre") != null) {
 				%>
 				<li class="nav-item"><a class="nav-link"
-					href="CerrarSesion">Cerrar Sesi�n</a></li>
+					href="CerrarSesion">Cerrar Sesion</a></li>
 				<%-- <li class="dropdown">
 					<button class="btn btn-secondary dropdown-toggle" type="button"
 						id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
@@ -62,7 +62,6 @@
 				%>
 			</ul>
 		</div>
-	</div>
 
 </nav>
 

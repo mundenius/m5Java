@@ -12,12 +12,12 @@ Carlos Carrasco --%>
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="assets/stylesheet.css">
+<link rel="stylesheet" href="/vista/assets/stylesheet.css">
 <title>Lista Capacitaciones</title>
 </head>
 <body>
 	<h1>Lista de Capacitaciones</h1>
-	<%@include file="FIJOS/Navbar.jsp"%>
+	<%@include file="/FIJOS/Navbar.jsp"%>
 	<h2>Capacitaciones</h2>
 	<table>
 		<tr>
@@ -42,6 +42,6 @@ Carlos Carrasco --%>
 
 </body>
 <footer>
-	<%@include file="FIJOS/Footer.jsp"%>
+	<%@include file="/FIJOS/Footer.jsp"%>
 </footer>
 </html>

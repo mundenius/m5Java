@@ -19,7 +19,7 @@ Carlos Carrasco --%>
 	<header>
 		<h1>Crear Capacitación</h1>
 	</header>
-	<%@include file = "FIJOS/Navbar.jsp"%>
+	<%@include file = "/FIJOS/Navbar.jsp"%>
 
 
 	<main>
@@ -74,6 +74,6 @@ Carlos Carrasco --%>
 
 </body>
 <footer>
-<%@include file= "FIJOS/Footer.jsp" %>
+<%@include file= "/FIJOS/Footer.jsp" %>
 </footer>
 </html>
