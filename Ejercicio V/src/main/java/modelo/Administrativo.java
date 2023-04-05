@@ -1,8 +1,10 @@
 package modelo;
+import java.util.Scanner;
 
 public class Administrativo extends Usuario {
 	private String experienciaPrevia;
 	private String area;
+	Scanner sc = new Scanner(System.in);
 	
 	public Administrativo(Usuario usuario) {
 		super(usuario.getNombreUsuario(), usuario.getFechaNacimientoUsuario(), usuario.getRunUsuario());
@@ -19,7 +21,15 @@ public class Administrativo extends Usuario {
 	}
 
 	public void setExperienciaPrevia(String experienciaPrevia) {
-		this.experienciaPrevia = experienciaPrevia;
+		do {
+			if (experienciaPrevia.length() <= 100) {
+				this.experienciaPrevia = experienciaPrevia;
+				break;
+			} else {
+				System.out.println("La experiencia previa no debe exceder los 100 caracteres");
+				experienciaPrevia = sc.nextLine();
+			}
+		}while(true);
 	}
 
 	public String getArea() {
@@ -27,7 +37,15 @@ public class Administrativo extends Usuario {
 	}
 
 	public void setArea(String area) {
-		this.area = area;
+		do {
+			if (area.length() >= 5 && area.length() <=20) {
+				this.area = area;
+				break;
+			}else {
+				System.out.println("Ingrese un area mayor que 4 y menor que 20 caracteres");
+				area = sc.nextLine();
+			}
+		} while (true);
 	}
 
 	@Override
