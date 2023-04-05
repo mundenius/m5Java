@@ -1,7 +1,6 @@
-package modelo.CRUD.Usuario_CRUD;
+package modelo.CRUD.Capacitacion_CRUD;
 
 import java.io.IOException;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,19 +8,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import modelo.DAO.UsuarioDAO.*;
+import modelo.DAO.CapacitacionDAO.ImplCapacitacionDAO;
+import modelo.DAO.CapacitacionDAO.ICapacitacionDAO;
 
 /**
- * Servlet implementation class ListarUsuario
+ * Servlet implementation class ListarCapacitacion
  */
-//@WebServlet("/ListarUsuario")
-public class ListarUsuario extends HttpServlet {
+//@WebServlet("/ListarCapacitacion")
+public class ListarCapacitacion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ListarUsuario() {
+    public ListarCapacitacion() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,18 +32,18 @@ public class ListarUsuario extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		try {
-			System.out.println("entering try/catch sv listar usuarios");
-			IUsuarioDAO udao = new ImplUsuarioDAO();
-			System.out.println("se creo la instancia udao"); //DEBUG
-//			listausuario = udao.listarTodos();	otra forma
-			request.setAttribute("listausuarios", udao.listarTodos()); //listausuario	otra forma
-			System.out.println("request.setAttribute de ListarUsuario exitoso"); //DEBUG
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/listaUsuarios.jsp");
+			System.out.println("entering try/catch sv listar capacitaciones...");
+			ICapacitacionDAO capdao = new ImplCapacitacionDAO();
+			System.out.println("se creo la listapersona e instancia de perdao");
+//			listapersona = perdao.listarTodos();	otra forma
+			request.setAttribute("listacapacitacion", capdao.listarTodos()); //listapersona	otra forma
+			System.out.println("request.setAttribute de ListarCapacitacion exitoso"); //DEBUG
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/listaCapacitaciones.jsp");
 			dispatcher.forward(request, response);
 			
 			System.out.println("se despacho el forward de request,response");
 		}catch(Exception e) {
-			System.out.println(e + " LISTAR USUARIO SERVLET");
+			System.out.println(e + " LISTAR CAPACITACION SERVLET");
 		}
 	}
 

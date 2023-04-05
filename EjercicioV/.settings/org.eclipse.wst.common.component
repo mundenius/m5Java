@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
     <wb-module deploy-name="EjercicioV">
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/FIJOS"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/vista"/>
+                
         <property name="context-root" value="EjercicioV"/>
+                
         <property name="java-output-path" value="/EjercicioV/build/classes"/>
+            
     </wb-module>
+    
 </project-modules>
