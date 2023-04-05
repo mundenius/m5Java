@@ -4,7 +4,7 @@
   
   <servlet>
   <servlet-name>ListarCapacitacion</servlet-name>
-  <servlet-class>CRUD.Capacitacion_CRUD.ListarCapacitacion</servlet-class>
+  <servlet-class>modelo.CRUD.Capacitacion_CRUD.ListarCapacitacion</servlet-class>
   </servlet>
   <servlet-mapping>
   <servlet-name>ListarCapacitacion</servlet-name>
@@ -13,10 +13,19 @@
   
   <servlet>
   <servlet-name>CrearCapacitacion</servlet-name>
-  <servlet-class>CRUD.Capacitacion_CRUD.CrearCapacitacion</servlet-class>
+  <servlet-class>modelo.CRUD.Capacitacion_CRUD.CrearCapacitacion</servlet-class>
   </servlet>
  <servlet-mapping>
  <servlet-name>CrearCapacitacion</servlet-name>
  <url-pattern>/CrearCapacitacion</url-pattern>
+ </servlet-mapping>
+ 
+  <servlet>
+  <servlet-name>CerrarSesion</servlet-name>
+  <servlet-class>controlador.CerrarSesion</servlet-class>
+  </servlet>
+ <servlet-mapping>
+ <servlet-name>CerrarSesion</servlet-name>
+ <url-pattern>/CerrarSesion</url-pattern>
  </servlet-mapping>
 </web-app>

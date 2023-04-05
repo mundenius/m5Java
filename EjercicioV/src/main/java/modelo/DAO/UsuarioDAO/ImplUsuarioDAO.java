@@ -21,7 +21,7 @@ public class ImplUsuarioDAO implements IUsuarioDAO {
 	@Override
 	public List<Usuario> listarTodos() {
 		// TODO Auto-generated method stub
-		// se instancia una nueva conexion con el singleton
+		// se instancia una nueva conexion con el singleton a la base de datos
 		Connection conn = Singleton.getConnection();
 		System.out.println("llegó la conexion.. " + conn); // debug
 		// TODO Auto-generated method stub
@@ -39,11 +39,11 @@ public class ImplUsuarioDAO implements IUsuarioDAO {
 				us.setFechaNacimiento(String.valueOf(rs.getDate(4)));
 				us.setRut(rs.getLong(5));
 				lista.add(us);
-				System.out.println("Capacitacion creada");
+				System.out.println("Usuario creado");
 			}
 			System.out.println("saliendo try/catch listarTodos()");
 		} catch (Exception e) {
-			System.out.println(e + " LISTAR, CAPACITACION DAO IMPL");
+			System.out.println(e + " LISTAR, USUARIO DAO IMPL");
 		} finally {
 			try {
 				st.close();

@@ -4,15 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="assets/crearUsuarioStyle.css">
+<link rel="stylesheet" href="/vista/assets/crearUsuarioStyle.css">
 <title>Crear Usuario</title>
 </head>
 <body>
 <header>
-<%@include file= "FIJOS/Header.jsp" %>
+<%@include file= "/FIJOS/Header.jsp" %>
 </header>
 <nav>
-	<%@include file= "FIJOS/Navbar.jsp" %>
+	<%@include file= "/FIJOS/Navbar.jsp" %>
 </nav>
     <div class="signupFrm">
         <form action="" class="form">
@@ -43,6 +43,6 @@
       </div>
 </body>
 <footer>
-<%@include file= "FIJOS/Footer.jsp" %>
+<%@include file= "/FIJOS/Footer.jsp" %>
 </footer>
 </html>

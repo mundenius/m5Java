@@ -38,7 +38,7 @@ public class ListarCapacitacion extends HttpServlet {
 //			listapersona = perdao.listarTodos();	otra forma
 			request.setAttribute("listacapacitacion", capdao.listarTodos()); //listapersona	otra forma
 			System.out.println("request.setAttribute de ListarCapacitacion exitoso"); //DEBUG
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/listaCapacitaciones.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/listaCapacitaciones.jsp");
 			dispatcher.forward(request, response);
 			
 			System.out.println("se despacho el forward de request,response");

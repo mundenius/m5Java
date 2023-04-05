@@ -46,6 +46,6 @@ Carlos Carrasco --%>
 	<% } %>
 </body>
 <footer>
-<%@include file= "/vista/FIJOS/Footer.jsp" %>
+<%@include file= "/FIJOS/Footer.jsp" %>
 </footer>
 </html>

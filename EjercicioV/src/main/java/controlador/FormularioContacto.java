@@ -40,7 +40,7 @@ public class FormularioContacto extends HttpServlet {
 		request.setAttribute("mensaje", mensaje);
 		
 
-		 response.sendRedirect("confirmacionContacto.jsp");
+		 response.sendRedirect("vista/paginas/confirmacionContacto.jsp");
 		 return;
 
 		
