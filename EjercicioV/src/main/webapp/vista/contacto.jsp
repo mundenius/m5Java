@@ -16,7 +16,7 @@ Carlos Carrasco --%>
 <body>
 
 	<h1>Contacto</h1>
-<%@include file = "FIJOS/Navbar.jsp"%>
+<%@include file = "/FIJOS/Navbar.jsp"%>
 	<form action="FormularioContacto" method="POST">
 		<label>Nombre:</label> <input type="text" name="nombre" required>
 		
@@ -31,6 +31,6 @@ Carlos Carrasco --%>
 
 </body>
 <footer>
-<%@include file= "FIJOS/Footer.jsp" %>
+<%@include file= "/FIJOS/Footer.jsp" %>
 </footer>
 </html>

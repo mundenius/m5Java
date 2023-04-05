@@ -34,9 +34,9 @@ public class ListarUsuario extends HttpServlet {
 		try {
 			System.out.println("entering try/catch sv listar usuarios");
 			IUsuarioDAO udao = new ImplUsuarioDAO();
-			System.out.println("se creo la instancia udao");
+			System.out.println("se creo la instancia udao"); //DEBUG
 //			listausuario = udao.listarTodos();	otra forma
-			request.setAttribute("listacapacitacion", udao.listarTodos()); //listausuario	otra forma
+			request.setAttribute("listausuarios", udao.listarTodos()); //listausuario	otra forma
 			System.out.println("request.setAttribute de ListarUsuario exitoso"); //DEBUG
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/listaUsuarios.jsp");
 			dispatcher.forward(request, response);
