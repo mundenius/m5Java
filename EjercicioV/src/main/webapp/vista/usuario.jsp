@@ -24,27 +24,27 @@
           </div>
     
           <div class="inputContainer">
-            <input type="text" class="input" placeholder="a">
+            <input type="text" class="input" placeholder="nombre">
             <label for="" class="label">Nombre: </label>
           </div>
     
           <div class="inputContainer">
-            <input type="text" class="input" placeholder="a">
+            <input type="text" class="input" placeholder="apellido">
             <label for="" class="label">Apellido: </label>
           </div>
     
           <div class="inputContainer">
-            <input type="date" class="input" placeholder="a">
+            <input type="date" class="input">
             <label for="" class="label">Fecha de nacimiento: </label>
           </div>
           
           <div class="inputContainer">
-            <input type="text" class="input" placeholder="a">
+            <input type="text" class="input" placeholder="11111111-1">
             <label for="" class="label">Rut: </label>
           </div>
     
     
-          <input type="submit" class="submitBtn" value="Sign up">
+          <input type="submit" class="submitBtn" value="Crear usuario">
         </form>
       </div>
 </body>
