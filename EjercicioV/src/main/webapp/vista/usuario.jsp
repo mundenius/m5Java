@@ -20,23 +20,29 @@
     
           <div class="inputContainer">
             <input type="text" class="input" placeholder="a">
-            <label for="" class="label">Email</label>
+            <label for="" class="label">Id Usuario: </label>
           </div>
     
           <div class="inputContainer">
             <input type="text" class="input" placeholder="a">
-            <label for="" class="label">Nombre de Usuario</label>
+            <label for="" class="label">Nombre: </label>
           </div>
     
           <div class="inputContainer">
             <input type="text" class="input" placeholder="a">
-            <label for="" class="label">Contraseña</label>
+            <label for="" class="label">Apellido: </label>
           </div>
     
           <div class="inputContainer">
-            <input type="text" class="input" placeholder="a">
-            <label for="" class="label">Repita la Contraseña</label>
+            <input type="date" class="input" placeholder="a">
+            <label for="" class="label">Fecha de nacimiento: </label>
           </div>
+          
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="a">
+            <label for="" class="label">Rut: </label>
+          </div>
+    
     
           <input type="submit" class="submitBtn" value="Sign up">
         </form>
