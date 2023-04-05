@@ -31,7 +31,6 @@ public class ListarCapacitacion extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		Connection conn = Singleton.getConnection();
 		try {
 			System.out.println("entering try/catch sv listar capacitaciones...");
 			ICapacitacionDAO capdao = new ImplCapacitacionDAO();
@@ -43,7 +42,6 @@ public class ListarCapacitacion extends HttpServlet {
 			dispatcher.forward(request, response);
 			
 			System.out.println("se despacho el forward de request,response");
-//			conn.close();
 		}catch(Exception e) {
 			System.out.println(e + " LISTAR CAPACITACION SERVLET");
 		}
