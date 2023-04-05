@@ -1,26 +1,23 @@
-<nav class="navbar navbar-expand-lg bg-light">
-	<div class="container-fluid">
-		<a class="navbar-brand"
-			href="/inicio.jsp">Prevenciï¿½n
-			de Riesgo</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-			data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link" aria-current="page"
-					href="inicio.jsp">Inicio</a></li>
-				<li class="nav-item"><a class="nav-link"
-					href="contacto.jsp">Contacto</a>
-				</li>
-				<li class="nav-item"><a class="nav-link"
-					href="capacitacion.jsp">Capacitaciï¿½n</a>
-				</li>
-				<li class="nav-item"><a class="nav-link"
-					href="ListarCapacitacion">Lista
-						de Capacitaciones</a></li>
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand"
+    href="inicio.jsp">Prevención
+    de Riesgo</a>
+    <div class="collapse navbar-collapse" id="opciones">   
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" aria-current="page"
+              href="inicio.jsp">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link"
+                  href="contacto.jsp">Contacto</a>
+              </li>
+              <li class="nav-item"><a class="nav-link"
+                  href="capacitacion.jsp">Capacitación</a>
+              </li>
+              <li class="nav-item"><a class="nav-link"
+                  href="listaCapacitaciones.jsp">Lista
+                      de Capacitaciones</a></li> 
 
 
 				<%
@@ -63,3 +60,8 @@
 	</div>
 
 </nav>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+
