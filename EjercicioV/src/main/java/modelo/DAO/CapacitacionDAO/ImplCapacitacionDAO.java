@@ -67,7 +67,7 @@ public class ImplCapacitacionDAO implements ICapacitacionDAO{
 			System.out.println("just entered try/catch REGISTRAR CAPACITACION IMPL\n");
 			
 			// se prepara la query para llamarla luego
-			String sql = "INSERT INTO asesoriaprevriesgos.capacitaciones(idcapacitacion, capfecha, caphora, caplugar, capduracion, cliente_rutcliente) values(?,?,?,?,?,?);";
+			String sql = "INSERT INTO asesoriaprevriesgos.capacitaciones(idcapacitacion, capfecha, caphora, caplugar, capduracion) values(?,?,?,?,?);";
 //				+ "INSERT INTO persona(Nombre) values(?);";
 			
 			//se instancia el statement, y se manda la query que se preparo anteriormente
@@ -77,7 +77,7 @@ public class ImplCapacitacionDAO implements ICapacitacionDAO{
 			st.setTime(3, Time.valueOf(capacitacion.getHora()) );
 			st.setString(4, capacitacion.getLugar());
 			st.setInt(5, Integer.parseInt(capacitacion.getDuracionCap()));
-			st.setInt(6, capacitacion.getCliente_rutcliente());
+//			st.setInt(6, capacitacion.getCliente_rutcliente());
 			System.out.println("atributos set en la query"); //DEBUG
 			st.executeUpdate();
 			st.close();

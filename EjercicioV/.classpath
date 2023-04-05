@@ -11,6 +11,6 @@
 	<classpathentry kind="lib" path="C:/Users/vsald/RepositoriosJava/RepoM5/m5Java/EjercicioV/src/main/webapp/WEB-INF/lib/jstl-1.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/vsald/RepositoriosJava/RepoM5/m5Java/EjercicioV/src/main/webapp/WEB-INF/lib/mysql-connector-j-8.0.32.jar"/>
 	<classpathentry kind="lib" path="C:/Users/vsald/RepositoriosJava/RepoM5/m5Java/EjercicioV/src/main/webapp/WEB-INF/lib/ojdbc10.jar"/>
-	<classpathentry kind="lib" path="C:/Users/vsald/RepositoriosJava/RepoM5/m5Java/EjercicioV/src/main/webapp/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/vsald/eclipse/apache-tomcat-9.0.71/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

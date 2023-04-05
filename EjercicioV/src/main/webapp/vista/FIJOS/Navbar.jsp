@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-light">
 	<div class="container-fluid">
 		<a class="navbar-brand"
-			href="/inicio.jsp">Prevenci�n
+			href="/vista/inicio.jsp">Prevenci�n
 			de Riesgo</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 			data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
@@ -11,12 +11,12 @@
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" aria-current="page"
-					href="inicio.jsp">Inicio</a></li>
+					href="/vista/inicio.jsp">Inicio</a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="contacto.jsp">Contacto</a>
+					href="/vista/contacto.jsp">Contacto</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
-					href="capacitacion.jsp">Capacitaci�n</a>
+					href="/vista/capacitacion.jsp">Capacitaci�n</a>
 				</li>
 				<li class="nav-item"><a class="nav-link"
 					href="ListarCapacitacion">Lista

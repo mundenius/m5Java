@@ -5,7 +5,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/FooterStyle.css">
+<link rel="stylesheet" href="/vista/assets/FooterStyle.css">
 <!------ Include the above in your HEAD tag ---------->
 
 <footer class="section footer-classic context-dark bg-image" style="background: #e3f4f0 ;">

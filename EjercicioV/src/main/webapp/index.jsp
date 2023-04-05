@@ -10,7 +10,7 @@ Carlos Carrasco --%>
 <head>
 <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="assets/stylesheet.css">
+    <link rel="stylesheet" href="/vista/assets/stylesheet.css">
 
 
 </head>
@@ -19,7 +19,6 @@ Carlos Carrasco --%>
 	<div class="grad"></div>
 	<div class="header">
 		<div>
-
 			<h1>Inicie sesion</h1>
 
 		</div>
@@ -46,6 +45,6 @@ Carlos Carrasco --%>
 	<% } %>
 </body>
 <footer>
-<%@include file= "FIJOS/Footer.jsp" %>
+<%@include file= "/vista/FIJOS/Footer.jsp" %>
 </footer>
 </html>
