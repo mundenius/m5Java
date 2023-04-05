@@ -18,7 +18,7 @@ import modelo.DAO.CapacitacionDAO.*;
 
 
 
-@WebServlet(name = "CrearCapacitacion", urlPatterns = "/FormularioCrearCapacitacion")
+//@WebServlet(name = "CrearCapacitacion", urlPatterns = "/FormularioCrearCapacitacion")
 public class CrearCapacitacion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -93,7 +93,7 @@ public class CrearCapacitacion extends HttpServlet {
 			capdao.registrar(capacitacion);
 			// Redirige a una pagina de confirmacion
 			conn.close();
-			response.sendRedirect("confirmacionCapacitacion.jsp");
+			response.sendRedirect("/vista/CONFIRMACIONES/confirmacionCapacitacion.jsp");
 			
 		}catch(Exception e) {
 			System.out.println(e + " SERVLET CREAR CAPACITACION");

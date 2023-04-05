@@ -19,29 +19,23 @@ import modelo.clases.Usuario;
 /**
  * Servlet implementation class CrearUsuario
  */
-@WebServlet("/CrearUsuario")
+@WebServlet(name = "CrearUsuario", urlPatterns = "/CrearUsuario")
 public class CrearUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public CrearUsuario() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+	}
+
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Obtener los valores de los campos del formulario
 
@@ -66,7 +60,7 @@ public class CrearUsuario extends HttpServlet {
 				System.out.println(idUsuario);
 				System.out.println(nombre);
 				System.out.println(apellido);
-				System.out.println(fechaNacimiento);
+				System.out.println(fecha);
 				System.out.println(rut);
 				// Guardar los valores en los atributos de la solicitud
 
@@ -91,7 +85,7 @@ public class CrearUsuario extends HttpServlet {
 					usdao.registrar(usuario);
 					// Redirige a una pagina de confirmacion
 					conn.close();
-					response.sendRedirect("confirmacionCapacitacion.jsp");
+					response.sendRedirect("confirmacionUsuario.jsp"); 
 					
 				}catch(Exception e) {
 					System.out.println(e + " SERVLET CREAR USUARIO");

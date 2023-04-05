@@ -25,7 +25,7 @@ public class ImplCapacitacionDAO implements ICapacitacionDAO{
 				// TODO Auto-generated method stub
 				List<Capacitacion> lista = new ArrayList<Capacitacion>();
 				try {
-					String sql = "SELECT * FROM capacitaciones ORDER by idcapacitacion";
+					String sql = "SELECT * FROM capacitacion ORDER by idcapacitacion";
 					PreparedStatement st = conn.prepareStatement(sql);
 					rs = st.executeQuery(sql);
 					System.out.println("query ejecutada");
@@ -67,7 +67,7 @@ public class ImplCapacitacionDAO implements ICapacitacionDAO{
 			System.out.println("just entered try/catch REGISTRAR CAPACITACION IMPL\n");
 			
 			// se prepara la query para llamarla luego
-			String sql = "INSERT INTO asesoriaprevriesgos.capacitaciones(idcapacitacion, capfecha, caphora, caplugar, capduracion) values(?,?,?,?,?);";
+			String sql = "INSERT INTO asesoriaprevriesgos.capacitacion(idcapacitacion, capfecha, caphora, caplugar, capduracion) values(?,?,?,?,?);";
 //				+ "INSERT INTO persona(Nombre) values(?);";
 			
 			//se instancia el statement, y se manda la query que se preparo anteriormente
