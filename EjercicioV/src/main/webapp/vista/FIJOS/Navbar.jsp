@@ -2,22 +2,27 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand"
-    href="inicio.jsp">Prevención
-    de Riesgo</a>
-    <div class="collapse navbar-collapse" id="opciones">   
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" aria-current="page"
-              href="inicio.jsp">Inicio</a></li>
-              <li class="nav-item"><a class="nav-link"
-                  href="contacto.jsp">Contacto</a>
-              </li>
-              <li class="nav-item"><a class="nav-link"
-                  href="capacitacion.jsp">Capacitación</a>
-              </li>
-              <li class="nav-item"><a class="nav-link"
-                  href="listaCapacitaciones.jsp">Lista
-                      de Capacitaciones</a></li> 
+		<a class="navbar-brand"
+			href="/vista/inicio.jsp">Prevenciï¿½n
+			de Riesgo</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+			data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" aria-current="page"
+					href="/vista/inicio.jsp">Inicio</a></li>
+				<li class="nav-item"><a class="nav-link"
+					href="/vista/contacto.jsp">Contacto</a>
+				</li>
+				<li class="nav-item"><a class="nav-link"
+					href="/vista/capacitacion.jsp">Capacitaciï¿½n</a>
+				</li>
+				<li class="nav-item"><a class="nav-link"
+					href="ListarCapacitacion">Lista
+						de Capacitaciones</a></li>
 
 
 				<%
