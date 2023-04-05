@@ -18,7 +18,7 @@ import DAO.CapacitacionDAOImpl;
 
 
 
-@WebServlet(name = "FormularioCrearCapacitacion", urlPatterns = "/FormularioCrearCapacitacion")
+@WebServlet(name = "CrearCapacitacion", urlPatterns = "/FormularioCrearCapacitacion")
 public class CrearCapacitacion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
