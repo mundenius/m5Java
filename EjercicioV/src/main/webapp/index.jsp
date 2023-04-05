@@ -1,4 +1,4 @@
-<%--autores:
+<%-- autores:
 Javiera Saavedra
 Valentina Saldias
 Adrian Fredes 
@@ -10,7 +10,7 @@ Carlos Carrasco --%>
 <head>
 <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="assets/stylesheet.css">
+    <link rel="stylesheet" href="/vista/assets/stylesheet.css">
 
 
 </head>

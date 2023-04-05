@@ -34,7 +34,7 @@ public class Login extends HttpServlet {
             response.sendRedirect("/index.jsp");
         }
         else{
-            response.sendRedirect("inicio.jsp");
+            response.sendRedirect("vista/inicio.jsp");
         }
 
 
@@ -60,7 +60,7 @@ public class Login extends HttpServlet {
 		else {
 			HttpSession sesion = request.getSession();
 			sesion.setAttribute("nombre", usuario);
-			response.sendRedirect("inicio.jsp");
+			response.sendRedirect("vista/inicio.jsp");
 		}
 	}
 
