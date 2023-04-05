@@ -3,7 +3,7 @@ Javiera Saavedra
 Valentina Saldias
 Adrian Fredes 
 Carlos Carrasco --%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html;charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,6 +19,7 @@ Carlos Carrasco --%>
 	<div class="grad"></div>
 	<div class="header">
 		<div>
+
 			<h1>Inicie sesion</h1>
 
 		</div>
