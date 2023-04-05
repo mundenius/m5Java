@@ -1,9 +1,9 @@
-<%-- autores:
+<%--autores:
 Javiera Saavedra
 Valentina Saldias
 Adrian Fredes 
 Carlos Carrasco --%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html;charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -46,6 +46,6 @@ Carlos Carrasco --%>
 	<% } %>
 </body>
 <footer>
-<%@include file= "FIJOS/Footer.jsp" %>
+<%@include file= "/vista/FIJOS/Footer.jsp" %>
 </footer>
 </html>
