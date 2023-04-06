@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import modelo.clases.Capacitacion;
 import modelo.conexion.Singleton;
 import modelo.DAO.CapacitacionDAO.*;
+import modelo.implementacion.*;
 
 
 
@@ -36,66 +37,68 @@ public class CrearCapacitacion extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		ImplementacionInterfazCapacitacion impcap = new ImplementacionInterfazCapacitacion();
+		
+		
 		// Obtener los valores de los campos del formulario
-
-		String idCapacitacion = request.getParameter("idCapacitacion"); 
-		String fechaCap = request.getParameter("fecha");
-		String hora = request.getParameter("hora");
-		String lugar = request.getParameter("lugar"); 
-		String duracionCap = request.getParameter("duracion"); 
-		int idUsuario_Run = Integer.parseInt(request.getParameter("idUsuario")); 
-
-		Date fecha = null;
-		if (fechaCap != null && !fechaCap.isEmpty()) {
-		    try {
-		        fecha = new SimpleDateFormat("dd-MM-yyyy").parse(fechaCap);
-		    } catch (ParseException e) {
-		        e.printStackTrace();
-		    }
-		}
-
-
-		int duracion = 0;
-		if (duracionCap != null && !duracionCap.isEmpty()) {
-		    duracion = Integer.parseInt(duracionCap);
-		}
-		
-		
-		
-		// Imprimir los valores obtenidos en la consola
-		System.out.println(idCapacitacion);
-		System.out.println(fecha);
-		System.out.println(hora);
-		System.out.println(lugar);
-		System.out.println(duracion);
-		System.out.println(idUsuario_Run);
-		// Guardar los valores en los atributos de la solicitud
-
-		try {
-			System.out.println("entering try/catch CREAR CAPACITACION SERVLET");
-			Capacitacion capacitacion = new Capacitacion();
-			ImplCapacitacionDAO capdao = new ImplCapacitacionDAO();
-			
-			request.setAttribute("idcapacitacion", idCapacitacion);
-			capacitacion.setIdCapacitacion(idCapacitacion);
-			request.setAttribute("fecha", fecha);
-			capacitacion.setFechaCap(fechaCap);
-			request.setAttribute("hora", hora);
-			capacitacion.setHora(hora);
-			request.setAttribute("lugar", lugar);
-			capacitacion.setLugar(lugar);
-			request.setAttribute("duracion", duracion);
-			capacitacion.setDuracionCap(duracionCap);
-			request.setAttribute("idUsuario", idUsuario_Run);
-			capacitacion.setIdUsuario_Run(idUsuario_Run);
-			
-			capdao.registrar(capacitacion);
-			// Redirige a una pagina de confirmacion
-			response.sendRedirect("vista/CONFIRMACIONES/confirmacionCapacitacion.jsp");
-			
-		}catch(Exception e) {
-			System.out.println(e + " SERVLET CREAR CAPACITACION");
-		}
+//		String idCapacitacion = request.getParameter("idCapacitacion"); 
+//		String fechaCap = request.getParameter("fecha");
+//		String hora = request.getParameter("hora");
+//		String lugar = request.getParameter("lugar"); 
+//		String duracionCap = request.getParameter("duracion"); 
+//		int idUsuario_Run = Integer.parseInt(request.getParameter("idUsuario")); 
+//
+//		Date fecha = null;
+//		if (fechaCap != null && !fechaCap.isEmpty()) {
+//		    try {
+//		        fecha = new SimpleDateFormat("dd-MM-yyyy").parse(fechaCap);
+//		    } catch (ParseException e) {
+//		        e.printStackTrace();
+//		    }
+//		}
+//
+//
+//		int duracion = 0;
+//		if (duracionCap != null && !duracionCap.isEmpty()) {
+//		    duracion = Integer.parseInt(duracionCap);
+//		}
+//		
+//		
+//		
+//		// Imprimir los valores obtenidos en la consola
+//		System.out.println(idCapacitacion);
+//		System.out.println(fecha);
+//		System.out.println(hora);
+//		System.out.println(lugar);
+//		System.out.println(duracion);
+//		System.out.println(idUsuario_Run);
+//		// Guardar los valores en los atributos de la solicitud
+//
+//		try {
+//			System.out.println("entering try/catch CREAR CAPACITACION SERVLET");
+//			Capacitacion capacitacion = new Capacitacion();
+//			ImplCapacitacionDAO capdao = new ImplCapacitacionDAO();
+//			
+//			request.setAttribute("idcapacitacion", idCapacitacion);
+//			capacitacion.setIdCapacitacion(idCapacitacion);
+//			request.setAttribute("fecha", fecha);
+//			capacitacion.setFechaCap(fechaCap);
+//			request.setAttribute("hora", hora);
+//			capacitacion.setHora(hora);
+//			request.setAttribute("lugar", lugar);
+//			capacitacion.setLugar(lugar);
+//			request.setAttribute("duracion", duracion);
+//			capacitacion.setDuracionCap(duracionCap);
+//			request.setAttribute("idUsuario", idUsuario_Run);
+//			capacitacion.setIdUsuario_Run(idUsuario_Run);
+//			
+//			capdao.registrar(capacitacion);
+//			// Redirige a una pagina de confirmacion
+//			response.sendRedirect("vista/CONFIRMACIONES/confirmacionCapacitacion.jsp");
+//			
+//		}catch(Exception e) {
+//			System.out.println(e + " SERVLET CREAR CAPACITACION");
+//		}
 
 		
 
