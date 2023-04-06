@@ -14,7 +14,9 @@
         <li class="nav-item"><a class="nav-link" aria-current="page"
             href="Inicio">Inicio</a></li>
             <li class="nav-item"><a class="nav-link"
+
                 href="FormularioContacto">Contacto</a>
+
             </li>
             <li class="nav-item"><a class="nav-link"
                 href="CrearCapacitacion">Capacitación</a>
