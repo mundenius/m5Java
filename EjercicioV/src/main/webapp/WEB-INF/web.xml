@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>EjercicioV</display-name>
+	
+	<servlet>
+		<servlet-name>ListarCapacitacion</servlet-name>
+		<servlet-class>modelo.CRUD.Capacitacion_CRUD.ListarCapacitacion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListarCapacitacion</servlet-name>
+		<url-pattern>/ListarCapacitacion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CrearCapacitacion</servlet-name>
+		<servlet-class>modelo.CRUD.Capacitacion_CRUD.CrearCapacitacion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CrearCapacitacion</servlet-name>
+		<url-pattern>/CrearCapacitacion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CerrarSesion</servlet-name>
+		<servlet-class>controlador.CerrarSesion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CerrarSesion</servlet-name>
+		<url-pattern>/CerrarSesion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CrearUsuario</servlet-name>
+		<servlet-class>modelo.CRUD.Usuario_CRUD.CrearUsuario</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CrearUsuario</servlet-name>
+		<url-pattern>/CrearUsuario</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ListarUsuario</servlet-name>
+		<servlet-class>modelo.CRUD.Usuario_CRUD.ListarUsuario</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListarUsuario</servlet-name>
+		<url-pattern>/ListarUsuario</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConfirmacionCapacitacion</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionCapacitacion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionCapacitacion</servlet-name>
+		<url-pattern>/ConfirmacionCapacitacion</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConfirmacionUsuario</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionUsuario</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionUsuario</servlet-name>
+		<url-pattern>/ConfirmacionUsuario</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConfirmacionContacto</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionContacto</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionContacto</servlet-name>
+		<url-pattern>/ConfirmacionContacto</url-pattern>
+	</servlet-mapping>
+</web-app>
