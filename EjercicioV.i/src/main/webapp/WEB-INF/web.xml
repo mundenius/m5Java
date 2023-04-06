@@ -49,4 +49,31 @@
 		<servlet-name>ListarUsuario</servlet-name>
 		<url-pattern>/ListarUsuario</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConfirmacionCapacitacion</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionCapacitacion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionCapacitacion</servlet-name>
+		<url-pattern>/ConfirmacionCapacitacion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConfirmacionUsuario</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionUsuario</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionUsuario</servlet-name>
+		<url-pattern>/ConfirmacionUsuario</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConfirmacionContacto</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionContacto</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionContacto</servlet-name>
+		<url-pattern>/ConfirmacionContacto</url-pattern>
+	</servlet-mapping>
 </web-app>
