@@ -7,14 +7,14 @@ public class Capacitacion {
 	private String hora;
 	private String lugar;
 	private String duracionCap;
-	private int idUsuario_Run;
+	private long idUsuario_Run;
 	
 	public Capacitacion() {
 	}
 
 
 	public Capacitacion(String idCapacitacion, String fechaCap, String hora, String lugar, String duracionCap,
-			int idUsuario_Run) {
+			long idUsuario_Run) {
 		this.idCapacitacion = idCapacitacion;
 		this.fechaCap = fechaCap;
 		this.hora = hora;
@@ -63,11 +63,11 @@ public class Capacitacion {
 		return duracionCap;
 	}
 
-	public void setIdUsuario_Run(int idUsuario_Run) {
+	public void setIdUsuario_Run(long idUsuario_Run) {
 		this.idUsuario_Run = idUsuario_Run;
 	}
 
-	public int getIdUsuario_Run() {
+	public long getIdUsuario_Run() {
 		return idUsuario_Run;
 	}
 

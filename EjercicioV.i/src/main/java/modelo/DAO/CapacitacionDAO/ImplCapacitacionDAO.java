@@ -80,7 +80,7 @@ public class ImplCapacitacionDAO implements ICapacitacionDAO {
 														// pasarla directo como STRING a la base de datos
 			st.setString(4, capacitacion.getLugar());
 			st.setInt(5, Integer.parseInt(capacitacion.getDuracionCap()));
-			st.setInt(6, capacitacion.getIdUsuario_Run());
+			st.setLong(6, capacitacion.getIdUsuario_Run());
 			System.out.println("atributos set en la query"); // DEBUG
 			st.executeUpdate();
 			st.close();

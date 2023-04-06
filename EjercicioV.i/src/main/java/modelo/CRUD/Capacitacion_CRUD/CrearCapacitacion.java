@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import modelo.clases.Capacitacion;
-import modelo.conexion.Singleton;
 import modelo.DAO.CapacitacionDAO.*;
-import modelo.implementacion.*;
+import modelo.implementacion.ImplementacionInterfazCapacitacion;
+import modelo.interfaces.ICapacitacion;
 
 
 
@@ -37,8 +37,8 @@ public class CrearCapacitacion extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		ImplementacionInterfazCapacitacion impcap = new ImplementacionInterfazCapacitacion();
-		
+		request.getRequestDispatcher("RecuperadorCapacitacionConsola").forward(request, response);
+
 		
 		// Obtener los valores de los campos del formulario
 //		String idCapacitacion = request.getParameter("idCapacitacion"); 
