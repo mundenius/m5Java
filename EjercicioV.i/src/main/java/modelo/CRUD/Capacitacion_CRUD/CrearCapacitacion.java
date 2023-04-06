@@ -86,7 +86,7 @@ public class CrearCapacitacion extends HttpServlet {
 			capacitacion.setLugar(lugar);
 			request.setAttribute("duracion", duracion);
 			capacitacion.setDuracionCap(duracionCap);
-			request.setAttribute("cliente_rutcliente", idUsuario_Run);
+			request.setAttribute("idUsuario", idUsuario_Run);
 			capacitacion.setIdUsuario_Run(idUsuario_Run);
 			
 			capdao.registrar(capacitacion);
