@@ -5,27 +5,27 @@
     
     <!-- logo -->
     <a class="navbar-brand"
-    href="/inicio.jsp">Prevención
+    href="Inicio">Prevención
     de Riesgo</a>
     
     <!-- enlaces -->
     <div class="collapse navbar-collapse" id="opciones">   
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" aria-current="page"
-            href="inicio.jsp">Inicio</a></li>
+            href="Inicio">Inicio</a></li>
             <li class="nav-item"><a class="nav-link"
-                href="contacto.jsp">Contacto</a>
+                href="FormularioContacto">Contacto</a>
             </li>
             <li class="nav-item"><a class="nav-link"
-                href="capacitacion.jsp">Capacitación</a>
+                href="CrearCapacitacion">Capacitación</a>
             </li>
             <li class="nav-item"><a class="nav-link"
-                href="listaCapacitaciones.jsp">Lista
+                href="ListarCapacitacion">Lista
                     de Capacitaciones</a></li>  
                     <li class="nav-item"><a class="nav-link"
                       href="usuario.jsp">Crear Usuario</a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="listaUsuario.jsp">Lista de Usuarios</a></li>		
+					href="ListarUsuario">Lista de Usuarios</a></li>		
 
 
 				<%
@@ -58,7 +58,7 @@
 				%>
 
 			<li class="nav-item"><a class="nav-link"
-				href="/index.jsp">Login</a></li>
+				href="Login">Login</a></li>
 
 				<%
 				}

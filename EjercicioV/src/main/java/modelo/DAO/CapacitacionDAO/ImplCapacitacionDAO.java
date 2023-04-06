@@ -74,7 +74,7 @@ public class ImplCapacitacionDAO implements ICapacitacionDAO{
 			PreparedStatement st = conn.prepareStatement(sql);
 			st.setInt(1, Integer.parseInt(capacitacion.getIdCapacitacion()));
 			st.setDate(2, StringToDate(capacitacion.getFechaCap()));
-			st.setTime(3, Time.valueOf(capacitacion.getHora()));
+			st.setString(3, capacitacion.getHora());
 			st.setString(4, capacitacion.getLugar());
 			st.setInt(5, Integer.parseInt(capacitacion.getDuracionCap()));
 //			st.setInt(6, capacitacion.getCliente_rutcliente());
