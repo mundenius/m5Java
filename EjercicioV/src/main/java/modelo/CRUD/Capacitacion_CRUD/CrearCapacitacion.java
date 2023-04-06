@@ -30,7 +30,7 @@ public class CrearCapacitacion extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		request.getRequestDispatcher("vista/capacitacion.jsp").forward(request, response);
 	}
 
 	@Override
@@ -43,7 +43,7 @@ public class CrearCapacitacion extends HttpServlet {
 		String hora = request.getParameter("hora");
 		String lugar = request.getParameter("lugar"); 
 		String duracionCap = request.getParameter("duracion"); 
-		int cliente_rutcliente = Integer.parseInt(request.getParameter("cliente_rutcliente")); 
+		int idUsuario_Run = Integer.parseInt(request.getParameter("idUsuario")); 
 
 		Date fecha = null;
 		if (fechaCap != null && !fechaCap.isEmpty()) {
@@ -68,12 +68,11 @@ public class CrearCapacitacion extends HttpServlet {
 		System.out.println(hora);
 		System.out.println(lugar);
 		System.out.println(duracion);
-		System.out.println(cliente_rutcliente);
+		System.out.println(idUsuario_Run);
 		// Guardar los valores en los atributos de la solicitud
 
 		try {
 			System.out.println("entering try/catch CREAR CAPACITACION SERVLET");
-			Connection conn = Singleton.getConnection();
 			Capacitacion capacitacion = new Capacitacion();
 			ImplCapacitacionDAO capdao = new ImplCapacitacionDAO();
 			
@@ -87,13 +86,12 @@ public class CrearCapacitacion extends HttpServlet {
 			capacitacion.setLugar(lugar);
 			request.setAttribute("duracion", duracion);
 			capacitacion.setDuracionCap(duracionCap);
-			request.setAttribute("cliente_rutcliente", cliente_rutcliente);
-			capacitacion.setCliente_rutcliente(cliente_rutcliente);
+			request.setAttribute("idUsuario", idUsuario_Run);
+			capacitacion.setIdUsuario_Run(idUsuario_Run);
 			
 			capdao.registrar(capacitacion);
 			// Redirige a una pagina de confirmacion
-			conn.close();
-			response.sendRedirect("/vista/CONFIRMACIONES/confirmacionCapacitacion.jsp");
+			response.sendRedirect("vista/CONFIRMACIONES/confirmacionCapacitacion.jsp");
 			
 		}catch(Exception e) {
 			System.out.println(e + " SERVLET CREAR CAPACITACION");

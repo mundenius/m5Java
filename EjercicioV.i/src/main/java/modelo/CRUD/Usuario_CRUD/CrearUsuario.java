@@ -19,7 +19,7 @@ import modelo.clases.Usuario;
 /**
  * Servlet implementation class CrearUsuario
  */
-@WebServlet(name = "CrearUsuario", urlPatterns = "/CrearUsuario")
+//@WebServlet(name = "CrearUsuario", urlPatterns = "/CrearUsuario")
 public class CrearUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -32,18 +32,19 @@ public class CrearUsuario extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.getRequestDispatcher("vista/usuario.jsp").forward(request, response);
+
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Obtener los valores de los campos del formulario
 
-				int idUsuario = Integer.parseInt(request.getParameter("idUsuario")); 
+				String idUsuario = request.getParameter("idUsuario"); 
 				String nombre = request.getParameter("nombre");
 				String apellido = request.getParameter("apellido");
 				String fechaNacimiento = request.getParameter("fechaNacimiento"); 
-				long rut = Long.parseLong(request.getParameter("rut")); 
+				String rut = request.getParameter("rut"); 
 				
 
 				Date fecha= null;
@@ -66,12 +67,11 @@ public class CrearUsuario extends HttpServlet {
 
 				try {
 					System.out.println("entering try/catch CREAR USUARIO SERVLET");
-					Connection conn = Singleton.getConnection();
 					Usuario usuario = new Usuario();
 					ImplUsuarioDAO usdao = new ImplUsuarioDAO();
 					
 					request.setAttribute("idUsuario", idUsuario);
-					usuario.setIdUsuario(idUsuario);
+					usuario.setIdUsuario(Integer.parseInt(idUsuario));
 					request.setAttribute("nombre", nombre);
 					usuario.setNombre(nombre);
 					request.setAttribute("apellido", apellido);
@@ -79,13 +79,12 @@ public class CrearUsuario extends HttpServlet {
 					request.setAttribute("fecha nacimiento", fechaNacimiento);
 					usuario.setFechaNacimiento(fechaNacimiento);
 					request.setAttribute("rut", rut);
-					usuario.setRut(rut);
+					usuario.setRut(Long.parseLong(rut));
 
 					
 					usdao.registrar(usuario);
 					// Redirige a una pagina de confirmacion
-					conn.close();
-					response.sendRedirect("confirmacionUsuario.jsp"); 
+					response.sendRedirect("ConfirmacionUsuario"); 
 					
 				}catch(Exception e) {
 					System.out.println(e + " SERVLET CREAR USUARIO");

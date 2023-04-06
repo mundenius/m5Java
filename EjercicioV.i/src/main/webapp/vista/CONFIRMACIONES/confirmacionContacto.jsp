@@ -19,7 +19,7 @@ Carlos Carrasco --%>
             <h1>¡Gracias por contactarnos!</h1>
             <p>Recibimos tu mensaje y nos pondremos en contacto contigo.</p>
     
-            <a href="inicio.jsp" class="btn">Regresar al inicio</a>
+            <a href="Inicio" class="btn">Regresar al inicio</a>
         </div>
     </body>
     <footer>

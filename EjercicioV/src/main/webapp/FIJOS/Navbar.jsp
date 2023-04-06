@@ -14,7 +14,9 @@
         <li class="nav-item"><a class="nav-link" aria-current="page"
             href="Inicio">Inicio</a></li>
             <li class="nav-item"><a class="nav-link"
-                href="Contacto">Contacto</a>
+
+                href="FormularioContacto">Contacto</a>
+
             </li>
             <li class="nav-item"><a class="nav-link"
                 href="CrearCapacitacion">Capacitación</a>
@@ -58,7 +60,7 @@
 				%>
 
 			<li class="nav-item"><a class="nav-link"
-				href="/index.jsp">Login</a></li>
+				href="Login">Login</a></li>
 
 				<%
 				}

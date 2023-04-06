@@ -11,7 +11,7 @@ Carlos Carrasco --%>
 <head>
 <meta charset="UTF-8">
 <title>Ingrese capacitacion</title>
-<link rel="stylesheet" href="assets/stylesheet.css">
+<link rel="stylesheet" href="vista/assets/stylesheet.css">
 
 </head>
 <body>
@@ -29,8 +29,8 @@ Carlos Carrasco --%>
 			oninvalid="this.setCustomValidity('Ingrese un numero de ID')"
 			onchange="this.setCustomValidity('')" type="text" /><br><br>
 			
-			<label for="cliente_rutcliente"><strong>RUT Cliente:</strong></label>
-			<input type="text" id="cliente_rutcliente" name="cliente_rutcliente"  required 
+			<label for="cliente_rutcliente"><strong>ID Usuario:</strong></label>
+			<input type="text" id="idUsuario_Run" name="idUsuario"  required 
 			oninvalid="this.setCustomValidity('Ingrese Rut')"
 			onchange="this.setCustomValidity('')" type="text" /><br><br>
 			
