@@ -10,7 +10,7 @@ Carlos Carrasco --%>
 <head>
 <meta charset="UTF-8">
 <title>Contacto</title>
-<link rel="stylesheet" href="assets/stylesheet.css">
+<link rel="stylesheet" href="vista/assets/stylesheet.css">
 
 </head>
 <body>

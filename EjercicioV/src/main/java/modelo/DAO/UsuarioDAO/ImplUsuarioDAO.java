@@ -25,7 +25,7 @@ public class ImplUsuarioDAO implements IUsuarioDAO {
 		// TODO Auto-generated method stub
 		List<Usuario> lista = new ArrayList<Usuario>();
 		try {
-			String sql = "SELECT * FROM usuario ORDER by idusuario";
+			String sql = "SELECT * FROM usuario ORDER by idusuario;";
 			PreparedStatement st = conn.prepareStatement(sql);
 			rs = st.executeQuery(sql);
 			System.out.println("query ejecutada");
