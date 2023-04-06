@@ -1,28 +1,31 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
+ <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
       <span class="navbar-toggler-icon"></span>
     </button>
-		<a class="navbar-brand"
-			href="/inicio.jsp">Prevencion
-			de Riesgo</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-			data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link" aria-current="page"
-					href="inicio.jsp">Inicio</a></li>
+    
+    <!-- logo -->
+    <a class="navbar-brand"
+    href="Inicio">Prevención
+    de Riesgo</a>
+    
+    <!-- enlaces -->
+    <div class="collapse navbar-collapse" id="opciones">   
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" aria-current="page"
+            href="Inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link"
+                href="VistaContacto">Contacto</a>
+            </li>
+            <li class="nav-item"><a class="nav-link"
+                href="vista/capacitacion.jsp">Capacitación</a>
+            </li>
+            <li class="nav-item"><a class="nav-link"
+                href="ListarCapacitacion">Lista
+                    de Capacitaciones</a></li>  
+                    <li class="nav-item"><a class="nav-link"
+                      href="vista/usuario.jsp">Crear Usuario</a></li>
 				<li class="nav-item"><a class="nav-link"
-					href="vista/contacto.jsp">Contacto</a>
-				</li>
-				<li class="nav-item"><a class="nav-link"
-					href="vista/capacitacion.jsp">Capacitacion</a>
-				</li>
-				<li class="nav-item"><a class="nav-link"
-					href="ListarCapacitacion">Lista
-						de Capacitaciones</a></li>
+					href="ListarUsuario">Lista de Usuarios</a></li>		
 
 
 				<%
