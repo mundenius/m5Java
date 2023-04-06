@@ -1,5 +1,8 @@
-<%-- autores  --%>
-
+<%-- autores:
+Javiera Saavedra
+Valentina Saldias
+Adrian Fredes 
+Carlos Carrasco --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,8 +21,9 @@
 
 </head>
 <body>
-	<h1>Contacto</h1>
 
+	<h1>Contacto</h1>
+<%@include file = "FIJOS/Navbar.jsp"%>
 	<form action="FormularioContacto" method="POST">
 		<label>Nombre:</label> <input type="text" name="nombre" required>
 		

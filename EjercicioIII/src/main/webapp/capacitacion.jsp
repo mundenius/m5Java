@@ -24,7 +24,7 @@
 
 
 	<main>
-		<form action="FormularioCrearCapacitacion" method="POST"  onsubmit="return validarDuracion()">
+		<form action="/FormularioCrearCapacitacion" method="POST"  onsubmit="return validarDuracion()">
 			<label for="nombre">Nombre de la capacitación:</label> 
 			<input type="text" id="nombre" name="nombreCap" required><br><br>
 			
