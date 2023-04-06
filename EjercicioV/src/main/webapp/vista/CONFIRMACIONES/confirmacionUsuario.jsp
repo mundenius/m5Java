@@ -33,7 +33,7 @@ Carlos Carrasco --%>
     
     
     		<a href="ListarUsuario" class="btn">Ir a lista de usuarios</a>
-            <a href="inicio.jsp" class="btn">Regresar al inicio</a>
+            <a href="Inicio" class="btn">Regresar al inicio</a>
         </div>
     </body>
     <footer>

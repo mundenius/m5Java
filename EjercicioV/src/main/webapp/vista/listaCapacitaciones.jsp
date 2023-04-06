@@ -1,4 +1,3 @@
-
 <%-- autores:
 Javiera Saavedra
 Valentina Saldias
@@ -26,7 +25,7 @@ Carlos Carrasco --%>
 			<th>Hora Capacitacion</th>
 			<th>Lugar Capacitacion</th>
 			<th>Duracion Capacitacion</th>
-			<th>Rut Cliente </th>
+			<th>ID Usuario </th>
 		</tr>
 		<c:forEach items="${listacapacitacion}" var="cap">
 			<tr>
@@ -35,7 +34,7 @@ Carlos Carrasco --%>
 				<td>${cap.hora}</td>
 				<td>${cap.lugar}</td>
 				<td>${cap.duracionCap}</td>
-				<td>${cap.cliente_rutcliente}</td>
+				<td>${cap.idUsuario_Run}</td>
 			</tr>
 		</c:forEach>
 	</table>

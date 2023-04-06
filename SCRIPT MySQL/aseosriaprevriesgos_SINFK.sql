@@ -1,3 +1,4 @@
+DROP DATABASE asesoriaprevriesgos;
 CREATE DATABASE asesoriaPrevRiesgos;
 USE asesoriaPrevRiesgos;
 
@@ -6,8 +7,7 @@ idusuario varchar(15) not null primary key,
 nombre varchar(30) not null, 
 apellido varchar(30) not null, 
 fechanacimiento varchar(10) not null, 
-run int not null,
-tipo_usuario varchar(20) not null
+run int not null
 );
 
 CREATE TABLE cliente (
@@ -47,7 +47,7 @@ capfecha DATE NOT NULL,
 caphora TIME,
 caplugar VARCHAR(100) NOT NULL,
 capduracion INT,
-idusuario_run varchar(15) not null
+idusuario_run int not null
 );
 
 CREATE TABLE asistente (

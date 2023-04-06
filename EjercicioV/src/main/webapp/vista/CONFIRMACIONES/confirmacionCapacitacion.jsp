@@ -18,7 +18,7 @@ Carlos Carrasco --%>
             <h1>¡Capacitación creada con éxito!</h1>
             <p>Su capacitacion ha sido creada</p>
     
-            <a href="/vista/inicio.jsp" class="btn">Regresar al inicio</a><br><br>
+            <a href="Inicio" class="btn">Regresar al inicio</a><br><br>
             <a href="ListarCapacitacion" class="btn">Lista de capacitaciones</a>
         </div>
     </body>

@@ -64,7 +64,7 @@ public class ImplUsuarioDAO implements IUsuarioDAO {
 		 System.out.println("llego la conexion= " + conn);
 			try {
 				System.out.println("just entered try/catch REGISTRAR USUARIO IMPL\n");
-		        String sql = "INSERT INTO usuario(idUsuario, nombre, apellido, fechaNacimiento, rut) VALUES (?, ?, ?, ?, ?)";
+		        String sql = "INSERT INTO usuario(idUsuario, nombre, apellido, fechaNacimiento, run) VALUES (?, ?, ?, ?, ?)";
 		        PreparedStatement st = conn.prepareStatement(sql);
 		        st.setInt(1, usuario.getIdUsuario());
 		        st.setString(2, usuario.getNombre());

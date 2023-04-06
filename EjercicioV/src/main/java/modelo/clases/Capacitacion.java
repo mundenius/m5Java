@@ -2,25 +2,25 @@ package modelo.clases;
 
 public class Capacitacion {
 
-	String idCapacitacion;
-	String fechaCap;
-	String hora;
-	String lugar;
-	String duracionCap;
-	int cliente_rutcliente;
+	private String idCapacitacion;
+	private String fechaCap;
+	private String hora;
+	private String lugar;
+	private String duracionCap;
+	private int idUsuario_Run;
 	
 	public Capacitacion() {
 	}
 
 
 	public Capacitacion(String idCapacitacion, String fechaCap, String hora, String lugar, String duracionCap,
-			int cliente_rutcliente) {
+			int idUsuario_Run) {
 		this.idCapacitacion = idCapacitacion;
 		this.fechaCap = fechaCap;
 		this.hora = hora;
 		this.lugar = lugar;
 		this.duracionCap = duracionCap;
-		this.cliente_rutcliente = cliente_rutcliente;
+		this.idUsuario_Run = idUsuario_Run;
 	}
 
 	public void setIdCapacitacion(String idCapacitacion) {
@@ -63,19 +63,19 @@ public class Capacitacion {
 		return duracionCap;
 	}
 
-	public void setCliente_rutcliente(int cliente_rutcliente) {
-		this.cliente_rutcliente = cliente_rutcliente;
+	public void setIdUsuario_Run(int idUsuario_Run) {
+		this.idUsuario_Run = idUsuario_Run;
 	}
 
-	public int getCliente_rutcliente() {
-		return cliente_rutcliente;
+	public int getIdUsuario_Run() {
+		return idUsuario_Run;
 	}
 
 	@Override
 	public String toString() {
 		return "\nToString\nId capacitacion: " + getIdCapacitacion() + "\nFecha: " + getFechaCap() + "\nHora: " + getHora()
 				+ "\nLugar: " + getLugar() + "\nduracion: " + getDuracionCap() + "\nRut del cliente: "
-				+ getCliente_rutcliente();
+				+ getIdUsuario_Run();
 	}
 }
 

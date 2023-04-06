@@ -38,7 +38,7 @@ public class ListarUsuario extends HttpServlet {
 //			listausuario = udao.listarTodos();	otra forma
 			request.setAttribute("listausuarios", udao.listarTodos()); //listausuario	otra forma
 			System.out.println("request.setAttribute de ListarUsuario exitoso"); //DEBUG
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/listaUsuarios.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("vista/listaUsuarios.jsp");
 			dispatcher.forward(request, response);
 			
 			System.out.println("se despacho el forward de request,response");

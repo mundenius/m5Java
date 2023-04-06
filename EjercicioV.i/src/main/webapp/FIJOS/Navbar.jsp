@@ -23,7 +23,7 @@
                 href="ListarCapacitacion">Lista
                     de Capacitaciones</a></li>  
                     <li class="nav-item"><a class="nav-link"
-                      href="usuario.jsp">Crear Usuario</a></li>
+                      href="CrearUsuario">Crear Usuario</a></li>
 				<li class="nav-item"><a class="nav-link"
 					href="ListarUsuario">Lista de Usuarios</a></li>		
 

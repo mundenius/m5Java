@@ -15,7 +15,7 @@ public class Singleton {
 			String driver = "com.mysql.cj.jdbc.Driver";
 			
 			String user = "root";
-			String password = "hola27";
+			String password = "Gryffindor97";
 			
 			try {
 				Class.forName(driver);
