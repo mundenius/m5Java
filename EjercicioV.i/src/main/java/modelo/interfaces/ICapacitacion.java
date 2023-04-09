@@ -6,5 +6,7 @@ import modelo.clases.Capacitacion;
 
 public interface ICapacitacion {
 
-	public List<Capacitacion> listaCapacitaicon();
+	public List<Capacitacion> listaCapacitacion();
+	
+	public void registrarConsola(Capacitacion capacitacion);
 }

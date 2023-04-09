@@ -1,7 +1,6 @@
-package modelo.CRUD.Capacitacion_CRUD;
+package modelo.implementacion;
 
 import java.io.IOException;
-import java.sql.Connection;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,31 +12,39 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import modelo.clases.Capacitacion;
-import modelo.conexion.Singleton;
 import modelo.DAO.CapacitacionDAO.*;
+import modelo.implementacion.ImplementacionInterfazCapacitacion;
+import modelo.interfaces.ICapacitacion;
 
-
-
-//@WebServlet(name = "CrearCapacitacion", urlPatterns = "/FormularioCrearCapacitacion")
-public class CrearCapacitacion extends HttpServlet {
+/**
+ * Servlet implementation class RecuperadorCapacitacionConsola
+ */
+@WebServlet("/RecuperadorCapacitacionConsola")
+public class RecuperadorCapacitacionConsola extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public RecuperadorCapacitacionConsola() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
-	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		request.getRequestDispatcher("vista/capacitacion.jsp").forward(request, response);
-	}
-
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// Obtener los valores de los campos del formulario
-
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+//		 Obtener los valores de los campos del formulario
 		String idCapacitacion = request.getParameter("idCapacitacion"); 
 		String fechaCap = request.getParameter("fecha");
 		String hora = request.getParameter("hora");
@@ -74,7 +81,7 @@ public class CrearCapacitacion extends HttpServlet {
 		try {
 			System.out.println("entering try/catch CREAR CAPACITACION SERVLET");
 			Capacitacion capacitacion = new Capacitacion();
-			ImplCapacitacionDAO capdao = new ImplCapacitacionDAO();
+			ICapacitacion capdao = new ImplementacionInterfazCapacitacion();
 			
 			request.setAttribute("idcapacitacion", idCapacitacion);
 			capacitacion.setIdCapacitacion(idCapacitacion);
@@ -89,16 +96,13 @@ public class CrearCapacitacion extends HttpServlet {
 			request.setAttribute("idUsuario", idUsuario_Run);
 			capacitacion.setIdUsuario_Run(idUsuario_Run);
 			
-			capdao.registrar(capacitacion);
+			capdao.registrarConsola(capacitacion);
 			// Redirige a una pagina de confirmacion
-			response.sendRedirect("vista/CONFIRMACIONES/confirmacionCapacitacion.jsp");
+			response.sendRedirect("ConfirmacionCapacitacionConsola");
 			
 		}catch(Exception e) {
 			System.out.println(e + " SERVLET CREAR CAPACITACION");
 		}
-
-		
-
 	}
 
 }

@@ -19,6 +19,7 @@ public class FormularioContacto extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.getRequestDispatcher("vista/contacto.jsp").forward(request, response);
 
 	}
 
@@ -30,7 +31,7 @@ public class FormularioContacto extends HttpServlet {
 		String email = request.getParameter("email");
 		String mensaje = request.getParameter("mensaje");
 
-		//datos para ver si llegan en consola
+		// datos para ver si llegan en consola
 		System.out.println(nombre);
 		System.out.println(email);
 		System.out.println(mensaje);
@@ -38,12 +39,10 @@ public class FormularioContacto extends HttpServlet {
 		request.setAttribute("nombre", nombre);
 		request.setAttribute("email", email);
 		request.setAttribute("mensaje", mensaje);
-		
 
-		 response.sendRedirect("vista/paginas/confirmacionContacto.jsp");
-		 return;
+		response.sendRedirect("ConfirmacionContacto");
+		return;
 
-		
 	}
 
 }

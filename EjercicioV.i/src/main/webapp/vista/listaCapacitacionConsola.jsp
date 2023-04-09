@@ -12,10 +12,10 @@ Carlos Carrasco --%>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="/vista/assets/stylesheet.css">
-<title>Lista Capacitaciones</title>
+<title>Lista Capacitacion Consola</title>
 </head>
 <body>
-	<h1>Lista de Capacitaciones</h1>
+	<h1>Lista de Capacitaciones en la Consola</h1>
 	<%@include file="/FIJOS/Navbar.jsp"%>
 	<h2>Capacitaciones</h2>
 	<table>
@@ -27,7 +27,7 @@ Carlos Carrasco --%>
 			<th>Duracion Capacitacion</th>
 			<th>ID Usuario </th>
 		</tr>
-		<c:forEach items="${listacapacitacion}" var="cap">
+		<c:forEach items="${listacapconsola}" var="cap">
 			<tr>
 				<td>${cap.idCapacitacion}</td>
 				<td>${cap.fechaCap}</td>
