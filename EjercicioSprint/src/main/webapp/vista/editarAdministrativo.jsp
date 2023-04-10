@@ -55,7 +55,7 @@ Carlos Carrasco --%>
           </div>
     
     
-          <input type="submit" class="submitBtn" value="Crear Administrativo">
+          <input type="submit" class="submitBtn" value="Editar Administrativo">
         </form>
       </div>
 </body>

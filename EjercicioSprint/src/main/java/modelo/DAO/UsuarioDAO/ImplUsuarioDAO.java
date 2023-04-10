@@ -81,13 +81,13 @@ public class ImplUsuarioDAO implements IUsuarioDAO {
 	}
 
 	@Override
-	public void actualizar(Usuario d) {
+	public void actualizar(Usuario usuario) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void eliminar(int id) {
+	public void eliminar(Usuario usuario) {
 		// TODO Auto-generated method stub
 
 	}

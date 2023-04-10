@@ -55,7 +55,7 @@ Carlos Carrasco --%>
           </div>
     
     
-          <input type="submit" class="submitBtn" value="Crear Profesional">
+          <input type="submit" class="submitBtn" value="Editar Profesional">
         </form>
       </div>
 </body>

@@ -33,11 +33,12 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query insertar USUARIO \nProsigue insertar datos de administrativo"); //DEBUG
 		        
-		        String sqladmin = "INSERT INTO profesional(telefono, tituloprofesional,proyecto) VALUES (?,?,?);";
-		        PreparedStatement stmt = conn.prepareStatement(sqladmin);
+		        String sqlprof = "INSERT INTO profesional(telefono, tituloprofesional,proyecto, rutprof) VALUES (?,?,?,?);";
+		        PreparedStatement stmt = conn.prepareStatement(sqlprof);
 		        stmt.setInt(1, prof.getTelefono());
 		        stmt.setString(2, prof.getTituloProfesional());
 		        stmt.setString(2, prof.getProyecto());
+		        stmt.setLong(4, prof.getRut());
 
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para PROFESIONAL");
@@ -67,12 +68,12 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query actualizar USUARIO \nProsigue insertar datos de profesional"); //DEBUG
 		        
-		        String sqladmin = "UPDATE administrativo set telefono = ?, tituloprofesional = ?, proyecto = ? WHERE idprofesional = ?;";
-		        PreparedStatement stmt = conn.prepareStatement(sqladmin);
+		        String sqlprof = "UPDATE administrativo set telefono = ?, tituloprofesional = ?, proyecto = ? WHERE rutprof = ?;";
+		        PreparedStatement stmt = conn.prepareStatement(sqlprof);
 		        stmt.setInt(1, prof.getTelefono());
 		        stmt.setString(2, prof.getTituloProfesional());
 		        stmt.setString(3, prof.getProyecto());
-		        stmt.setInt(4, prof.getIdProfesional());
+		        stmt.setLong(4, prof.getRut());
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para PROFESIONAL");
 		        
@@ -90,15 +91,17 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 		 System.out.println("llego la conexion= " + conn);
 			try {
 				System.out.println("just entered try/catch ELIMINAR PROFESIONAL IMPL\n");
-		        String sql = "DELETE FROM usuario WHERE run = ?;";
+		        String sql = "DELETE FROM profesional WHERE run = ?;";
 		        PreparedStatement st = conn.prepareStatement(sql);
 		        st.setLong(1, prof.getRut());
-		        System.out.println("atributos set en la query eliminar USUARIO \nProsigue eliminacion de datos de profesional"); //DEBUG
+		        st.executeUpdate();
+		        System.out.println("atributos set en la query eliminar PROFESIONAL \nProsigue eliminacion de datos USUARIO"); //DEBUG
 		        
-		        String sqladmin = "DELETE FROM cliente WHERE idprofesional = ?;";
-		        PreparedStatement stmt = conn.prepareStatement(sqladmin);
+		        String sqlprof = "DELETE FROM usuario WHERE run = ?;";
+		        PreparedStatement stmt = conn.prepareStatement(sqlprof);
 		        stmt.setInt(1, prof.getIdProfesional());
-		        System.out.println("atributos set en la query para PROFESIONAL");
+		        stmt.executeUpdate();
+		        System.out.println("atributos set en la query para USUARIO");
 		        
 		        st.close();
 		        conn.close();

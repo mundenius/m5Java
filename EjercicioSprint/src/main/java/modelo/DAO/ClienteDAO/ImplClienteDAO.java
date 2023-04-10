@@ -32,19 +32,19 @@ public class ImplClienteDAO implements IClienteDAO {
 			st.setLong(4, cli.getRut());
 			st.executeUpdate();
 			System.out
-					.println("atributos set en la query insertar USUARIO \nProsigue insertar datos de administrativo"); // DEBUG
+					.println("atributos set en la query insertar USUARIO \nProsigue insertar datos de CLIENTE"); // DEBUG
 
-			String sqladmin = "INSERT INTO cliente(clitelefono, cliafp, clisistemasalud, clidireccion, clicomuna, cliedad) VALUES (?,?,?,?,?,?);";
-			PreparedStatement stmt = conn.prepareStatement(sqladmin);
+			String sqlcli = "INSERT INTO cliente(clitelefono, cliafp, clisistemasalud, clidireccion, clicomuna, cliedad, rutcliente) VALUES (?,?,?,?,?,?,?);";
+			PreparedStatement stmt = conn.prepareStatement(sqlcli);
 			stmt.setInt(1, cli.getTelefono());
 			stmt.setString(2, cli.getAfp());
 			stmt.setString(3, cli.getSistemaSalud());
 			stmt.setString(4, cli.getDireccion());
-			stmt.setString(5, cli.getDireccion());
 			stmt.setString(5, cli.getComuna());
 			stmt.setInt(6, cli.getEdad());
+			stmt.setLong(7, cli.getRut());
 			stmt.executeUpdate();
-			System.out.println("atributos set en la query para ADMINISTRATIVO");
+			System.out.println("atributos set en la query para CLIENTE");
 
 			st.close();
 			conn.close();
@@ -71,8 +71,8 @@ public class ImplClienteDAO implements IClienteDAO {
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query actualizar USUARIO \nProsigue insertar datos de CLIENTE"); //DEBUG
 		        
-		        String sqladmin = "UPDATE cliente set clitelefono = ?, cliafp = ?, clisistemasalud = ?, clidireccion = ?, clicomuna = ?, cliedad = ? WHERE idcliente = ?;";
-		        PreparedStatement stmt = conn.prepareStatement(sqladmin);
+		        String sqlcli = "UPDATE cliente set clitelefono = ?, cliafp = ?, clisistemasalud = ?, clidireccion = ?, clicomuna = ?, cliedad = ? WHERE idcliente = ?;";
+		        PreparedStatement stmt = conn.prepareStatement(sqlcli);
 		        stmt.setInt(1, cli.getTelefono());
 		        stmt.setString(2, cli.getAfp());
 		        stmt.setString(3, cli.getSistemaSalud());
@@ -105,16 +105,17 @@ public class ImplClienteDAO implements IClienteDAO {
 		 System.out.println("llego la conexion= " + conn);
 			try {
 				System.out.println("just entered try/catch ELIMINAR CLIENTE IMPL\n");
-		        String sql = "DELETE FROM usuario WHERE run = ?;";
+		        String sql = "DELETE FROM cliente WHERE rutcliente = ?;";
 		        PreparedStatement st = conn.prepareStatement(sql);
 		        st.setLong(1, cli.getRut());
-		        System.out.println("atributos set en la query eliminar USUARIO \nProsigue eliminacion de datos de administrativo"); //DEBUG
+		        st.executeUpdate();
+		        System.out.println("atributos set en la query eliminar CLIENTE \nProsigue eliminacion de datos USUARIO"); //DEBUG
 		        
-		        String sqladmin = "DELETE FROM cliente WHERE idcliente = ?;";
-		        PreparedStatement stmt = conn.prepareStatement(sqladmin);
+		        String sqlcli = "DELETE FROM usuario WHERE run = ?;";
+		        PreparedStatement stmt = conn.prepareStatement(sqlcli);
 		        stmt.setInt(1, cli.getIdCliente());
-		        
-		        System.out.println("atributos set en la query para CLIENTE");
+		        stmt.executeUpdate();
+		        System.out.println("atributos set en la query para USUARIO");
 		        
 		        st.close();
 		        conn.close();
