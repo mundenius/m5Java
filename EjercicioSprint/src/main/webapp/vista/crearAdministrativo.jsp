@@ -17,7 +17,7 @@ Carlos Carrasco --%>
 <body>
 <%@include file = "/FIJOS/Navbar.jsp"%>
 <div class="signupFrm">
-        <form action="CrearAdministrativo" method="POST" class="form">
+        <form action="CrearAdmin" method="POST" class="form">
           <h1 class="title">Crear Administrativo</h1>
     
           <div class="inputContainer">

@@ -94,7 +94,7 @@ public class CrearProfesional extends HttpServlet {
 					
 					profdao.registrar(prof);
 					// Redirige a una pagina de confirmacion
-					response.sendRedirect("ConfirmacionProfesional"); 
+					response.sendRedirect("ConfirmacionCreacionProfesional"); 
 					
 				}catch(Exception e) {
 					System.out.println(e + " SERVLET CREAR PROFESIONAL");

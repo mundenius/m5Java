@@ -93,7 +93,7 @@ public class CrearAdmin extends HttpServlet {
 			
 			admindao.registrar(admin);
 			// Redirige a una pagina de confirmacion
-			response.sendRedirect("ConfirmacionCrearAdministrativo"); 
+			response.sendRedirect("ConfirmacionCreacionAdmin"); 
 			
 		}catch(Exception e) {
 			System.out.println(e + " SERVLET CREAR ADMINISTRATIVO");
