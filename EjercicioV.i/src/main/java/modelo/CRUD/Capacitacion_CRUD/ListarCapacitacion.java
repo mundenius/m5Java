@@ -34,25 +34,25 @@ public class ListarCapacitacion extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		System.out.println("entrando SV ListarCapacitacion");
-		ICapacitacion impcap = new ImplementacionInterfazCapacitacion();
-		
-		request.setAttribute("listacapconsola", impcap.listaCapacitacion());
-		request.getRequestDispatcher("vista/listaCapacitacionConsola.jsp").forward(request, response);
-		System.out.println("redireccion a listaCapacitacionConsola.jsp OK");
-//		try {
-//			System.out.println("entering try/catch sv listar capacitaciones...");
-//			ICapacitacionDAO capdao = new ImplCapacitacionDAO();
-//			System.out.println("se creo la listapersona e instancia de perdao");
-////			listapersona = perdao.listarTodos();	otra forma
-//			request.setAttribute("listacapacitacion", capdao.listarTodos()); //listapersona	otra forma
-//			System.out.println("request.setAttribute de ListarCapacitacion exitoso"); //DEBUG
-//			RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/listaCapacitaciones.jsp");
-//			dispatcher.forward(request, response);
-//			
-//			System.out.println("se despacho el forward de request,response");
-//		}catch(Exception e) {
-//			System.out.println(e + " LISTAR CAPACITACION SERVLET");
-//		}
+//		ICapacitacion impcap = new ImplementacionInterfazCapacitacion();
+//		
+//		request.setAttribute("listacapconsola", impcap.listaCapacitacion());
+//		request.getRequestDispatcher("vista/listaCapacitacionConsola.jsp").forward(request, response);
+//		System.out.println("redireccion a listaCapacitacionConsola.jsp OK");
+		try {
+			System.out.println("entering try/catch sv listar capacitaciones...");
+			ICapacitacionDAO capdao = new ImplCapacitacionDAO();
+			System.out.println("se creo la listapersona e instancia de perdao");
+//			listapersona = perdao.listarTodos();	otra forma
+			request.setAttribute("listacapacitacion", capdao.listarTodos()); //listapersona	otra forma
+			System.out.println("request.setAttribute de ListarCapacitacion exitoso"); //DEBUG
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/listaCapacitaciones.jsp");
+			dispatcher.forward(request, response);
+			
+			System.out.println("se despacho el forward de request,response");
+		}catch(Exception e) {
+			System.out.println(e + " LISTAR CAPACITACION SERVLET");
+		}
 	}
 
 	/**
