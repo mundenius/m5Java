@@ -14,6 +14,7 @@ Carlos Carrasco --%>
 <link rel="stylesheet" href="vista/assets/stylesheet.css">
 </head>
 <body>
+<%@include file = "/FIJOS/Navbar.jsp"%>
 	<div class="signupFrm">
 		<form action="EditarCliente" method="POST" class="form">
 			<h1 class="title">Editar Cliente</h1>
@@ -77,4 +78,7 @@ Carlos Carrasco --%>
 		</form>
 	</div>
 </body>
+<footer>
+<%@include file= "/FIJOS/Footer.jsp" %>
+</footer>
 </html>
