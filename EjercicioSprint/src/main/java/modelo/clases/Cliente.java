@@ -2,6 +2,7 @@ package modelo.clases;
 
 public class Cliente extends Usuario {
 
+	private int idCliente;
 	private int telefono;
 	private String afp;
 	private String sistemaSalud;
@@ -13,15 +14,23 @@ public class Cliente extends Usuario {
 
 	}
 
-	public Cliente(int idUsuario, String nombre, String apellido, String fechaNacimiento, long rut, int telefono,
+	public Cliente(int idUsuario, String nombre, String apellido, String fechaNacimiento, long rut, int idCliente, int telefono,
 			String afp, String sistemaSalud, String direccion, String comuna, int edad) {
 		super(idUsuario, nombre, apellido, fechaNacimiento, rut);
+		this.idCliente = idCliente;
 		this.telefono = telefono;
 		this.afp = afp;
 		this.sistemaSalud = sistemaSalud;
 		this.direccion = direccion;
 		this.comuna = comuna;
 		this.edad = edad;
+	}
+	public int getIdCliente() {
+		return idCliente;
+	}
+	
+	public void setIdCliente(int idCliente) {
+		this.idCliente = idCliente;
 	}
 
 	public int getTelefono() {
@@ -78,4 +87,5 @@ public class Cliente extends Usuario {
 				+ "\nSistema de Salud: " + getSistemaSalud() + "\nDireccion: " + getDireccion() + "\nComuna: "
 				+ getComuna() + "\nEdad: " + getEdad();
 	}
+
 }

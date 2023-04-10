@@ -19,11 +19,6 @@
           <h1 class="title">Crear usuario</h1>
     
           <div class="inputContainer">
-            <input type="text" class="input" placeholder="a" name="idUsuario">
-            <label for="" class="label">Id Usuario: </label>
-          </div>
-    
-          <div class="inputContainer">
             <input type="text" class="input" placeholder="nombre" name="nombre">
             <label for="" class="label">Nombre: </label>
           </div>
