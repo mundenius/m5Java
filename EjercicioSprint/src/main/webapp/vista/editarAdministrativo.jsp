@@ -15,7 +15,7 @@ Carlos Carrasco --%>
 
 </head>
 <body>
-
+<%@include file = "/FIJOS/Navbar.jsp"%>
 <div class="signupFrm">
         <form action="EditarAdministrativo" method="POST" class="form">
           <h1 class="title">Editar Administrativo</h1>
@@ -55,4 +55,7 @@ Carlos Carrasco --%>
         </form>
       </div>
 </body>
+<footer>
+<%@include file= "/FIJOS/Footer.jsp" %>
+</footer>
 </html>

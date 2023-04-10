@@ -15,7 +15,7 @@ Carlos Carrasco --%>
 
 </head>
 <body>
-
+<%@include file = "/FIJOS/Navbar.jsp"%>
 <div class="signupFrm">
         <form action="CrearAdministrativo" method="POST" class="form">
           <h1 class="title">Crear Administrativo</h1>
@@ -54,5 +54,9 @@ Carlos Carrasco --%>
           <input type="submit" class="submitBtn" value="Crear Administrativo">
         </form>
       </div>
+      
 </body>
+<footer>
+<%@include file= "/FIJOS/Footer.jsp" %>
+</footer>
 </html>

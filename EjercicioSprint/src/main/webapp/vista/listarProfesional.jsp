@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file = "/FIJOS/Navbar.jsp"%>
 
 </body>
+<footer>
+<%@include file= "/FIJOS/Footer.jsp" %>
+</footer>
 </html>
