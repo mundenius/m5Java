@@ -59,6 +59,10 @@ public class Usuario {
 		this.rut = rut;
 	}
 
+	
+	public String getNombreCompleto() {
+		return getNombre() + " " + getApellido();
+	}
 	@Override
 	public String toString() {
 		return "Usuario \nidUsuario: " + idUsuario + "\nNombre: " + nombre + "\nApellido: " + apellido
