@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Crear Usuario</title>
+<link rel="stylesheet" href="vista/assets/stylesheet.css">
 </head>
 <body>
 

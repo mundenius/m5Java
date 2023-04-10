@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="vista/assets/stylesheet.css">
 </head>
 <body>
 <%@include file = "/FIJOS/Navbar.jsp"%>
