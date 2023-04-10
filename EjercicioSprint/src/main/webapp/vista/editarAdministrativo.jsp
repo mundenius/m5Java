@@ -15,43 +15,39 @@ Carlos Carrasco --%>
 
 </head>
 <body>
+
 <div class="signupFrm">
         <form action="EditarAdministrativo" method="POST" class="form">
           <h1 class="title">Editar Administrativo</h1>
     
           <div class="inputContainer">
-            <input type="text" class="input" placeholder="nombre" name="nombre">
             <label for="" class="label">Nombre: </label>
+            <input type="text" class="input" placeholder="nombre" name="nombre">
           </div>
     
           <div class="inputContainer">
-            <input type="text" class="input" placeholder="apellido" name="apellido">
             <label for="" class="label">Apellido: </label>
+            <input type="text" class="input" placeholder="apellido" name="apellido">
           </div>
     
           <div class="inputContainer">
-            <input type="date" class="input" name="fechaNacimiento">
             <label for="" class="label">Fecha de nacimiento: </label>
+            <input type="date" class="input" name="fechaNacimiento">
           </div>
           
           <div class="inputContainer">
-            <input type="text" class="input" placeholder="11111111-1" name="rut">
             <label for="" class="label">Rut: </label>
+            <input type="text" class="input" placeholder="11111111-1" name="rut">
           </div>
           
           <div class="inputContainer">
-            <input type="text" class="input" placeholder="somethin@noreply.com" name="idadmin">
-            <label for="" class="label">ID Admin: </label>
-          </div>
-          
-          <div class="inputContainer">
-            <input type="text" class="input" placeholder="somethin@noreply.com" name="email">
             <label for="" class="label">Email: </label>
+            <input type="text" class="input" placeholder="somethin@noreply.com" name="email">
           </div>
           
           <div class="inputContainer">
-            <input type="text" class="input" placeholder="Finanzas, Gerencia, etc" name="area">
             <label for="" class="label">Area: </label>
+            <input type="text" class="input" placeholder="Finanzas, Gerencia, etc" name="area">
           </div>
     
     

@@ -17,7 +17,7 @@ import modelo.clases.Administrativo;
 /**
  * Servlet implementation class CrearAdmin
  */
-@WebServlet("/CrearAdmin")
+//@WebServlet("/CrearAdmin")
 public class CrearAdmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -93,7 +93,7 @@ public class CrearAdmin extends HttpServlet {
 			
 			admindao.registrar(admin);
 			// Redirige a una pagina de confirmacion
-			response.sendRedirect("ConfirmacionAdministrativo"); 
+			response.sendRedirect("ConfirmacionCrearAdministrativo"); 
 			
 		}catch(Exception e) {
 			System.out.println(e + " SERVLET CREAR ADMINISTRATIVO");

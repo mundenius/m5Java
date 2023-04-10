@@ -17,7 +17,7 @@ import modelo.clases.Profesional;
 /**
  * Servlet implementation class CrearProfesional
  */
-@WebServlet("/CrearProfesional")
+//@WebServlet("/CrearProfesional")
 public class CrearProfesional extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

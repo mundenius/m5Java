@@ -18,28 +18,28 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Administrativo</a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Crear Administrativo</a>
+                            <a href="CrearAdministrativo" class="dropdown-item">Crear Administrativo</a>
                             <a href="#" class="dropdown-item">Lista de Administrativos</a>
-                            <a href="#" class="dropdown-item">Editar Administrativo</a>
-                            <a href="#" class="dropdown-item">Eliminar Administrativo</a>
+                            <a href="EditarAdministrativo" class="dropdown-item">Editar Administrativo</a>
+                            <a href="EliminarAdministrativo" class="dropdown-item">Eliminar Administrativo</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cliente</a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Crear Cliente</a>
+                            <a href="CrearCliente" class="dropdown-item">Crear Cliente</a>
                             <a href="#" class="dropdown-item">Lista de Clientes</a>
-                            <a href="#" class="dropdown-item">Editar Cliente</a>
-                            <a href="#" class="dropdown-item">Eliminar Cliente</a>
+                            <a href="EditarCliente" class="dropdown-item">Editar Cliente</a>
+                            <a href="EliminarCliente" class="dropdown-item">Eliminar Cliente</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profesional</a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Crear Profesional</a>
+                            <a href="CrearProfesional" class="dropdown-item">Crear Profesional</a>
                             <a href="#" class="dropdown-item">Lista de Profesionales</a>
-                            <a href="#" class="dropdown-item">Editar Profesional</a>
-                            <a href="#" class="dropdown-item">Eliminar Profesional</a>
+                            <a href="EditarProfesional" class="dropdown-item">Editar Profesional</a>
+                            <a href="EliminarProfesional" class="dropdown-item">Eliminar Profesional</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

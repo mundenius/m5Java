@@ -32,23 +32,8 @@
 		<url-pattern>/CerrarSesion</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>CrearUsuario</servlet-name>
-		<servlet-class>modelo.CRUD.Usuario_CRUD.CrearUsuario</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>CrearUsuario</servlet-name>
-		<url-pattern>/CrearUsuario</url-pattern>
-	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>ListarUsuario</servlet-name>
-		<servlet-class>modelo.CRUD.Usuario_CRUD.ListarUsuario</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ListarUsuario</servlet-name>
-		<url-pattern>/ListarUsuario</url-pattern>
-	</servlet-mapping>
+<!-- CONFIRMACIONES -->
 
 	<servlet>
 		<servlet-name>ConfirmacionCapacitacion</servlet-name>
@@ -75,5 +60,106 @@
 	<servlet-mapping>
 		<servlet-name>ConfirmacionContacto</servlet-name>
 		<url-pattern>/ConfirmacionContacto</url-pattern>
+	</servlet-mapping>
+
+
+<!-- USUARIO -->
+	<servlet>
+		<servlet-name>CrearUsuario</servlet-name>
+		<servlet-class>modelo.CRUD.Usuario_CRUD.CrearUsuario</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CrearUsuario</servlet-name>
+		<url-pattern>/CrearUsuario</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ListarUsuario</servlet-name>
+		<servlet-class>modelo.CRUD.Usuario_CRUD.ListarUsuario</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListarUsuario</servlet-name>
+		<url-pattern>/ListarUsuario</url-pattern>
+	</servlet-mapping>
+
+
+<!-- ADMINISTRATIVO -->
+	<servlet>
+		<servlet-name>CrearAdmin</servlet-name>
+		<servlet-class>modelo.CRUD.Admin_CRUD.CrearAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CrearAdmin</servlet-name>
+		<url-pattern>/CrearAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EditarAdmin</servlet-name>
+		<servlet-class>modelo.CRUD.Admin_CRUD.EditarAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditarAdmin</servlet-name>
+		<url-pattern>/EditarAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EliminarAdmin</servlet-name>
+		<servlet-class>modelo.CRUD.Admin_CRUD.EliminarAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EliminarAdmin</servlet-name>
+		<url-pattern>/EliminarAdmin</url-pattern>
+	</servlet-mapping>
+
+
+<!-- PROFESIONAL -->
+	<servlet>
+		<servlet-name>CrearProfesional</servlet-name>
+		<servlet-class>modelo.CRUD.Profesional_CRUD.CrearProfesional</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CrearProfesional</servlet-name>
+		<url-pattern>/CrearProfesional</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EditarProfesional</servlet-name>
+		<servlet-class>modelo.CRUD.Profesional_CRUD.EditarProfesional</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditarProfesional</servlet-name>
+		<url-pattern>/EditarProfesional</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EliminarProfesional</servlet-name>
+		<servlet-class>modelo.CRUD.Profesional_CRUD.EliminarProfesional</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EliminarProfesional</servlet-name>
+		<url-pattern>/EliminarProfesional</url-pattern>
+	</servlet-mapping>
+
+
+<!-- CLIENTE -->
+	<servlet>
+		<servlet-name>CrearCliente</servlet-name>
+		<servlet-class>modelo.CRUD.Cliente_CRUD.CrearCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CrearCliente</servlet-name>
+		<url-pattern>/CrearCliente</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EditarCliente</servlet-name>
+		<servlet-class>modelo.CRUD.Cliente_CRUD.EditarCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditarCliente</servlet-name>
+		<url-pattern>/EditarCliente</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EliminarCliente</servlet-name>
+		<servlet-class>modelo.CRUD.Cliente_CRUD.EliminarCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EliminarCliente</servlet-name>
+		<url-pattern>/EliminarCliente</url-pattern>
 	</servlet-mapping>
 </web-app>

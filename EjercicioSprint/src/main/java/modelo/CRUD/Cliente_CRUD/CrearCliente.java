@@ -18,7 +18,7 @@ import modelo.clases.Usuario;
 /**
  * Servlet implementation class CrearCliente
  */
-@WebServlet("/CrearCliente")
+//@WebServlet("/CrearCliente")
 public class CrearCliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

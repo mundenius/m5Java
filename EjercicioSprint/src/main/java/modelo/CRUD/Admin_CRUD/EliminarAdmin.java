@@ -1,4 +1,4 @@
-package modelo.CRUD.Profesional_CRUD;
+package modelo.CRUD.Admin_CRUD;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class EditarProfesional
+ * Servlet implementation class EliminarAdmin
  */
-//@WebServlet("/EditarProfesional")
-public class EditarProfesional extends HttpServlet {
+//@WebServlet("/EliminarAdmin")
+public class EliminarAdmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EditarProfesional() {
+    public EliminarAdmin() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,7 +27,7 @@ public class EditarProfesional extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.getRequestDispatcher("vista/eliminarAdministrativo.jsp").forward(request, response);
 	}
 
 	/**
