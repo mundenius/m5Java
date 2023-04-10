@@ -17,7 +17,7 @@ import modelo.clases.Administrativo;
 /**
  * Servlet implementation class EditarAdmin
  */
-@WebServlet("/EditarAdmin")
+//@WebServlet("/EditarAdmin")
 public class EditarAdmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

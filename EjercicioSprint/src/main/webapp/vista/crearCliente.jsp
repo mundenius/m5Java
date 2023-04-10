@@ -20,58 +20,55 @@ Carlos Carrasco --%>
 			<h1 class="title">Crear Cliente</h1>
 
 			<div class="inputContainer">
-				<input type="text" class="input" placeholder="nombre" name="nombre">
-				<label for="" class="label">Nombre: </label>
+				<label for="" class="label">Nombre: </label> <input type="text"
+					class="input" placeholder="nombre" name="nombre">
 			</div>
 
 			<div class="inputContainer">
-				<input type="text" class="input" placeholder="apellido"
-					name="apellido"> <label for="" class="label">Apellido:
-				</label>
+				<label for="" class="label">Apellido:</label> <input type="text"
+					class="input" placeholder="apellido" name="apellido">
 			</div>
 
 			<div class="inputContainer">
-				<input type="date" class="input" name="fechaNacimiento"> <label
-					for="" class="label">Fecha de nacimiento: </label>
+				<label for="" class="label">Fecha de nacimiento: </label> <input
+					type="date" class="input" name="fechaNacimiento">
 			</div>
 
 			<div class="inputContainer">
-				<input type="text" class="input" placeholder="11111111-1" name="rut">
-				<label for="" class="label">Rut: </label>
+				<label for="" class="label">Rut: </label> <input type="text"
+					class="input" placeholder="11111111-1" name="rut">
 			</div>
 
 			<div class="inputContainer">
-				<input type="text" class="input" placeholder="12345678"
-					name="telefono"> <label for="" class="label">Telefono:
-				</label>
+				<label for="" class="label">Telefono:</label> <input type="text"
+					class="input" placeholder="12345678" name="telefono">
 			</div>
 
 			<div class="inputContainer">
-				<input type="text" class="input" placeholder="AFP" name="afp">
-				<label for="" class="label">AFP: </label>
+				<label for="" class="label">AFP: </label> <input type="text"
+					class="input" placeholder="AFP" name="afp">
 			</div>
 
 			<div class="inputContainer">
-				<input type="text" class="input" placeholder="FONASA - ISAPRE"
-					name="sistemasalud"> <label for="" class="label">Sistema de
-					Salud: </label>
+				<label for="" class="label">Sistema de Salud: </label> <input
+					type="text" class="input" placeholder="FONASA - ISAPRE"
+					name="sistemasalud">
 			</div>
 
 			<div class="inputContainer">
-				<input type="text" class="input" placeholder="5 oriente 1090"
-					name="direccion"> <label for="" class="label">Direccion:
-				</label>
+				<label for="" class="label">Direccion:</label> <input type="text"
+					class="input" placeholder="5 oriente 1090" name="direccion">
 			</div>
 
 			<div class="inputContainer">
-				<input type="text" class="input"
-					placeholder="Quilpue, Viña del Mar, etc" name="comuna"> <label
-					for="" class="label">Comuna: </label>
+				<label for="" class="label">Comuna: </label> <input type="text"
+					class="input" placeholder="Quilpue, Viña del Mar, etc"
+					name="comuna">
 			</div>
 
 			<div class="inputContainer">
-				<input type="text" class="input" placeholder="0-100" name="edad">
-				<label for="" class="label">Edad: </label>
+				<label for="" class="label">Edad: </label> <input type="text"
+					class="input" placeholder="0-100" name="edad">
 			</div>
 
 			<input type="submit" class="submitBtn" value="Crear Cliente">

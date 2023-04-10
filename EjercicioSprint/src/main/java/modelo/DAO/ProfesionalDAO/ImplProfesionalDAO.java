@@ -26,10 +26,10 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 				System.out.println("just entered try/catch REGISTRAR PROFESIONAL IMPL\n");
 		        String sql = "INSERT INTO usuario(nombre, apellido, fechaNacimiento, run) VALUES (?, ?, ?, ?);";
 		        PreparedStatement st = conn.prepareStatement(sql);
-		        st.setString(2, prof.getNombre());
-		        st.setString(3, prof.getApellido());
-		        st.setDate(4, StringToDate(prof.getFechaNacimiento()));
-		        st.setLong(5, prof.getRut());
+		        st.setString(1, prof.getNombre());
+		        st.setString(2, prof.getApellido());
+		        st.setDate(3, StringToDate(prof.getFechaNacimiento()));
+		        st.setLong(4, prof.getRut());
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query insertar USUARIO \nProsigue insertar datos de administrativo"); //DEBUG
 		        

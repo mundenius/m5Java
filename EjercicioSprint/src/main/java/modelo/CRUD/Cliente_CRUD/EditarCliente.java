@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class EditarCliente
  */
-@WebServlet("/EditarCliente")
+//@WebServlet("/EditarCliente")
 public class EditarCliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
