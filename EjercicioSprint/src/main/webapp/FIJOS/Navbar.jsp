@@ -18,10 +18,10 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Administrativo</a>
                         <div class="dropdown-menu">
-                            <a href="CrearAdministrativo" class="dropdown-item">Crear Administrativo</a>
+                            <a href="CrearAdmin" class="dropdown-item">Crear Administrativo</a>
                             <a href="#" class="dropdown-item">Lista de Administrativos</a>
-                            <a href="EditarAdministrativo" class="dropdown-item">Editar Administrativo</a>
-                            <a href="EliminarAdministrativo" class="dropdown-item">Eliminar Administrativo</a>
+                            <a href="EditarAdmin" class="dropdown-item">Editar Administrativo</a>
+                            <a href="EliminarAdmin" class="dropdown-item">Eliminar Administrativo</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

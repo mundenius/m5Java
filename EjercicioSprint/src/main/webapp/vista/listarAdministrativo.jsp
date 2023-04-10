@@ -20,29 +20,19 @@ Carlos Carrasco --%>
 	<h2>Administrativos</h2>
 	<table>
 		<tr>
-			<th>ID Usuario</th>
+			<th>RUN</th>
 			<th>Nombre </th>
 			<th>Apellido</th>
 			<th>Fecha de Nacimiento</th>
-			<th>RUN</th>
-		</tr>
-		<c:forEach items="${listausuariosadmin}" var="us">
-			<tr>
-				<td>${us.idUsuario}</td>
-				<td>${us.nombre}</td>
-				<td>${us.apellido}</td>
-				<td>${us.fechaNacimiento}</td>
-				<td>${us.rut}</td>
-			</tr>
-		</c:forEach>
-		<tr>
-			<th>ID Administrativo</th>
-			<th>Email </th>
+			<th>Email</th>
 			<th>Area</th>
 		</tr>
-		<c:forEach items="${listaadmin}" var="admin">
+		<c:forEach items="${listausuariosadmin}" var="admin">
 			<tr>
-				<td>${admin.idAdmin}</td>
+				<td>${admin.rut}</td>
+				<td>${admin.nombre}</td>
+				<td>${admin.apellido}</td>
+				<td>${admin.fechaNacimiento}</td>
 				<td>${admin.email}</td>
 				<td>${admin.area}</td>
 			</tr>

@@ -100,10 +100,10 @@ public class CrearCliente extends HttpServlet {
 					
 					clidao.registrar(cli);
 					// Redirige a una pagina de confirmacion
-					response.sendRedirect("ConfirmacionAdministrativo"); 
+					response.sendRedirect("ConfirmacionCreacionCliente"); 
 					
 				}catch(Exception e) {
-					System.out.println(e + " SERVLET CREAR ADMINISTRATIVO");
+					System.out.println(e + " SERVLET CREAR CLIENTE");
 				}
 	}
 
