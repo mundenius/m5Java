@@ -26,17 +26,18 @@ public class ImplAdminDAO implements IAdminDAO{
 				System.out.println("just entered try/catch REGISTRAR ADMINISTRATIVO IMPL\n");
 		        String sql = "INSERT INTO usuario(nombre, apellido, fechaNacimiento, run) VALUES (?, ?, ?, ?);";
 		        PreparedStatement st = conn.prepareStatement(sql);
-		        st.setString(2, admin.getNombre());
-		        st.setString(3, admin.getApellido());
-		        st.setDate(4, StringToDate(admin.getFechaNacimiento()));
-		        st.setLong(5, admin.getRut());
+		        st.setString(1, admin.getNombre());
+		        st.setString(2, admin.getApellido());
+		        st.setDate(3, StringToDate(admin.getFechaNacimiento()));
+		        st.setLong(4, admin.getRut());
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query insertar USUARIO \nProsigue insertar datos de administrativo"); //DEBUG
 		        
-		        String sqladmin = "INSERT INTO administrativo(email, area) VALUES (?,?);";
+		        String sqladmin = "INSERT INTO administrativo(email, area, rutadmin) VALUES (?,?,?);";
 		        PreparedStatement stmt = conn.prepareStatement(sqladmin);
 		        stmt.setString(1, admin.getEmail());
 		        stmt.setString(2, admin.getArea());
+		        stmt.setLong(3, admin.getRut());
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para ADMINISTRATIVO");
 		        
@@ -65,11 +66,11 @@ public class ImplAdminDAO implements IAdminDAO{
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query actualizar USUARIO \nProsigue insertar datos de administrativo"); //DEBUG
 		        
-		        String sqladmin = "UPDATE administrativo set email = ?, area = ? WHERE idadmin = ?;";
+		        String sqladmin = "UPDATE administrativo set email = ?, area = ? WHERE rutadmin = ?;";
 		        PreparedStatement stmt = conn.prepareStatement(sqladmin);
 		        stmt.setString(1, admin.getEmail());
 		        stmt.setString(2, admin.getArea());
-		        stmt.setInt(3, admin.getIdAdmin());
+		        stmt.setLong(3, admin.getRut());
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para ADMINISTRATIVO");
 		        
@@ -87,16 +88,17 @@ public class ImplAdminDAO implements IAdminDAO{
 		 System.out.println("llego la conexion= " + conn);
 			try {
 				System.out.println("just entered try/catch ELIMINAR ADMINISTRATIVO IMPL\n");
-		        String sql = "DELETE FROM usuario WHERE run = ?;";
+		        String sql = "DELETE FROM admin WHERE rutadmin = ?;";
 		        PreparedStatement st = conn.prepareStatement(sql);
 		        st.setLong(1, admin.getRut());
-		        System.out.println("atributos set en la query eliminar USUARIO \nProsigue eliminacion de datos de administrativo"); //DEBUG
+		        st.executeUpdate();
+		        System.out.println("atributos set en la query eliminar ADMINISTRATIVO \nProsigue eliminacion de datos USUARIO"); //DEBUG
 		        
-		        String sqladmin = "DELETE FROM cliente WHERE idadmin = ?;";
+		        String sqladmin = "DELETE FROM usuario WHERE run = ?;";
 		        PreparedStatement stmt = conn.prepareStatement(sqladmin);
 		        stmt.setInt(1, admin.getIdAdmin());
-		        
-		        System.out.println("atributos set en la query para ADMINISTRATIVO");
+		        stmt.executeUpdate();
+		        System.out.println("atributos set en la query para USUARIO");
 		        
 		        st.close();
 		        conn.close();

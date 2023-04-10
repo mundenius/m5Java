@@ -98,7 +98,7 @@ public class ImplCapacitacionDAO implements ICapacitacionDAO {
 	}
 
 	@Override
-	public void eliminar(int id) {
+	public void eliminar(Capacitacion capacitacion) {
 		// TODO Auto-generated method stub
 
 	}

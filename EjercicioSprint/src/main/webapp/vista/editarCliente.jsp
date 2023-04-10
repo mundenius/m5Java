@@ -16,7 +16,7 @@ Carlos Carrasco --%>
 <body>
 	<div class="signupFrm">
 		<form action="EditarCliente" method="POST" class="form">
-			<h1 class="title">Crear Cliente</h1>
+			<h1 class="title">Editar Cliente</h1>
 
 			<div class="inputContainer">
 				<input type="text" class="input" placeholder="nombre" name="nombre">
@@ -73,7 +73,7 @@ Carlos Carrasco --%>
 				<label for="" class="label">Edad: </label>
 			</div>
 
-			<input type="submit" class="submitBtn" value="Crear Cliente">
+			<input type="submit" class="submitBtn" value="Editar Cliente">
 		</form>
 	</div>
 </body>
