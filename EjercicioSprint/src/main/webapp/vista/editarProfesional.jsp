@@ -34,12 +34,7 @@ Carlos Carrasco --%>
             <label for="" class="label">Fecha de nacimiento: </label>
             <input type="date" class="input" name="fechaNacimiento">
           </div>
-          
-          <div class="inputContainer">
-            <label for="" class="label">Rut: </label>
-            <input type="text" class="input" placeholder="11111111-1" name="rut">
-          </div>
-          
+                 
           <div class="inputContainer">
             <label for="" class="label">Telefono: </label>
             <input type="text" class="input" placeholder="12345678" name="telefono">

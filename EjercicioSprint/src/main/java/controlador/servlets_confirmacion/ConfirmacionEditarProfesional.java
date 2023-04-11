@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ConfirmacionEditarProfesional
  */
-@WebServlet("/ConfirmacionEditarProfesional")
+//@WebServlet("/ConfirmacionEditarProfesional")
 public class ConfirmacionEditarProfesional extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

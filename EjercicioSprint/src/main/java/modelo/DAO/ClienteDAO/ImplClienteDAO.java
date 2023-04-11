@@ -70,18 +70,19 @@ public class ImplClienteDAO implements IClienteDAO {
 		System.out.println("llego la conexion= " + conn);
 		try {
 			System.out.println("just entered try/catch REGISTRAR CLIENTE IMPL\n");
-			String sql = "INSERT INTO usuario(nombre, apellido, fechaNacimiento, run) VALUES (?, ?, ?, ?);";
+			String sql = "INSERT INTO usuario(nombre, apellido, fechanacimiento, run) VALUES (?, ?, ?, ?);";
 			PreparedStatement st = conn.prepareStatement(sql);
+			System.out.println("pre st.SETTER");
 			st.setString(1, cli.getNombre());
 			st.setString(2, cli.getApellido());
 			st.setDate(3, StringToDate(cli.getFechaNacimiento()));
 			st.setLong(4, cli.getRut());
 			st.executeUpdate();
-			System.out
-					.println("atributos set en la query insertar USUARIO \nProsigue insertar datos de CLIENTE"); // DEBUG
+			System.out.println("atributos set en la query insertar USUARIO \nProsigue insertar datos de CLIENTE"); // DEBUG
 
 			String sqlcli = "INSERT INTO cliente(clitelefono, cliafp, clisistemasalud, clidireccion, clicomuna, cliedad, rutcliente) VALUES (?,?,?,?,?,?,?);";
 			PreparedStatement stmt = conn.prepareStatement(sqlcli);
+			System.out.println("pre stmt.SETTER");
 			stmt.setInt(1, cli.getTelefono());
 			stmt.setString(2, cli.getAfp());
 			stmt.setString(3, cli.getSistemaSalud());
