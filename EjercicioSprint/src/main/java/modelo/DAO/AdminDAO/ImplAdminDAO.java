@@ -15,7 +15,8 @@ import modelo.conexion.Singleton;
 public class ImplAdminDAO implements IAdminDAO{
 
 	ResultSet rs;
-	Statement st;
+	PreparedStatement st;
+	PreparedStatement stmt;
 
 	@Override
 	public List<Administrativo> listarTodos() {
@@ -72,6 +73,7 @@ public class ImplAdminDAO implements IAdminDAO{
 		        st.setString(2, admin.getApellido());
 		        st.setDate(3, StringToDate(admin.getFechaNacimiento()));
 		        st.setLong(4, admin.getRut());
+		        System.out.println("pre executeUpdate");
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query insertar USUARIO \nProsigue insertar datos de administrativo"); //DEBUG
 		        
@@ -83,8 +85,8 @@ public class ImplAdminDAO implements IAdminDAO{
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para ADMINISTRATIVO");
 		        
-		        st.close();
-		        conn.close();
+//		        st.close();
+//		        conn.close();
 		    } catch (Exception e) {
 		        System.out.println("Error al registrar ADMINISTRATIVO: " + e.getMessage());
 		    }
@@ -99,12 +101,13 @@ public class ImplAdminDAO implements IAdminDAO{
 		 System.out.println("llego la conexion= " + conn);
 			try {
 				System.out.println("just entered try/catch ACTUALIZAR ADMINISTRATIVO IMPL\n");
-		        String sql = "UPDATE usuario set nombre=?, apellido=?, fechaNacimiento=? WHERE run=?;";
+		        String sql = "UPDATE usuario set nombre = (?), apellido = (?), fechaNacimiento = (?) WHERE run = (?);";
 		        PreparedStatement st = conn.prepareStatement(sql);
 		        st.setString(1, admin.getNombre());
 		        st.setString(2, admin.getApellido());
 		        st.setDate(3, StringToDate(admin.getFechaNacimiento()));
 		        st.setLong(4, admin.getRut());
+		        System.out.println("pre executeUpdate usuario");
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query actualizar USUARIO \nProsigue insertar datos de administrativo"); //DEBUG
 		        
@@ -113,6 +116,7 @@ public class ImplAdminDAO implements IAdminDAO{
 		        stmt.setString(1, admin.getEmail());
 		        stmt.setString(2, admin.getArea());
 		        stmt.setLong(3, admin.getRut());
+		        System.out.println("pre executeUpdate admin");
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para ADMINISTRATIVO");
 		        
@@ -130,20 +134,22 @@ public class ImplAdminDAO implements IAdminDAO{
 		 System.out.println("llego la conexion= " + conn);
 			try {
 				System.out.println("just entered try/catch ELIMINAR ADMINISTRATIVO IMPL\n");
-		        String sql = "DELETE FROM admin WHERE rutadmin = ?;";
+		        String sql = "DELETE FROM administrativo WHERE rutadmin = ?;";
 		        PreparedStatement st = conn.prepareStatement(sql);
 		        st.setLong(1, admin.getRut());
+		        System.out.println("pre executeUpdate administrativo");
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query eliminar ADMINISTRATIVO \nProsigue eliminacion de datos USUARIO"); //DEBUG
 		        
 		        String sqladmin = "DELETE FROM usuario WHERE run = ?;";
 		        PreparedStatement stmt = conn.prepareStatement(sqladmin);
-		        stmt.setInt(1, admin.getIdAdmin());
+		        stmt.setLong(1, admin.getRut());
+		        System.out.println("pre executeUpdate usuario");
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para USUARIO");
 		        
-		        st.close();
-		        conn.close();
+//		        st.close();
+//		        conn.close();
 		    } catch (Exception e) {
 		        System.out.println("Error al eliminar ADMINISTRATIVO: " + e.getMessage());
 		    }

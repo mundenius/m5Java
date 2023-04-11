@@ -24,8 +24,9 @@ Carlos Carrasco --%>
 			<th>Nombre </th>
 			<th>Apellido</th>
 			<th>Fecha de Nacimiento</th>
-			<th>Email</th>
-			<th>Area</th>
+			<th>Telefono</th>
+			<th>Titulo Profesional</th>
+			<th>Proyecto</th>
 		</tr>
 		<c:forEach items="${listausuariosprof}" var="prof">
 			<tr>

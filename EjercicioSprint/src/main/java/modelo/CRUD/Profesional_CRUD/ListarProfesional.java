@@ -31,14 +31,6 @@ public class ListarProfesional extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("vista/listarProfesional.jsp").forward(request, response);
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		try {
 			System.out.println("entering try/catch sv listar Profesional");
 			IProfesionalDAO profdao = new ImplProfesionalDAO();
@@ -52,7 +44,14 @@ public class ListarProfesional extends HttpServlet {
 			System.out.println("se despacho el forward de request,response");
 		}catch(Exception e) {
 			System.out.println(e + " LISTAR PROFESIONAL SERVLET");
-		}
+		}	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

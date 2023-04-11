@@ -51,9 +51,9 @@ public class ImplClienteDAO implements IClienteDAO {
 					System.out.println(e + " LISTAR, CLIENTE DAO IMPL");
 				} finally {
 					try {
-						st.close();
-						rs.close();
-						conn.close();
+//						st.close();
+//						rs.close();
+//						conn.close();
 					} catch (Exception e) {
 						System.out.println(e + " TRY/CATCH close connections");
 					}
@@ -116,6 +116,7 @@ public class ImplClienteDAO implements IClienteDAO {
 		        st.setString(2, cli.getApellido());
 		        st.setDate(3, StringToDate(cli.getFechaNacimiento()));
 		        st.setLong(4, cli.getRut());
+		        System.out.println("pre executeUpdate");
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query actualizar USUARIO \nProsigue insertar datos de CLIENTE"); //DEBUG
 		        
@@ -128,6 +129,7 @@ public class ImplClienteDAO implements IClienteDAO {
 		        stmt.setString(5, cli.getComuna());
 		        stmt.setInt(6, cli.getEdad());
 		        stmt.setInt(7, cli.getIdCliente());
+		        System.out.println("pre executeUpdate");
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para actualizar CLIENTE");
 		        
@@ -153,17 +155,19 @@ public class ImplClienteDAO implements IClienteDAO {
 		 System.out.println("llego la conexion= " + conn);
 			try {
 				System.out.println("just entered try/catch ELIMINAR CLIENTE IMPL\n");
-		        String sql = "DELETE FROM cliente WHERE rutcliente = ?;";
+		        String sql = "DELETE FROM cliente WHERE rutcliente = (?);";
 		        PreparedStatement st = conn.prepareStatement(sql);
 		        st.setLong(1, cli.getRut());
+		        System.out.println("pre executeUpdate cliente");
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query eliminar CLIENTE \nProsigue eliminacion de datos USUARIO"); //DEBUG
 		        
 		        String sqlcli = "DELETE FROM usuario WHERE run = ?;";
 		        PreparedStatement stmt = conn.prepareStatement(sqlcli);
-		        stmt.setInt(1, cli.getIdCliente());
+		        stmt.setLong(1, cli.getRut());
+		        System.out.println("pre executeUpdate usuario");
 		        stmt.executeUpdate();
-		        System.out.println("atributos set en la query para USUARIO");
+		        System.out.println("atributos set en la query para eliminar USUARIO");
 		        
 //		        st.close();
 //		        conn.close();

@@ -89,8 +89,8 @@ public class EditarCliente extends HttpServlet {
 			cli.setApellido(apellido);
 			request.setAttribute("fecha nacimiento", fechaNacimiento);
 			cli.setFechaNacimiento(fechaNacimiento);
-//			request.setAttribute("rut", rut);
-//			cli.setRut(Long.parseLong(rut));
+			request.setAttribute("rut", rut);
+			cli.setRut(Long.parseLong(rut));
 			request.setAttribute("telefono", telefono);
 			cli.setTelefono(Integer.parseInt(telefono));;
 			request.setAttribute("afp", afp);
