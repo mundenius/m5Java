@@ -46,9 +46,9 @@ public class ImplAdminDAO implements IAdminDAO{
 			System.out.println(e + " LISTAR, ADMIN DAO IMPL");
 		} finally {
 			try {
-				st.close();
-				rs.close();
-				conn.close();
+//				st.close();
+//				rs.close();
+//				conn.close();
 			} catch (Exception e) {
 				System.out.println(e + " TRY/CATCH close connections");
 			}
@@ -65,8 +65,9 @@ public class ImplAdminDAO implements IAdminDAO{
 		 System.out.println("llego la conexion= " + conn);
 			try {
 				System.out.println("just entered try/catch REGISTRAR ADMINISTRATIVO IMPL\n");
-		        String sql = "INSERT INTO usuario(nombre, apellido, fechaNacimiento, run) VALUES (?, ?, ?, ?);";
+		        String sql = "INSERT INTO usuario(nombre, apellido, fechanacimiento, run) VALUES (?, ?, ?, ?);";
 		        PreparedStatement st = conn.prepareStatement(sql);
+		        System.out.println("pre st.SETTER");
 		        st.setString(1, admin.getNombre());
 		        st.setString(2, admin.getApellido());
 		        st.setDate(3, StringToDate(admin.getFechaNacimiento()));

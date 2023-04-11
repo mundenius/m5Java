@@ -36,11 +36,6 @@ Carlos Carrasco --%>
           </div>
           
           <div class="inputContainer">
-            <label for="" class="label">Rut: </label>
-            <input type="text" class="input" placeholder="11111111-1" name="rut">
-          </div>
-          
-          <div class="inputContainer">
             <label for="" class="label">Email: </label>
             <input type="text" class="input" placeholder="somethin@noreply.com" name="email">
           </div>

@@ -33,36 +33,6 @@
 	</servlet-mapping>
 
 
-<!-- CONFIRMACIONES -->
-
-	<servlet>
-		<servlet-name>ConfirmacionCapacitacion</servlet-name>
-		<servlet-class>controlador.servlets_confirmacion.ConfirmacionCapacitacion</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ConfirmacionCapacitacion</servlet-name>
-		<url-pattern>/ConfirmacionCapacitacion</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>ConfirmacionUsuario</servlet-name>
-		<servlet-class>controlador.servlets_confirmacion.ConfirmacionUsuario</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ConfirmacionUsuario</servlet-name>
-		<url-pattern>/ConfirmacionUsuario</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>ConfirmacionContacto</servlet-name>
-		<servlet-class>controlador.servlets_confirmacion.ConfirmacionContacto</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ConfirmacionContacto</servlet-name>
-		<url-pattern>/ConfirmacionContacto</url-pattern>
-	</servlet-mapping>
-
-
 <!-- USUARIO -->
 	<servlet>
 		<servlet-name>CrearUsuario</servlet-name>
@@ -93,6 +63,14 @@
 		<url-pattern>/CrearAdmin</url-pattern>
 	</servlet-mapping>
 	<servlet>
+		<servlet-name>ListarAdmin</servlet-name>
+		<servlet-class>modelo.CRUD.Admin_CRUD.ListarAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListarAdmin</servlet-name>
+		<url-pattern>/ListarAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
 		<servlet-name>EditarAdmin</servlet-name>
 		<servlet-class>modelo.CRUD.Admin_CRUD.EditarAdmin</servlet-class>
 	</servlet>
@@ -118,6 +96,14 @@
 	<servlet-mapping>
 		<servlet-name>CrearProfesional</servlet-name>
 		<url-pattern>/CrearProfesional</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ListarProfesional</servlet-name>
+		<servlet-class>modelo.CRUD.Profesional_CRUD.ListarProfesional</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListarProfesional</servlet-name>
+		<url-pattern>/ListarProfesional</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>EditarProfesional</servlet-name>
@@ -147,6 +133,14 @@
 		<url-pattern>/CrearCliente</url-pattern>
 	</servlet-mapping>
 	<servlet>
+		<servlet-name>ListarCliente</servlet-name>
+		<servlet-class>modelo.CRUD.Cliente_CRUD.ListarCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListarCliente</servlet-name>
+		<url-pattern>/ListarCliente</url-pattern>
+	</servlet-mapping>
+	<servlet>
 		<servlet-name>EditarCliente</servlet-name>
 		<servlet-class>modelo.CRUD.Cliente_CRUD.EditarCliente</servlet-class>
 	</servlet>
@@ -161,5 +155,89 @@
 	<servlet-mapping>
 		<servlet-name>EliminarCliente</servlet-name>
 		<url-pattern>/EliminarCliente</url-pattern>
+	</servlet-mapping>
+	
+	
+<!-- CONFIRMACIONES -->
+
+	<servlet>
+		<servlet-name>ConfirmacionCapacitacion</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionCapacitacion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionCapacitacion</servlet-name>
+		<url-pattern>/ConfirmacionCapacitacion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConfirmacionUsuario</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionUsuario</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionUsuario</servlet-name>
+		<url-pattern>/ConfirmacionUsuario</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConfirmacionContacto</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionContacto</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionContacto</servlet-name>
+		<url-pattern>/ConfirmacionContacto</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConfirmacionCreacionAdmin</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionCreacionAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionCreacionAdmin</servlet-name>
+		<url-pattern>/ConfirmacionCreacionAdmin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConfirmacionCreacionCliente</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionCreacionCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionCreacionCliente</servlet-name>
+		<url-pattern>/ConfirmacionCreacionCliente</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConfirmacionCreacionProfesional</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionCreacionProfesional</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionCreacionProfesional</servlet-name>
+		<url-pattern>/ConfirmacionCreacionProfesional</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConfirmacionEditarAdmin</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionEditarAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionEditarAdmin</servlet-name>
+		<url-pattern>/ConfirmacionEditarAdmin</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>ConfirmacionEditarCliente</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionEditarCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionEditarCliente</servlet-name>
+		<url-pattern>/ConfirmacionEditarCliente</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>ConfirmacionEditarProfesional</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionEditarProfesional</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionEditarProfesional</servlet-name>
+		<url-pattern>/ConfirmacionEditarProfesional</url-pattern>
 	</servlet-mapping>
 </web-app>

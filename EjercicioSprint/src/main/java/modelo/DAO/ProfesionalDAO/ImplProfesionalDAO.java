@@ -48,9 +48,9 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 					System.out.println(e + " LISTAR, PROFESIONAL DAO IMPL");
 				} finally {
 					try {
-						st.close();
-						rs.close();
-						conn.close();
+//						st.close();
+//						rs.close();
+//						conn.close();
 					} catch (Exception e) {
 						System.out.println(e + " TRY/CATCH close connections");
 					}
@@ -69,6 +69,7 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 				System.out.println("just entered try/catch REGISTRAR PROFESIONAL IMPL\n");
 		        String sql = "INSERT INTO usuario(nombre, apellido, fechaNacimiento, run) VALUES (?, ?, ?, ?);";
 		        PreparedStatement st = conn.prepareStatement(sql);
+		        System.out.println("pre st.SETTER");
 		        st.setString(1, prof.getNombre());
 		        st.setString(2, prof.getApellido());
 		        st.setDate(3, StringToDate(prof.getFechaNacimiento()));
@@ -78,6 +79,7 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 		        
 		        String sqlprof = "INSERT INTO profesional(telefono, tituloprofesional,proyecto, rutprof) VALUES (?,?,?,?);";
 		        PreparedStatement stmt = conn.prepareStatement(sqlprof);
+		        System.out.println("pre stmt.SETTER");
 		        stmt.setInt(1, prof.getTelefono());
 		        stmt.setString(2, prof.getTituloProfesional());
 		        stmt.setString(3, prof.getProyecto());
@@ -86,8 +88,8 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para PROFESIONAL");
 		        
-		        st.close();
-		        conn.close();
+//		        st.close();
+//		        conn.close();
 		    } catch (Exception e) {
 		        System.out.println("Error al registrar PROFESIONAL: " + e.getMessage());
 		    }
