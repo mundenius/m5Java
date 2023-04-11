@@ -24,7 +24,7 @@ rutcliente int not null
 CREATE TABLE administrativo (
 idadministrativo int not null auto_increment primary key, 
 email varchar(20) not null, 
-area varchar(15) not null,
+area varchar(20) not null,
 rutadmin int not null
 );
 
