@@ -99,7 +99,7 @@ public class ImplAdminDAO implements IAdminDAO{
 		 System.out.println("llego la conexion= " + conn);
 			try {
 				System.out.println("just entered try/catch ACTUALIZAR ADMINISTRATIVO IMPL\n");
-		        String sql = "UPDATE usuario set nombre = ?, apellido = ?, fechaNacimiento = ? WHERE run = ?;";
+		        String sql = "UPDATE usuario set nombre=?, apellido=?, fechaNacimiento=? WHERE run=?;";
 		        PreparedStatement st = conn.prepareStatement(sql);
 		        st.setString(1, admin.getNombre());
 		        st.setString(2, admin.getApellido());
@@ -116,8 +116,8 @@ public class ImplAdminDAO implements IAdminDAO{
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para ADMINISTRATIVO");
 		        
-		        st.close();
-		        conn.close();
+//		        st.close();
+//		        conn.close();
 		    } catch (Exception e) {
 		        System.out.println("Error al actualizar ADMINISTRATIVO: " + e.getMessage());
 		    }

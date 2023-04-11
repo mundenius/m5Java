@@ -93,8 +93,8 @@ public class ImplClienteDAO implements IClienteDAO {
 			stmt.executeUpdate();
 			System.out.println("atributos set en la query para CLIENTE");
 
-			st.close();
-			conn.close();
+//			st.close();
+//			conn.close();
 		} catch (Exception e) {
 			System.out.println("Error al registrar CLIENTE: " + e.getMessage());
 		}
@@ -111,6 +111,7 @@ public class ImplClienteDAO implements IClienteDAO {
 				System.out.println("just entered try/catch ACTUALIZAR CLIENTE IMPL\n");
 		        String sql = "UPDATE usuario set nombre = ?, apellido = ?, fechaNacimiento = ? WHERE run = ?;";
 		        PreparedStatement st = conn.prepareStatement(sql);
+		        System.out.println("pre st.SETTER");
 		        st.setString(1, cli.getNombre());
 		        st.setString(2, cli.getApellido());
 		        st.setDate(3, StringToDate(cli.getFechaNacimiento()));
@@ -130,14 +131,14 @@ public class ImplClienteDAO implements IClienteDAO {
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para actualizar CLIENTE");
 		        
-		        st.close();
-		        stmt.close();
+//		        st.close();
+//		        stmt.close();
 		    } catch (Exception e) {
 		        System.out.println("Error al actualizar CLIENTE: " + e.getMessage());
 		    }finally {
 		    	try {
 //		    		st.close();
-		    		conn.close();
+//		    		conn.close();
 		    		
 		    	}catch(Exception e) {
 		    		System.out.println(e + "closing try/catch ");
@@ -164,8 +165,8 @@ public class ImplClienteDAO implements IClienteDAO {
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para USUARIO");
 		        
-		        st.close();
-		        conn.close();
+//		        st.close();
+//		        conn.close();
 		    } catch (Exception e) {
 		        System.out.println("Error al eliminar CLIENTE: " + e.getMessage());
 		    }
