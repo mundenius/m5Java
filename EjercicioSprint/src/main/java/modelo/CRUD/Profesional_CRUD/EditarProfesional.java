@@ -83,8 +83,8 @@ public class EditarProfesional extends HttpServlet {
 			prof.setApellido(apellido);
 			request.setAttribute("fecha nacimiento", fechaNacimiento);
 			prof.setFechaNacimiento(fechaNacimiento);
-//			request.setAttribute("rut", rut);
-//			prof.setRut(Long.parseLong(rut));
+			request.setAttribute("rut", rut);
+			prof.setRut(Long.parseLong(rut));
 			request.setAttribute("telefono", telefono);
 			prof.setTelefono(Integer.parseInt(telefono));
 			request.setAttribute("area", tituloProfesional);

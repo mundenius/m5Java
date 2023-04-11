@@ -84,8 +84,8 @@ public class EditarAdmin extends HttpServlet {
 					admin.setApellido(apellido);
 					request.setAttribute("fecha nacimiento", fechaNacimiento);
 					admin.setFechaNacimiento(fechaNacimiento);
-//					request.setAttribute("rut", rut);
-//					admin.setRut(Long.parseLong(rut));
+					request.setAttribute("rut", rut);
+					admin.setRut(Long.parseLong(rut));
 //					request.setAttribute("idadmin", idadmin);
 //					admin.setIdAdmin(Integer.parseInt(idadmin));
 					request.setAttribute("email", email);

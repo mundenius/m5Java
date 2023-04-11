@@ -110,20 +110,22 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 		        st.setString(2, prof.getApellido());
 		        st.setDate(3, StringToDate(prof.getFechaNacimiento()));
 		        st.setLong(4, prof.getRut());
+		        System.out.println("pre executeUpdate usuario");
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query actualizar USUARIO \nProsigue insertar datos de profesional"); //DEBUG
 		        
-		        String sqlprof = "UPDATE administrativo set telefono = ?, tituloprofesional = ?, proyecto = ? WHERE rutprof = ?;";
+		        String sqlprof = "UPDATE profesional set telefono = ?, tituloprofesional = ?, proyecto = ? WHERE rutprof = ?;";
 		        PreparedStatement stmt = conn.prepareStatement(sqlprof);
 		        stmt.setInt(1, prof.getTelefono());
 		        stmt.setString(2, prof.getTituloProfesional());
 		        stmt.setString(3, prof.getProyecto());
 		        stmt.setLong(4, prof.getRut());
+		        System.out.println("pre executeUpdate profesional");
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para PROFESIONAL");
 		        
-		        st.close();
-		        conn.close();
+//		        st.close();
+//		        conn.close();
 		    } catch (Exception e) {
 		        System.out.println("Error al actualizar PROFESIONAL: " + e.getMessage());
 		    }
@@ -136,20 +138,22 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 		 System.out.println("llego la conexion= " + conn);
 			try {
 				System.out.println("just entered try/catch ELIMINAR PROFESIONAL IMPL\n");
-		        String sql = "DELETE FROM profesional WHERE run = ?;";
+		        String sql = "DELETE FROM profesional WHERE rutprof = (?);";
 		        PreparedStatement st = conn.prepareStatement(sql);
 		        st.setLong(1, prof.getRut());
+		        System.out.println("pre executeUpdate profesional");
 		        st.executeUpdate();
 		        System.out.println("atributos set en la query eliminar PROFESIONAL \nProsigue eliminacion de datos USUARIO"); //DEBUG
 		        
 		        String sqlprof = "DELETE FROM usuario WHERE run = ?;";
 		        PreparedStatement stmt = conn.prepareStatement(sqlprof);
-		        stmt.setInt(1, prof.getIdProfesional());
+		        stmt.setLong(1, prof.getRut());
+		        System.out.println("pre executeUpdate usuario");
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para USUARIO");
 		        
-		        st.close();
-		        conn.close();
+//		        st.close();
+//		        conn.close();
 		    } catch (Exception e) {
 		        System.out.println("Error al eliminar PROFESIONAL: " + e.getMessage());
 		    }

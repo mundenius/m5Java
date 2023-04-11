@@ -19,7 +19,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Administrativo</a>
                         <div class="dropdown-menu">
                             <a href="CrearAdmin" class="dropdown-item">Crear Administrativo</a>
-                            <a href="#" class="dropdown-item">Lista de Administrativos</a>
+                            <a href="ListarAdmin" class="dropdown-item">Lista de Administrativos</a>
                             <a href="EditarAdmin" class="dropdown-item">Editar Administrativo</a>
                             <a href="EliminarAdmin" class="dropdown-item">Eliminar Administrativo</a>
                         </div>
@@ -28,7 +28,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Cliente</a>
                         <div class="dropdown-menu">
                             <a href="CrearCliente" class="dropdown-item">Crear Cliente</a>
-                            <a href="#" class="dropdown-item">Lista de Clientes</a>
+                            <a href="ListarCliente" class="dropdown-item">Lista de Clientes</a>
                             <a href="EditarCliente" class="dropdown-item">Editar Cliente</a>
                             <a href="EliminarCliente" class="dropdown-item">Eliminar Cliente</a>
                         </div>
@@ -37,7 +37,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profesional</a>
                         <div class="dropdown-menu">
                             <a href="CrearProfesional" class="dropdown-item">Crear Profesional</a>
-                            <a href="#" class="dropdown-item">Lista de Profesionales</a>
+                            <a href="ListarProfesional" class="dropdown-item">Lista de Profesionales</a>
                             <a href="EditarProfesional" class="dropdown-item">Editar Profesional</a>
                             <a href="EliminarProfesional" class="dropdown-item">Eliminar Profesional</a>
                         </div>
@@ -59,8 +59,6 @@
                             <a href="FormularioContacto" class="dropdown-item">Contacto</a>
                             <a href="CrearUsuario" class="dropdown-item">Crear Usuario</a>
                             <a href="ListarUsuario" class="dropdown-item">Lista de Usuarios</a>
-                            <a href="#" class="dropdown-item">Editar Usuario</a>
-                            <a href="#" class="dropdown-item">Eliminar Usuario</a>
                             <div class="dropdown-divider"></div>
                             <%
 				if (request.getSession().getAttribute("nombre") != null) {

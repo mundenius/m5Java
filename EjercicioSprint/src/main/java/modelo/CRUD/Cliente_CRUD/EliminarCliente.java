@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import modelo.DAO.ClienteDAO.*;
+import modelo.clases.Cliente;
+
 /**
  * Servlet implementation class EliminarCliente
  */
@@ -35,7 +38,24 @@ public class EliminarCliente extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String rutcliente = request.getParameter("rutcliente");
+		System.out.println(rutcliente);
+		
+		try {
+			System.out.println("entering try/catch ELIMINAR CLIENTE SERVLET");
+			Cliente cli = new Cliente();
+			ImplClienteDAO clidao = new ImplClienteDAO();
+			
+			request.setAttribute("rutcliente", rutcliente);
+			cli.setRut(Long.parseLong(rutcliente));
+			System.out.println("RUT set en instancia cli\nllamado a metodo eliminar de clidao...");
+			
+			clidao.eliminar(cli);
+	
+			response.sendRedirect("ConfirmacionEliminarCliente"); 
+		}catch(Exception e) {
+			System.out.println(e + " SERVLET ELIMINAR CLIENTE");
+		}
 	}
 
 }

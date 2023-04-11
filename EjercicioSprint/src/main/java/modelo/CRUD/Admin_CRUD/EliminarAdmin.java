@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import modelo.DAO.AdminDAO.*;
+import modelo.clases.Administrativo;
+
 /**
  * Servlet implementation class EliminarAdmin
  */
@@ -35,7 +38,25 @@ public class EliminarAdmin extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String rutadmin = request.getParameter("rutadmin");
+		System.out.println(rutadmin);
+		
+		try {
+			System.out.println("entering try/catch ELIMINAR ADMIN SERVLET");
+			Administrativo admin = new Administrativo();
+			ImplAdminDAO admindao = new ImplAdminDAO();
+			
+			request.setAttribute("rutadmin", rutadmin);
+			admin.setRut(Long.parseLong(rutadmin));
+			System.out.println("RUT set en instancia admin\nllamado a metodo eliminar de admindao...");
+			
+			admindao.eliminar(admin);
+	
+			response.sendRedirect("ConfirmacionEliminarAdmin"); 
+
+		}catch(Exception e) {
+			System.out.println(e + " SERVLET ELIMINAR ADMINISTRATIVO");
+		}
 	}
 
 }
