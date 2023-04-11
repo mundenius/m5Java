@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ConfirmacionCreacionCliente
+ * Servlet implementation class ConfirmacionEditarProfesional
  */
-//@WebServlet("/ConfirmacionCreacionCliente")
-public class ConfirmacionCreacionCliente extends HttpServlet {
+//@WebServlet("/ConfirmacionEditarProfesional")
+public class ConfirmacionEditarProfesional extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ConfirmacionCreacionCliente() {
+    public ConfirmacionEditarProfesional() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,7 +27,7 @@ public class ConfirmacionCreacionCliente extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("vista/CONFIRMACIONES/confirmacionCreacionCliente.jsp").forward(request, response);
+		request.getRequestDispatcher("vista/confirmacionEditarProfesional.jsp").forward(request, response);
 	}
 
 	/**

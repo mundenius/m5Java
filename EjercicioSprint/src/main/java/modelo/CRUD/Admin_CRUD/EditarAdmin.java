@@ -93,9 +93,9 @@ public class EditarAdmin extends HttpServlet {
 					request.setAttribute("area", area);
 					admin.setArea(area);
 					
-					admindao.registrar(admin);
+					admindao.actualizar(admin);
 					// Redirige a una pagina de confirmacion
-					response.sendRedirect("ConfirmacionUsuario"); 
+					response.sendRedirect("ConfirmacionEditarAdmin"); 
 					
 				}catch(Exception e) {
 					System.out.println(e + " SERVLET EDITAR ADMINISTRATIVO");

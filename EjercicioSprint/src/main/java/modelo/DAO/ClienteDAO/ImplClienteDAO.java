@@ -3,17 +3,63 @@ package modelo.DAO.ClienteDAO;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
+import modelo.clases.Cliente;
 import modelo.clases.Cliente;
 import modelo.conexion.Singleton;
 
 public class ImplClienteDAO implements IClienteDAO {
 
+	ResultSet rs;
+	Statement st;
+	
 	@Override
 	public List<Cliente> listarTodos() {
 		// TODO Auto-generated method stub
-		return null;
+		// se instancia una nueva conexion con el singleton a la base de datos
+				Connection conn = Singleton.getConnection();
+				System.out.println("llegó la conexion.. " + conn); // debug
+				// TODO Auto-generated method stub
+				List<Cliente> lista = new ArrayList<Cliente>();
+				try {
+					String sql = "SELECT usuario.run, usuario.nombre, usuario.apellido, usuario.fechanacimiento, cliente.clitelefono, cliente.cliafp, cliente.clisistemasalud, cliente.clidireccion, cliente.clicomuna, cliente.cliedad FROM usuario INNER JOIN cliente ON usuario.run=cliente.rutcliente;";
+					PreparedStatement st = conn.prepareStatement(sql);
+					rs = st.executeQuery(sql);
+					System.out.println("query ejecutada");
+					while (rs.next()) {
+						Cliente cli = new Cliente();
+						cli.setRut(rs.getLong(1));	// el numero es por la columna en la base de datos
+						cli.setNombre(rs.getString(2));
+						cli.setApellido(rs.getString(3));
+						cli.setFechaNacimiento(String.valueOf(rs.getDate(4)));
+						cli.setTelefono(rs.getInt(5)); 
+						cli.setAfp(rs.getString(6));
+						cli.setSistemaSalud(rs.getString(7));
+						cli.setDireccion(rs.getString(8));
+						cli.setComuna(rs.getString(9));
+						cli.setEdad(rs.getInt(10));
+												
+						lista.add(cli);
+						System.out.println("Cliente creado");
+					}
+					System.out.println("saliendo try/catch listarTodos()");
+				} catch (Exception e) {
+					System.out.println(e + " LISTAR, CLIENTE DAO IMPL");
+				} finally {
+					try {
+						st.close();
+						rs.close();
+						conn.close();
+					} catch (Exception e) {
+						System.out.println(e + " TRY/CATCH close connections");
+					}
+				}
+
+				return lista;
 	}
 
 	@Override
@@ -24,18 +70,19 @@ public class ImplClienteDAO implements IClienteDAO {
 		System.out.println("llego la conexion= " + conn);
 		try {
 			System.out.println("just entered try/catch REGISTRAR CLIENTE IMPL\n");
-			String sql = "INSERT INTO usuario(nombre, apellido, fechaNacimiento, run) VALUES (?, ?, ?, ?);";
+			String sql = "INSERT INTO usuario(nombre, apellido, fechanacimiento, run) VALUES (?, ?, ?, ?);";
 			PreparedStatement st = conn.prepareStatement(sql);
+			System.out.println("pre st.SETTER");
 			st.setString(1, cli.getNombre());
 			st.setString(2, cli.getApellido());
 			st.setDate(3, StringToDate(cli.getFechaNacimiento()));
 			st.setLong(4, cli.getRut());
 			st.executeUpdate();
-			System.out
-					.println("atributos set en la query insertar USUARIO \nProsigue insertar datos de CLIENTE"); // DEBUG
+			System.out.println("atributos set en la query insertar USUARIO \nProsigue insertar datos de CLIENTE"); // DEBUG
 
 			String sqlcli = "INSERT INTO cliente(clitelefono, cliafp, clisistemasalud, clidireccion, clicomuna, cliedad, rutcliente) VALUES (?,?,?,?,?,?,?);";
 			PreparedStatement stmt = conn.prepareStatement(sqlcli);
+			System.out.println("pre stmt.SETTER");
 			stmt.setInt(1, cli.getTelefono());
 			stmt.setString(2, cli.getAfp());
 			stmt.setString(3, cli.getSistemaSalud());

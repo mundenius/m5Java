@@ -96,14 +96,21 @@ public class CrearCliente extends HttpServlet {
 					cli.setTelefono(Integer.parseInt(telefono));;
 					request.setAttribute("afp", afp);
 					cli.setAfp(afp);
-
+					request.setAttribute("sistemasalud", sistemaSalud);
+					cli.setSistemaSalud(sistemaSalud);
+					request.setAttribute("direccion", direccion);
+					cli.setDireccion(direccion);
+					request.setAttribute("comuna", comuna);
+					cli.setComuna(comuna);
+					request.setAttribute("edad", edad);
+					cli.setEdad(Integer.parseInt(edad));
 					
 					clidao.registrar(cli);
 					// Redirige a una pagina de confirmacion
-					response.sendRedirect("ConfirmacionAdministrativo"); 
+					response.sendRedirect("ConfirmacionCreacionCliente"); 
 					
 				}catch(Exception e) {
-					System.out.println(e + " SERVLET CREAR ADMINISTRATIVO");
+					System.out.println(e + " SERVLET CREAR CLIENTE");
 				}
 	}
 

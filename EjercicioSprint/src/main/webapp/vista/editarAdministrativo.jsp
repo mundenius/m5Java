@@ -17,7 +17,7 @@ Carlos Carrasco --%>
 <body>
 <%@include file = "/FIJOS/Navbar.jsp"%>
 <div class="signupFrm">
-        <form action="EditarAdministrativo" method="POST" class="form">
+        <form action="EditarAdmin" method="POST" class="form">
           <h1 class="title">Editar Administrativo</h1>
     
           <div class="inputContainer">
@@ -33,11 +33,6 @@ Carlos Carrasco --%>
           <div class="inputContainer">
             <label for="" class="label">Fecha de nacimiento: </label>
             <input type="date" class="input" name="fechaNacimiento">
-          </div>
-          
-          <div class="inputContainer">
-            <label for="" class="label">Rut: </label>
-            <input type="text" class="input" placeholder="11111111-1" name="rut">
           </div>
           
           <div class="inputContainer">
