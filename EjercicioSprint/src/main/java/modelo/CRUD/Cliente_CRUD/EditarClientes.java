@@ -17,14 +17,14 @@ import modelo.clases.Cliente;
 /**
  * Servlet implementation class EditarCliente
  */
-//@WebServlet("/EditarCliente")
-public class EditarCliente extends HttpServlet {
+//@WebServlet("/EditarClientes")
+public class EditarClientes extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EditarCliente() {
+    public EditarClientes() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -79,9 +79,11 @@ public class EditarCliente extends HttpServlet {
 		// Guardar los valores en los atributos de la solicitud
 
 		try {
-			System.out.println("entering try/catch EDITAR USUARIO SERVLET");
+			System.out.println("entering try/catch EDITAR CLIENTE SERVLET");
+			System.out.println("pre crear ClIENTE Y CLIDAO");
 			Cliente cli = new Cliente();
 			ImplClienteDAO clidao = new ImplClienteDAO();
+			System.out.println("se creo la instancia CLIDAO y CLI");
 			
 			request.setAttribute("nombre", nombre);
 			cli.setNombre(nombre);
@@ -91,6 +93,7 @@ public class EditarCliente extends HttpServlet {
 			cli.setFechaNacimiento(fechaNacimiento);
 			request.setAttribute("rut", rut);
 			cli.setRut(Long.parseLong(rut));
+			System.out.println("rut set on cli");
 			request.setAttribute("telefono", telefono);
 			cli.setTelefono(Integer.parseInt(telefono));;
 			request.setAttribute("afp", afp);
@@ -103,8 +106,9 @@ public class EditarCliente extends HttpServlet {
 			cli.setComuna(comuna);
 			request.setAttribute("edad", edad);
 			cli.setEdad(Integer.parseInt(edad));
-
-			
+			System.out.println("pre toString");
+			cli.toString();
+			System.out.println("pre actualizar(cli)");
 			clidao.actualizar(cli);
 			// Redirige a una pagina de confirmacion
 			response.sendRedirect("ConfirmacionEditarCliente"); 

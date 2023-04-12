@@ -141,12 +141,12 @@
 		<url-pattern>/ListarCliente</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>EditarCliente</servlet-name>
-		<servlet-class>modelo.CRUD.Cliente_CRUD.EditarCliente</servlet-class>
+		<servlet-name>EditarClientes</servlet-name>
+		<servlet-class>modelo.CRUD.Cliente_CRUD.EditarClientes</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>EditarCliente</servlet-name>
-		<url-pattern>/EditarCliente</url-pattern>
+		<servlet-name>EditarClientes</servlet-name>
+		<url-pattern>/EditarClientes</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>EliminarCliente</servlet-name>
