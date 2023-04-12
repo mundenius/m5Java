@@ -1,16 +1,26 @@
+/**
+ * 
+ * @author Valentina Saldias 
+ * @author Javiera Saavedra
+ * @author Adrian Fredes
+ * @author Carlos Carrasco
+ * @contact https://github.com/mundenius/m5Java
+ */
 package modelo.clases;
 
-public class Administrativo extends Usuario{
+public class Administrativo extends Usuario{ // clase Administrativo extiende de la clase Usuario
 
+	// variables privadas
 	private int idAdmin;
 	private String email;
 	private String area;
 
-	
+	//constructor sin parametros
 	public Administrativo() {
 		
 	}
-	
+
+    // Constructor con parametros, recibe siete argumentos que inicializan las variables de instancia
 	public Administrativo(int idUsuario, String nombre, String apellido, String fechaNacimiento, long rut, int idAdmin, String email, String area) {
 		super(idUsuario, nombre, apellido, fechaNacimiento, rut);
 		this.idAdmin = idAdmin;
@@ -18,6 +28,8 @@ public class Administrativo extends Usuario{
 		this.area = area;
 	}
 
+	
+	//getters y setters
 	public int getIdAdmin() {
 		return idAdmin;
 	}
@@ -42,8 +54,8 @@ public class Administrativo extends Usuario{
 		this.area = area;
 	}
 	
+	//metodo toString que devuelve una cadena de texto que representa al objeto actual de Administrativo
 	@Override 
-	
 	public String toString() {
 		return "\nId Administrativo: " + getIdAdmin() + "\nEmail: " + getEmail() + "\nArea: " + getArea();
 	}

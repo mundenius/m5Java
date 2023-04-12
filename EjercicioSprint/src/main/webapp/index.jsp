@@ -43,6 +43,7 @@ Carlos Carrasco --%>
 	<% if(request.getAttribute("datosInvalidos") != null) { %>
 		<div id="popup">
 			<p> <%= request.getAttribute("datosInvalidos") %></p> 
+			<button onclick="cerrarPopup()">Cerrar</button>
 		</div>
 	<% } %>
 </body>

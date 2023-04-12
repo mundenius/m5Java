@@ -1,7 +1,16 @@
+/**
+ * 
+ * @author Valentina Saldias 
+ * @author Javiera Saavedra
+ * @author Adrian Fredes
+ * @author Carlos Carrasco
+ * @contact https://github.com/mundenius/m5Java
+ */
 package modelo.clases;
 
-public class Cliente extends Usuario {
+public class Cliente extends Usuario { // clase Cliente extiende de la clase Usuario
 
+	//variables privadas
 	private int idCliente;
 	private int telefono;
 	private String afp;
@@ -10,10 +19,12 @@ public class Cliente extends Usuario {
 	private String comuna;
 	private int edad;
 
+	//constructor sin parametros
 	public Cliente() {
 
 	}
 
+	//constructor con parametros
 	public Cliente(int idUsuario, String nombre, String apellido, String fechaNacimiento, long rut, int idCliente, int telefono,
 			String afp, String sistemaSalud, String direccion, String comuna, int edad) {
 		super(idUsuario, nombre, apellido, fechaNacimiento, rut);
@@ -25,6 +36,8 @@ public class Cliente extends Usuario {
 		this.comuna = comuna;
 		this.edad = edad;
 	}
+	
+	//getters y setters
 	public int getIdCliente() {
 		return idCliente;
 	}
@@ -81,6 +94,7 @@ public class Cliente extends Usuario {
 		this.edad = edad;
 	}
 
+	//metodo toString que devuelve cadena de texto representando al objeto actual de Cliente
 	@Override
 	public String toString() {
 		return "Nombre Cliente: " + super.getNombreCompleto() + "\nTelefono: " + getTelefono() + "\nAFP: " + getAfp()
