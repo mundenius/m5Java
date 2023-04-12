@@ -73,7 +73,7 @@ public class CrearAdmin extends HttpServlet {
 		// Guardar los valores en los atributos de la solicitud
 
 		try {
-			System.out.println("entering try/catch CREAR USUARIO SERVLET");
+			System.out.println("entering try/catch CREAR ADMIN SERVLET");
 			Administrativo admin = new Administrativo();
 			ImplAdminDAO admindao = new ImplAdminDAO();
 			

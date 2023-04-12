@@ -29,7 +29,7 @@
                         <div class="dropdown-menu">
                             <a href="CrearCliente" class="dropdown-item">Crear Cliente</a>
                             <a href="ListarCliente" class="dropdown-item">Lista de Clientes</a>
-                            <a href="EditarCliente" class="dropdown-item">Editar Cliente</a>
+                            <a href="EditarClientes" class="dropdown-item">Editar Cliente</a>
                             <a href="EliminarCliente" class="dropdown-item">Eliminar Cliente</a>
                         </div>
                     </li>

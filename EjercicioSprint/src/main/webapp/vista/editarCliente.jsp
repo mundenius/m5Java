@@ -16,11 +16,11 @@ Carlos Carrasco --%>
 <body>
 <%@include file = "/FIJOS/Navbar.jsp"%>
 	<div class="signupFrm">
-		<form action="EditarCliente" method="POST" class="form">
+		<form action="EditarClientes" method="POST" class="form">
 			<h1 class="title">Editar Cliente</h1>
 			
 			<div class="inputContainer">
-				<label for="" class="label">Ingrese el RUT del Usuario que desea editar: </label> <input type="text"
+				<label for="" class="label">Ingrese el RUT del Cliente que desea editar: </label> <input type="text"
 					class="input" placeholder="11111111-1" name="rut">
 			</div>
 
