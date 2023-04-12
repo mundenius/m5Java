@@ -2,4 +2,10 @@
  * 
  */
 
- $('.dropdown-toggle').dropdown()
+/**
+ * js para el navbar
+ */
+ $('.dropdown-toggle').dropdown() 
+ 
+ 
+ 
