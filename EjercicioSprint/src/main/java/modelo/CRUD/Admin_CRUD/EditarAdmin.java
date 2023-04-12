@@ -74,7 +74,7 @@ public class EditarAdmin extends HttpServlet {
 				// Guardar los valores en los atributos de la solicitud
 
 				try {
-					System.out.println("entering try/catch CREAR USUARIO SERVLET");
+					System.out.println("entering try/catch EDITAR ADMIN SERVLET");
 					Administrativo admin = new Administrativo();
 					ImplAdminDAO admindao = new ImplAdminDAO();
 					
@@ -86,8 +86,8 @@ public class EditarAdmin extends HttpServlet {
 					admin.setFechaNacimiento(fechaNacimiento);
 					request.setAttribute("rut", rut);
 					admin.setRut(Long.parseLong(rut));
-					request.setAttribute("idadmin", idadmin);
-					admin.setIdAdmin(Integer.parseInt(idadmin));
+//					request.setAttribute("idadmin", idadmin);
+//					admin.setIdAdmin(Integer.parseInt(idadmin));
 					request.setAttribute("email", email);
 					admin.setEmail(email);
 					request.setAttribute("area", area);

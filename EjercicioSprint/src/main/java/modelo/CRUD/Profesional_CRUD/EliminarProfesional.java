@@ -38,19 +38,21 @@ public class EliminarProfesional extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String rutcliente = request.getParameter("rutcliente");
-		System.out.println(rutcliente);
+		String rutprof = request.getParameter("rutprof");
+		System.out.println(rutprof);
 		
 		try {
 			System.out.println("entering try/catch ELIMINAR PROFESIONAL SERVLET");
 			Profesional prof = new Profesional();
 			ImplProfesionalDAO profdao = new ImplProfesionalDAO();
 			
-			request.setAttribute("rutcliente", rutcliente);
-			prof.setRut(Long.parseLong(rutcliente));
+			request.setAttribute("rutprof", rutprof);
+			prof.setRut(Long.parseLong(rutprof));
 			System.out.println("RUT set en instancia prof\nllamado a metodo eliminar de profdao...");
 			
 			profdao.eliminar(prof);
+			
+			response.sendRedirect("ConfirmacionEliminarProfesional"); 
 	
 		}catch(Exception e) {
 			System.out.println(e + " SERVLET ELIMINAR PROFESIONAL");

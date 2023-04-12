@@ -27,7 +27,8 @@ public class ConfirmacionEditarCliente extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/vista/confirmacionEditarCliente.jsp").forward(request, response);
+		/** REDIRECCIONA A SU CORRESPONDIENTE EN JSP */
+		request.getRequestDispatcher("vista/CONFIRMACIONES/confirmacionEditarCliente.jsp").forward(request, response);
 	}
 
 	/**

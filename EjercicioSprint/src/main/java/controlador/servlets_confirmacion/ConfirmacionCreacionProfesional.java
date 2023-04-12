@@ -27,6 +27,7 @@ public class ConfirmacionCreacionProfesional extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		/** REDIRECCIONA A SU CORRESPONDIENTE EN JSP */
 		request.getRequestDispatcher("vista/CONFIRMACIONES/confirmacionCreacionProfesional.jsp").forward(request, response);
 	}
 

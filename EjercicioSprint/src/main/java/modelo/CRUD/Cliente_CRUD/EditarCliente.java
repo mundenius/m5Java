@@ -95,6 +95,14 @@ public class EditarCliente extends HttpServlet {
 			cli.setTelefono(Integer.parseInt(telefono));;
 			request.setAttribute("afp", afp);
 			cli.setAfp(afp);
+			request.setAttribute("sistemasalud", sistemaSalud);
+			cli.setSistemaSalud(sistemaSalud);
+			request.setAttribute("direccion", direccion);
+			cli.setDireccion(direccion);
+			request.setAttribute("comuna", comuna);
+			cli.setComuna(comuna);
+			request.setAttribute("edad", edad);
+			cli.setEdad(Integer.parseInt(edad));
 
 			
 			clidao.actualizar(cli);

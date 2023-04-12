@@ -19,8 +19,14 @@ Carlos Carrasco --%>
 <div class="signupFrm">
         <form action="EditarAdmin" method="POST" class="form">
           <h1 class="title">Editar Administrativo</h1>
-    
-          <div class="inputContainer">
+
+
+			<div class="inputContainer">
+				<label for="" class="label">Ingrese el RUT del Usuario que desea editar: </label> <input type="text"
+					class="input" placeholder="11111111-1" name="rut">
+			</div>
+
+			<div class="inputContainer">
             <label for="" class="label">Nombre: </label>
             <input type="text" class="input" placeholder="nombre" name="nombre">
           </div>
