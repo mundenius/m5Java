@@ -27,6 +27,7 @@ public class ConfirmacionEliminarAdmin extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		/** REDIRECCIONA A SU CORRESPONDIENTE EN JSP */
 		request.getRequestDispatcher("vista/CONFIRMACIONES/confirmacionEliminarAdmin.jsp").forward(request, response);
 	}
 

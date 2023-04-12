@@ -25,6 +25,13 @@ public class ImplCapacitacionDAO implements ICapacitacionDAO {
 		System.out.println("llegó la conexion.. " + conn); // debug
 		// TODO Auto-generated method stub
 		List<Capacitacion> lista = new ArrayList<Capacitacion>();
+		/**SE CREA UNA LISTA PARA ALMACENAR OBJETOS QUE SE TRAERAN DE LA BASE DE DATOS
+		 * SE CREA UN ATRIBUTO QUE CONTIENE LA SENTENCIA SELECT PARA LA BASE DE DATOS
+		 * SE PREPRARA EL STATEMENT, Y SE EJECUTA
+		 * EL RESULSET GENERARA RESULTADOS, LOS CUALES SE CAPTURARAN EN EL WHILE LOOP
+		 * POR CADA VEZ QUE SE EJECUTE EL WHILE LOOP, SE CREARA UN NUEVO OBJETO DE LO QUE SE ESTA LISTANDO
+		 * FINALMENTE SE AGREGA CADA OBJETO A LA LISTA DE OBJETOS
+		 *  */
 		try {
 			String sql = "SELECT * FROM capacitacion ORDER by idcapacitacion";
 			PreparedStatement st = conn.prepareStatement(sql);
@@ -59,6 +66,10 @@ public class ImplCapacitacionDAO implements ICapacitacionDAO {
 
 	@Override
 	public void registrar(Capacitacion capacitacion) {
+		/**SE CREA UN ATRIBUTO QUE CONTIENE LA SENTENCIA INSERT PARA LA BASE DE DATOS
+		 * SE PREPARA LA SENTENCIA AL ASIGNARLE VALORES A LAS COLUMNAS
+		 * FINALMENTE SE EJECUTAN LAS SENTENCIAS
+		 *  */
 		// TODO Auto-generated method stub
 		System.out.println("pre getConnection");
 		// se instancia una nueva conexion con el singleton
