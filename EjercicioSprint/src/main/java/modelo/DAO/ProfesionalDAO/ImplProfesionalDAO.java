@@ -25,6 +25,13 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 				System.out.println("llegó la conexion.. " + conn); // debug
 				// TODO Auto-generated method stub
 				List<Profesional> lista = new ArrayList<Profesional>();
+				/**SE CREA UNA LISTA PARA ALMACENAR OBJETOS QUE SE TRAERAN DE LA BASE DE DATOS
+				 * SE CREA UN ATRIBUTO QUE CONTIENE LA SENTENCIA SELECT PARA LA BASE DE DATOS
+				 * SE PREPRARA EL STATEMENT, Y SE EJECUTA
+				 * EL RESULSET GENERARA RESULTADOS, LOS CUALES SE CAPTURARAN EN EL WHILE LOOP
+				 * POR CADA VEZ QUE SE EJECUTE EL WHILE LOOP, SE CREARA UN NUEVO OBJETO DE LO QUE SE ESTA LISTANDO
+				 * FINALMENTE SE AGREGA CADA OBJETO A LA LISTA DE OBJETOS
+				 *  */
 				try {
 					String sql = "SELECT usuario.run, usuario.nombre, usuario.apellido, usuario.fechanacimiento, profesional.telefono, profesional.tituloprofesional, profesional.proyecto FROM usuario INNER JOIN profesional ON usuario.run=profesional.rutprof;";
 					PreparedStatement st = conn.prepareStatement(sql);
@@ -61,6 +68,12 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 
 	@Override
 	public void registrar(Profesional prof) {
+		/**SE CREA UN ATRIBUTO QUE CONTIENE LA SENTENCIA INSERT PARA LA BASE DE DATOS
+		 * SE PREPARA LA SENTENCIA AL ASIGNARLE VALORES A LAS COLUMNAS
+		 * PRIMERO SE SETTEAN LOS DE USUARIO, Y LUEGO EL DEL TIPO DE USUARIO
+		 * ESTO DEBIDO A LA FOREIGN KEY
+		 * FINALMENTE SE EJECUTAN LAS SENTENCIAS
+		 *  */
 		System.out.println("pre getConnection");
 		//se instancia una nueva conexion con el singleton
 		 Connection conn = Singleton.getConnection();
@@ -98,6 +111,12 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 
 	@Override
 	public void actualizar(Profesional prof) {
+		/**SE CREA UN ATRIBUTO QUE CONTIENE LA SENTENCIA UPDATE PARA LA BASE DE DATOS
+		 * SE PREPARA LA SENTENCIA AL ASIGNARLE VALORES A LAS COLUMNAS
+		 * PRIMERO SE SETTEAN LOS ATRIBUTOS QUE SE QUIEREN EDITAR DE USUARIO, Y LUEGO EL DEL TIPO DE USUARIO
+		 * ESTO DEBIDO A LA FOREIGN KEY EN LA BASE DE DATOS
+		 * FINALMENTE SE EJECUTAN LAS SENTENCIAS
+		 *  */
 		System.out.println("pre getConnection");
 		//se instancia una nueva conexion con el singleton
 		 Connection conn = Singleton.getConnection();
@@ -134,6 +153,13 @@ public class ImplProfesionalDAO implements IProfesionalDAO{
 
 	@Override
 	public void eliminar(Profesional prof) {
+		/**SE CREA UN ATRIBUTO QUE CONTIENE LA SENTENCIA DELETE PARA LA BASE DE DATOS
+		 * SE PREPARA LA SENTENCIA AL ASIGNARLE VALORES A LAS COLUMNAS
+		 * PRIMERO SE SETTEA EL ATRIBUTO CON EL QUE SE ENCONTRARA EL REGISTRO A ELIMINAR (RUT)
+		 * LUEGO SE EJECUTA LA SENTENCIA, PRIMERO SE ELIMINAN LOS DATOS DEL TIPO DE USUARIO
+		 * LUEGO LOS DATOS DEL USUARIO PER SE
+		 * ESTO DEBIDO A LA FOREIGN KEY EN LA BASE DE DATOS
+		 *  */
 		Connection conn = Singleton.getConnection();
 		 System.out.println("llego la conexion= " + conn);
 			try {

@@ -11,6 +11,7 @@ public class ImplementacionInterfazCapacitacion implements ICapacitacion {
 	@Override
 	public List<Capacitacion> listaCapacitacion() {
 		// TODO Auto-generated method stub
+		/** REQUERIMIENTOS PARA EJERCICIO V.i */
 		List<Capacitacion> lista = new ArrayList<Capacitacion>();
 
 		Capacitacion cap1 = new Capacitacion("1", "24/06/2022", "12:00", "Quilpue", "60", 12345678);

@@ -25,6 +25,13 @@ public class ImplClienteDAO implements IClienteDAO {
 				System.out.println("llegó la conexion.. " + conn); // debug
 				// TODO Auto-generated method stub
 				List<Cliente> lista = new ArrayList<Cliente>();
+				/**SE CREA UNA LISTA PARA ALMACENAR OBJETOS QUE SE TRAERAN DE LA BASE DE DATOS
+				 * SE CREA UN ATRIBUTO QUE CONTIENE LA SENTENCIA SELECT PARA LA BASE DE DATOS
+				 * SE PREPRARA EL STATEMENT, Y SE EJECUTA
+				 * EL RESULSET GENERARA RESULTADOS, LOS CUALES SE CAPTURARAN EN EL WHILE LOOP
+				 * POR CADA VEZ QUE SE EJECUTE EL WHILE LOOP, SE CREARA UN NUEVO OBJETO DE LO QUE SE ESTA LISTANDO
+				 * FINALMENTE SE AGREGA CADA OBJETO A LA LISTA DE OBJETOS
+				 *  */
 				try {
 					String sql = "SELECT usuario.run, usuario.nombre, usuario.apellido, usuario.fechanacimiento, cliente.clitelefono, cliente.cliafp, cliente.clisistemasalud, cliente.clidireccion, cliente.clicomuna, cliente.cliedad FROM usuario INNER JOIN cliente ON usuario.run=cliente.rutcliente;";
 					PreparedStatement st = conn.prepareStatement(sql);
@@ -64,6 +71,12 @@ public class ImplClienteDAO implements IClienteDAO {
 
 	@Override
 	public void registrar(Cliente cli) {
+		/**SE CREA UN ATRIBUTO QUE CONTIENE LA SENTENCIA INSERT PARA LA BASE DE DATOS
+		 * SE PREPARA LA SENTENCIA AL ASIGNARLE VALORES A LAS COLUMNAS
+		 * PRIMERO SE SETTEAN LOS DE USUARIO, Y LUEGO EL DEL TIPO DE USUARIO
+		 * ESTO DEBIDO A LA FOREIGN KEY
+		 * FINALMENTE SE EJECUTAN LAS SENTENCIAS
+		 *  */
 		System.out.println("pre getConnection");
 		// se instancia una nueva conexion con el singleton
 		Connection conn = Singleton.getConnection();
@@ -103,6 +116,12 @@ public class ImplClienteDAO implements IClienteDAO {
 
 	@Override
 	public void actualizar(Cliente cli) {
+		/**SE CREA UN ATRIBUTO QUE CONTIENE LA SENTENCIA UPDATE PARA LA BASE DE DATOS
+		 * SE PREPARA LA SENTENCIA AL ASIGNARLE VALORES A LAS COLUMNAS
+		 * PRIMERO SE SETTEAN LOS ATRIBUTOS QUE SE QUIEREN EDITAR DE USUARIO, Y LUEGO EL DEL TIPO DE USUARIO
+		 * ESTO DEBIDO A LA FOREIGN KEY EN LA BASE DE DATOS
+		 * FINALMENTE SE EJECUTAN LAS SENTENCIAS
+		 *  */
 		System.out.println("pre getConnection");
 		//se instancia una nueva conexion con el singleton
 		 Connection conn = Singleton.getConnection();
@@ -151,6 +170,13 @@ public class ImplClienteDAO implements IClienteDAO {
 
 	@Override
 	public void eliminar(Cliente cli) {
+		/**SE CREA UN ATRIBUTO QUE CONTIENE LA SENTENCIA DELETE PARA LA BASE DE DATOS
+		 * SE PREPARA LA SENTENCIA AL ASIGNARLE VALORES A LAS COLUMNAS
+		 * PRIMERO SE SETTEA EL ATRIBUTO CON EL QUE SE ENCONTRARA EL REGISTRO A ELIMINAR (RUT)
+		 * LUEGO SE EJECUTA LA SENTENCIA, PRIMERO SE ELIMINAN LOS DATOS DEL TIPO DE USUARIO
+		 * LUEGO LOS DATOS DEL USUARIO PER SE
+		 * ESTO DEBIDO A LA FOREIGN KEY EN LA BASE DE DATOS
+		 *  */
 		 Connection conn = Singleton.getConnection();
 		 System.out.println("llego la conexion= " + conn);
 			try {
