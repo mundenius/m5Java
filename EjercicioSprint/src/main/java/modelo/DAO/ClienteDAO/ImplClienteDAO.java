@@ -135,11 +135,11 @@ public class ImplClienteDAO implements IClienteDAO {
 		        st.setString(2, cli.getApellido());
 		        st.setDate(3, StringToDate(cli.getFechaNacimiento()));
 		        st.setLong(4, cli.getRut());
-		        System.out.println("pre executeUpdate");
+		        System.out.println("pre executeUpdate Usuario");
 		        st.executeUpdate();
-		        System.out.println("atributos set en la query actualizar USUARIO \nProsigue insertar datos de CLIENTE"); //DEBUG
+		        System.out.println("atributos set en la query actualizar USUARIO \nProsigue actualizar datos de CLIENTE"); //DEBUG
 		        
-		        String sqlcli = "UPDATE cliente set clitelefono = ?, cliafp = ?, clisistemasalud = ?, clidireccion = ?, clicomuna = ?, cliedad = ? WHERE idcliente = ?;";
+		        String sqlcli = "UPDATE cliente set clitelefono = ?, cliafp = ?, clisistemasalud = ?, clidireccion = ?, clicomuna = ?, cliedad = ? WHERE rutcliente = ?;";
 		        PreparedStatement stmt = conn.prepareStatement(sqlcli);
 		        stmt.setInt(1, cli.getTelefono());
 		        stmt.setString(2, cli.getAfp());
@@ -147,8 +147,8 @@ public class ImplClienteDAO implements IClienteDAO {
 		        stmt.setString(4, cli.getDireccion());
 		        stmt.setString(5, cli.getComuna());
 		        stmt.setInt(6, cli.getEdad());
-		        stmt.setInt(7, cli.getIdCliente());
-		        System.out.println("pre executeUpdate");
+		        stmt.setLong(7, cli.getRut());
+		        System.out.println("pre executeUpdate Cliente");
 		        stmt.executeUpdate();
 		        System.out.println("atributos set en la query para actualizar CLIENTE");
 		        
