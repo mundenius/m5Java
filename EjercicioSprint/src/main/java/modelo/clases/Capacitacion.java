@@ -1,3 +1,11 @@
+/**
+ * 
+ * @author Valentina Saldias 
+ * @author Javiera Saavedra
+ * @author Adrian Fredes
+ * @author Carlos Carrasco
+ * @contact https://github.com/mundenius/m5Java
+ */
 package modelo.clases;
 
 public class Capacitacion {
