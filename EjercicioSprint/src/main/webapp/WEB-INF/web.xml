@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>EjercicioSprint</display-name>
+
+	<servlet>
+		<servlet-name>ListarCapacitacion</servlet-name>
+		<servlet-class>modelo.CRUD.Capacitacion_CRUD.ListarCapacitacion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListarCapacitacion</servlet-name>
+		<url-pattern>/ListarCapacitacion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CrearCapacitacion</servlet-name>
+		<servlet-class>modelo.CRUD.Capacitacion_CRUD.CrearCapacitacion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CrearCapacitacion</servlet-name>
+		<url-pattern>/CrearCapacitacion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CerrarSesion</servlet-name>
+		<servlet-class>controlador.CerrarSesion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CerrarSesion</servlet-name>
+		<url-pattern>/CerrarSesion</url-pattern>
+	</servlet-mapping>
+
+
+<!-- USUARIO -->
+	<servlet>
+		<servlet-name>CrearUsuario</servlet-name>
+		<servlet-class>modelo.CRUD.Usuario_CRUD.CrearUsuario</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CrearUsuario</servlet-name>
+		<url-pattern>/CrearUsuario</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ListarUsuario</servlet-name>
+		<servlet-class>modelo.CRUD.Usuario_CRUD.ListarUsuario</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListarUsuario</servlet-name>
+		<url-pattern>/ListarUsuario</url-pattern>
+	</servlet-mapping>
+
+
+<!-- ADMINISTRATIVO -->
+	<servlet>
+		<servlet-name>CrearAdmin</servlet-name>
+		<servlet-class>modelo.CRUD.Admin_CRUD.CrearAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CrearAdmin</servlet-name>
+		<url-pattern>/CrearAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ListarAdmin</servlet-name>
+		<servlet-class>modelo.CRUD.Admin_CRUD.ListarAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListarAdmin</servlet-name>
+		<url-pattern>/ListarAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EditarAdmin</servlet-name>
+		<servlet-class>modelo.CRUD.Admin_CRUD.EditarAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditarAdmin</servlet-name>
+		<url-pattern>/EditarAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EliminarAdmin</servlet-name>
+		<servlet-class>modelo.CRUD.Admin_CRUD.EliminarAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EliminarAdmin</servlet-name>
+		<url-pattern>/EliminarAdmin</url-pattern>
+	</servlet-mapping>
+
+
+<!-- PROFESIONAL -->
+	<servlet>
+		<servlet-name>CrearProfesional</servlet-name>
+		<servlet-class>modelo.CRUD.Profesional_CRUD.CrearProfesional</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CrearProfesional</servlet-name>
+		<url-pattern>/CrearProfesional</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ListarProfesional</servlet-name>
+		<servlet-class>modelo.CRUD.Profesional_CRUD.ListarProfesional</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListarProfesional</servlet-name>
+		<url-pattern>/ListarProfesional</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EditarProfesional</servlet-name>
+		<servlet-class>modelo.CRUD.Profesional_CRUD.EditarProfesional</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditarProfesional</servlet-name>
+		<url-pattern>/EditarProfesional</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EliminarProfesional</servlet-name>
+		<servlet-class>modelo.CRUD.Profesional_CRUD.EliminarProfesional</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EliminarProfesional</servlet-name>
+		<url-pattern>/EliminarProfesional</url-pattern>
+	</servlet-mapping>
+
+
+<!-- CLIENTE -->
+	<servlet>
+		<servlet-name>CrearCliente</servlet-name>
+		<servlet-class>modelo.CRUD.Cliente_CRUD.CrearCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CrearCliente</servlet-name>
+		<url-pattern>/CrearCliente</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ListarCliente</servlet-name>
+		<servlet-class>modelo.CRUD.Cliente_CRUD.ListarCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListarCliente</servlet-name>
+		<url-pattern>/ListarCliente</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EditarClientes</servlet-name>
+		<servlet-class>modelo.CRUD.Cliente_CRUD.EditarClientes</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditarClientes</servlet-name>
+		<url-pattern>/EditarClientes</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EliminarCliente</servlet-name>
+		<servlet-class>modelo.CRUD.Cliente_CRUD.EliminarCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EliminarCliente</servlet-name>
+		<url-pattern>/EliminarCliente</url-pattern>
+	</servlet-mapping>
+	
+	
+<!-- CONFIRMACIONES -->
+
+	<servlet>
+		<servlet-name>ConfirmacionCapacitacion</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionCapacitacion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionCapacitacion</servlet-name>
+		<url-pattern>/ConfirmacionCapacitacion</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConfirmacionUsuario</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionUsuario</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionUsuario</servlet-name>
+		<url-pattern>/ConfirmacionUsuario</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConfirmacionContacto</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionContacto</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionContacto</servlet-name>
+		<url-pattern>/ConfirmacionContacto</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConfirmacionCreacionAdmin</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionCreacionAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionCreacionAdmin</servlet-name>
+		<url-pattern>/ConfirmacionCreacionAdmin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConfirmacionCreacionCliente</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionCreacionCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionCreacionCliente</servlet-name>
+		<url-pattern>/ConfirmacionCreacionCliente</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConfirmacionCreacionProfesional</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionCreacionProfesional</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionCreacionProfesional</servlet-name>
+		<url-pattern>/ConfirmacionCreacionProfesional</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConfirmacionEditarAdmin</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionEditarAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionEditarAdmin</servlet-name>
+		<url-pattern>/ConfirmacionEditarAdmin</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>ConfirmacionEditarCliente</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionEditarCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionEditarCliente</servlet-name>
+		<url-pattern>/ConfirmacionEditarCliente</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>ConfirmacionEditarProfesional</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionEditarProfesional</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionEditarProfesional</servlet-name>
+		<url-pattern>/ConfirmacionEditarProfesional</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConfirmacionEliminarCliente</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionEliminarCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionEliminarCliente</servlet-name>
+		<url-pattern>/ConfirmacionEliminarCliente</url-pattern>
+	</servlet-mapping>
+</web-app>

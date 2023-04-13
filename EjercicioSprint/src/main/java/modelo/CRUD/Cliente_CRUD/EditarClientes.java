@@ -1,0 +1,121 @@
+package modelo.CRUD.Cliente_CRUD;
+
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import modelo.DAO.ClienteDAO.ImplClienteDAO;
+import modelo.clases.Cliente;
+
+/**
+ * Servlet implementation class EditarCliente
+ */
+//@WebServlet("/EditarClientes")
+public class EditarClientes extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public EditarClientes() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		request.getRequestDispatcher("vista/editarCliente.jsp").forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		// Obtener los valores de los campos del formulario
+
+		String nombre = request.getParameter("nombre");
+		String apellido = request.getParameter("apellido");
+		String fechaNacimiento = request.getParameter("fechaNacimiento"); 
+		String rut = request.getParameter("rut"); 
+		String telefono = request.getParameter("telefono");
+		String afp = request.getParameter("afp");
+		String sistemaSalud = request.getParameter("sistemasalud");
+		String direccion = request.getParameter("direccion");
+		String comuna = request.getParameter("comuna");
+		String edad = request.getParameter("edad");
+
+		Date fecha= null;
+		if (fechaNacimiento != null && !fechaNacimiento.isEmpty()) {
+		    try {
+		        fecha = new SimpleDateFormat("dd-MM-yyyy").parse(fechaNacimiento);
+		    } catch (ParseException e) {
+		        e.printStackTrace();
+		    }
+		}
+
+					
+		// Imprimir los valores obtenidos en la consola
+		System.out.println(nombre);
+		System.out.println(apellido);
+		System.out.println(fecha);
+		System.out.println(rut);
+		System.out.println(telefono);
+		System.out.println(afp);
+		System.out.println(sistemaSalud);
+		System.out.println(direccion);
+		System.out.println(comuna);
+		System.out.println(edad);
+		// Guardar los valores en los atributos de la solicitud
+
+		try {
+			System.out.println("entering try/catch EDITAR CLIENTE SERVLET");
+			System.out.println("pre crear ClIENTE Y CLIDAO");
+			Cliente cli = new Cliente();
+			ImplClienteDAO clidao = new ImplClienteDAO();
+			System.out.println("se creo la instancia CLIDAO y CLI");
+			
+			request.setAttribute("nombre", nombre);
+			cli.setNombre(nombre);
+			request.setAttribute("apellido", apellido);
+			cli.setApellido(apellido);
+			request.setAttribute("fecha nacimiento", fechaNacimiento);
+			cli.setFechaNacimiento(fechaNacimiento);
+			request.setAttribute("rut", rut);
+			cli.setRut(Long.parseLong(rut));
+			System.out.println("rut set on cli");
+			request.setAttribute("telefono", telefono);
+			cli.setTelefono(Integer.parseInt(telefono));;
+			request.setAttribute("afp", afp);
+			cli.setAfp(afp);
+			request.setAttribute("sistemasalud", sistemaSalud);
+			cli.setSistemaSalud(sistemaSalud);
+			request.setAttribute("direccion", direccion);
+			cli.setDireccion(direccion);
+			request.setAttribute("comuna", comuna);
+			cli.setComuna(comuna);
+			request.setAttribute("edad", edad);
+			cli.setEdad(Integer.parseInt(edad));
+			System.out.println("pre toString");
+			cli.toString();
+			System.out.println("pre actualizar(cli)");
+			clidao.actualizar(cli);
+			// Redirige a una pagina de confirmacion
+			response.sendRedirect("ConfirmacionEditarCliente"); 
+			
+		}catch(Exception e) {
+			System.out.println(e + " SERVLET EDITAR CLIENTE");
+		}
+	}
+
+}

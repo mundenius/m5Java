@@ -3,42 +3,37 @@ CREATE DATABASE asesoriaPrevRiesgos;
 USE asesoriaPrevRiesgos;
 
 CREATE TABLE usuario (
-idusuario varchar(15) not null primary key, 
+idusuario int not null auto_increment primary key, 
 nombre varchar(30) not null, 
 apellido varchar(30) not null, 
 fechanacimiento varchar(10) not null, 
-run int not null
+run int not null unique
 );
 
 CREATE TABLE cliente (
-rutcliente INT not null PRIMARY KEY,
+idcliente INT not null auto_increment PRIMARY KEY,
 clitelefono VARCHAR (20) NOT NULL,
 cliafp VARCHAR(30),
-clisistemasalud INT NOT NULL,
+clisistemasalud VARCHAR(10) NOT NULL,
 clidireccion VARCHAR(100) NOT NULL,
 clicomuna VARCHAR(50) NOT NULL,
 cliedad INT NOT NULL,
-idusuario_cliente varchar(15) not null,
-tipo_usuario varchar(20) not null
+rutcliente int not null
 );
 
 CREATE TABLE administrativo (
-idadministrativo int not null primary key, 
-run varchar(15) not null unique, 
+idadministrativo int not null auto_increment primary key, 
 email varchar(20) not null, 
-area varchar(15) not null, 
-idusuario_administrativo varchar(15) not null,
-tipo_usuario varchar(20) not null
+area varchar(20) not null,
+rutadmin int not null
 );
 
 CREATE TABLE profesional (
 idprofesional int not null auto_increment primary key, 
-run varchar(15) not null unique, 
 telefono int, 
 tituloprofesional varchar(50) not null, 
-proyecto varchar(30) not null, 
-idusuario_profesional varchar(15) not null,
-tipo_usuario varchar(20) not null
+proyecto varchar(30) not null,
+rutprof int not null
 );
 
 CREATE TABLE capacitacion (
@@ -78,3 +73,15 @@ vislugar VARCHAR(50) NOT NULL,
 viscomentarios VARCHAR(250) NOT NULL,
 /*F*/cliente_rutcliente INT NOT NULL
 );
+
+alter table cliente add 
+constraint fk_rutcliente 
+foreign key(rutcliente) references usuario(run);
+
+alter table administrativo add 
+constraint fk_rutadmin 
+foreign key(rutadmin) references usuario(run);
+
+alter table profesional add 
+constraint fk_rutprof 
+foreign key(rutprof) references usuario(run);
