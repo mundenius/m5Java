@@ -16,12 +16,12 @@
 
             <div class="inputContainer">
                 <label for="nombre" class="label">Nombre: </label>
-                <input type="text" class="input" placeholder="nombre" name="nombre" id="nombre"  pattern="[A-Za-z ]{1,50}">
+                <input type="text" class="input" placeholder="nombre" name="nombre" id="nombre"  pattern="[a-z ]{1,30}">
             </div>
 
             <div class="inputContainer">
                 <label for="apellido" class="label">Apellido: </label>
-                <input type="text" class="input" placeholder="apellido" name="apellido" id="apellido" pattern="[A-Za-z ]{1,50}">
+                <input type="text" class="input" placeholder="apellido" name="apellido" id="apellido" pattern="[a-z ]{1,30}"">
             </div>
 
             <div class="inputContainer">
@@ -41,7 +41,7 @@
 
             <div class="inputContainer">
                 <label for="area" class="label">Area: </label>
-                <input type="text" class="input" placeholder="Finanzas, Gerencia, etc" name="area" id="area" pattern="[a-z]{1,15}">
+                <input type="text" class="input" placeholder="Finanzas, Gerencia, etc" name="area" id="area" pattern="[a-z ]{1,30}"">
             </div>
 
             <input type="submit" class="submitBtn" value="Crear Administrativo">

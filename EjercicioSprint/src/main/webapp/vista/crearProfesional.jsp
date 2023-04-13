@@ -22,12 +22,12 @@ Carlos Carrasco --%>
     
           <div class="inputContainer">
             <label for="" class="label">Nombre: </label>
-            <input type="text" class="input" placeholder="nombre" name="nombre" id="nombre" pattern="[A-Za-z ]{1,50}">
+            <input type="text" class="input" placeholder="nombre" name="nombre" id="nombre" pattern="[a-z ]{1,30}">
           </div>
     
           <div class="inputContainer">
             <label for="" class="label">Apellido: </label>
-            <input type="text" class="input" placeholder="apellido" name="apellido" id="apellido" pattern="[A-Za-z ]{1,50}">
+            <input type="text" class="input" placeholder="apellido" name="apellido" id="apellido" pattern="[a-z ]{1,30}">
           </div>
     
           <div class="inputContainer">
@@ -47,12 +47,12 @@ Carlos Carrasco --%>
           
           <div class="inputContainer">
             <label for="" class="label">Titulo Profesional: </label>
-            <input type="text" class="input" placeholder="Ingeniero, Tecnico, etc" name="tituloprof" id="tituloprof" pattern="[a-z]{1,30}">
+            <input type="text" class="input" placeholder="Ingeniero, Tecnico, etc" name="tituloprof" id="tituloprof" pattern="[a-z ]{1,30}">
           </div>
           
           <div class="inputContainer">
             <label for="" class="label">Proyecto: </label>
-            <input type="text" class="input" placeholder="Nombre del Proyecto" name="proyecto" id="proyecto" pattern="[a-z]{1,15}">
+            <input type="text" class="input" placeholder="Nombre del Proyecto" name="proyecto" id="proyecto" pattern="[a-z ]{1,30}">
           </div>
     
     

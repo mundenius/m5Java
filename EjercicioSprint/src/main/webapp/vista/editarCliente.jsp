@@ -26,12 +26,12 @@ Carlos Carrasco --%>
 
 			<div class="inputContainer">
 				<label for="" class="label">Nombre: </label> <input type="text"
-					class="input" placeholder="nombre" name="nombre" id="nombre" pattern="[A-Za-z ]{1,50}">
+					class="input" placeholder="nombre" name="nombre" id="nombre" pattern="[a-z ]{1,30}">
 			</div>
 
 			<div class="inputContainer">
 				<label for="" class="label">Apellido:</label> <input type="text"
-					class="input" placeholder="apellido" name="apellido" id="apellido" pattern="[A-Za-z ]{1,50}">
+					class="input" placeholder="apellido" name="apellido" id="apellido" pattern="[a-z ]{1,30}">
 			</div>
 
 			<div class="inputContainer">
@@ -46,13 +46,13 @@ Carlos Carrasco --%>
 
 			<div class="inputContainer">
 				<label for="" class="label">AFP: </label> <input type="text"
-					class="input" placeholder="AFP" name="afp" id="afp" pattern="[A-Za-z ]{1,50}">
+					class="input" placeholder="AFP" name="afp" id="afp" pattern="[a-z ]{1,30}">
 			</div>
 
 			<div class="inputContainer">
 				<label for="" class="label">Sistema de Salud: </label> <input
 					type="text" class="input" placeholder="FONASA - ISAPRE"
-					name="sistemasalud" id="sistemasalud" pattern="[A-Za-z ]{1,50}">
+					name="sistemasalud" id="sistemasalud" pattern="[a-z ]{1,30}">
 			</div>
 
 			<div class="inputContainer">
