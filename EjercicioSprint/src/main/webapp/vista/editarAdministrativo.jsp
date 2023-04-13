@@ -59,13 +59,16 @@ Carlos Carrasco --%>
 <footer>
 <%@include file= "/FIJOS/Footer.jsp" %>
  <script>
+ // se define la funcion validarFormulario(), se encarga de validar los campos del formulario
         function validarFormulario() {
+        	// obtenemos los valores de los campos del formulario
             var rut = document.getElementById("rut").value.trim();
             var nombre = document.getElementById("nombre").value.trim();
             var apellido = document.getElementById("apellido").value.trim();
             var email = document.getElementById("email").value.trim();
             var area = document.getElementById("area").value.trim();
 
+         // se verifica si el input esta vacio, si lo esta, sale mensaje de alerta y se retorna falso
             if (rut == "") {
                 alert("Por favor, ingrese rut del usuario que desea editar");
                 return false;
@@ -91,9 +94,12 @@ Carlos Carrasco --%>
                 return false;
             }
 
+         // Si todos los campos tienen datos, retornamos verdadero
             return true;
         }
 
+     // se asigna la funcion validarFormulario() al evento "onsubmit" del formulario con id que corresponde
+        //en este caso la id es Adminform
         document.getElementById("adminForm").onsubmit = function() {
             return validarFormulario();
         };
