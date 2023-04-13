@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ConfirmacionEliminarCliente
  */
-@WebServlet("/ConfirmacionEliminarCliente")
+//@WebServlet("/ConfirmacionEliminarCliente")
 public class ConfirmacionEliminarCliente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

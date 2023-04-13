@@ -38,7 +38,7 @@ public class EliminarCliente extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String rutcliente = request.getParameter("rutcliente");
+		String rutcliente = request.getParameter("rut");
 		System.out.println(rutcliente);
 		
 		try {

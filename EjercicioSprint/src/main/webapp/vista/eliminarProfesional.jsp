@@ -17,7 +17,7 @@
 				<label for="" class="label">Ingrese el RUT del Profesional que desea eliminar: </label> <input type="text"
 					class="input" placeholder="11111111" name="rutprof" id="rutprofesional" pattern="[0-9]+">
 			</div>
-						<input type="submit" class="submitBtn" value="Eliminar Cliente">
+						<input type="submit" class="submitBtn" value="Eliminar Profesional">
 		</form>
 	</div>
 

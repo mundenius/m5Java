@@ -240,4 +240,13 @@
 		<servlet-name>ConfirmacionEditarProfesional</servlet-name>
 		<url-pattern>/ConfirmacionEditarProfesional</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ConfirmacionEliminarCliente</servlet-name>
+		<servlet-class>controlador.servlets_confirmacion.ConfirmacionEliminarCliente</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmacionEliminarCliente</servlet-name>
+		<url-pattern>/ConfirmacionEliminarCliente</url-pattern>
+	</servlet-mapping>
 </web-app>
