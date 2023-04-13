@@ -11,7 +11,7 @@
 <body>
     <%@include file = "/FIJOS/Navbar.jsp"%>
     <div class="signupFrm">
-        <form action="CrearAdmin" method="POST" class="form" id="crear">
+        <form action="CrearAdmin" method="POST" class="form" id="adminForm">
             <h1 class="title">Crear Administrativo</h1>
 
             <div class="inputContainer">
@@ -51,6 +51,54 @@
     <footer>
         <%@include file= "/FIJOS/Footer.jsp" %>
     </footer>
-	<script src="validacion.js"></script>
+	 <script>
+	
+	    // se define la funcion validarFormulario(), se encarga de validar los campos del formulario
+	    function validarFormulario() {
+           
+        	// obtenemos los valores de los campos del formulario
+            var nombre = document.getElementById("nombre").value.trim();
+            var apellido = document.getElementById("apellido").value.trim();
+            var rut = document.getElementById("rut").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var area = document.getElementById("area").value.trim();
+
+          
+         // se verifica si el input esta vacio, si lo esta, sale mensaje de alerta y se retorna falso
+            if (nombre == "") {
+                alert("Por favor, ingrese nombre.");
+                return false;
+            }
+
+            if (apellido == "") {
+            	alert("Por favor, ingrese apellido.");
+                return false;
+            }
+
+            if (rut == "") {
+                alert("Por favor, ingrese rut .");
+                return false;
+            }
+            
+            if (email == "") {
+                alert("Por favor, ingrese su correo electrónico ");
+                return false;
+            }
+
+            if (area == "") {
+                alert("Por favor, ingrese area.");
+                return false;
+            }
+
+            // Si todos los campos tienen datos, retornamos verdadero
+            return true;
+        }
+        
+        // se asigna la funcion validarFormulario() al evento "onsubmit" del formulario con id que corresponde
+        //en este caso la id es Adminform
+        document.getElementById("adminForm").onsubmit = function() {
+            return validarFormulario();
+        };
+    </script>
 </body>
 </html>

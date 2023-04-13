@@ -1,6 +1,6 @@
 /**
   * crear usuarios (cliente, admin, profesional)
-  */
+  
  
         function validarFormulario() {
             var nombre = document.getElementById("nombre").value.trim();
@@ -91,4 +91,4 @@
         document.getElementById("crear").onsubmit = function() {
             return validarFormulario();
         };
-   
+   */
