@@ -18,7 +18,7 @@
 				<label for="" class="label">Ingrese el RUT del Administrativo que desea eliminar: </label> <input type="text"
 					class="input" placeholder="11111111-1" name="rutadmin" id="rutadmin" pattern="[0-9]+">
 			</div>
-						<input type="submit" class="submitBtn" value="Eliminar Cliente">
+						<input type="submit" class="submitBtn" value="Eliminar Administrativo">
 		</form>
 	</div>
 	
